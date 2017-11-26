@@ -17,7 +17,7 @@
     <div class="mainPanel">
       <router-view></router-view>
     </div>
-    <div class="cover" v-show="showNavi" @click="showNavi=false"></div>
+    <div class="mask" v-show="showNavi" @click="showNavi=false"></div>
   </div>
 </template>
 
@@ -54,10 +54,8 @@
         let o=pp.offsetTop;
         let d=r>o;
         let f=()=>{
-            console.log(o,r,d);
           pp.style.top=(d?o+=8:o-=8)+'px';
           if((d&&o>r)||(!d&&o<r)){
-              console.log(o>r);
             window.clearInterval(intv);
           }
         };
@@ -70,9 +68,25 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped="" type="text/css">
+<style lang="scss" type="text/css">
   $left:120px;
-  .cover{
+
+  div{
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  }
+
+  .text{
+    text-indent:2em;
+    letter-spacing:0.2em;
+    line-height:1.75;
+  }
+  .wrap-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+  }
+  .mask{
     position:fixed;
     width:100%;
     height:100%;
@@ -86,6 +100,8 @@
   .mainPanel{
     position:absolute;
     left:$left;
+    top:0;
+    margin:0 0;
     width:100%;
   }
   .navi {
