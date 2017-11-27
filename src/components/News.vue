@@ -3,7 +3,7 @@
     <div class="coverPage">
       <div class="cover"  ref="coverImg">
       <img src='../assets/image/cover.jpg' style="position:absolute;width:100%;height:100%"/>
-      <div class="mask" style="position:absolute;width:100%;height:100%"></div>
+      <div class="covermask" style="position:absolute;width:100%;height:100%"></div>
       </div>
       <div class="coverPanel" ref="coverPanel">
         <div class="panel coverTitle">
@@ -130,7 +130,7 @@
     height: $pageHeight;
   }
 
-  .mask {
+  .covermask {
     background-color: #111;
     opacity: 0.8;
   }
