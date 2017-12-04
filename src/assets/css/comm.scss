@@ -1,0 +1,303 @@
+/*========menu动态效果========*/
+.Menu_link {
+  display: block;
+  position: relative;
+  width: 86px;
+  height: 90px;
+  cursor: pointer;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.Menu_hamburger:before {
+  top: -6px;
+}
+
+.Menu_hamburger:after {
+  top: 6px;
+}
+
+.Menu_hamburger, .Menu_hamburger:after, .Menu_hamburger:before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 2px;
+  background-color: #000;
+}
+
+.Menu_hamburger.Menu_init_animateIn:before {
+  animation: Anti_Menu_topHam .8s ease-in-out forwards;
+}
+
+.Menu_hamburger.Menu_init_animateIn:after {
+  animation: Anti_Menu_bottomHam .8s ease-in-out forwards;
+}
+
+.Menu_init_animateIn {
+  animation: Anti_Menu_middleHam .8s ease-in-out forwards;
+}
+
+@keyframes Anti_Menu_middleHam {
+  0% {
+    background-color: transparent
+  }
+  50% {
+    background-color: transparent
+  }
+  to {
+    background-color: #000
+  }
+}
+
+@keyframes Anti_Menu_bottomHam {
+  0% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  50% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 5px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes Anti_Menu_topHam {
+  0% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: -5px;
+    transform: rotate(0deg);
+  }
+}
+
+.Menu_hamburger.Menu_animateIn:before {
+  -webkit-animation: Menu_topHam .4s ease-in-out forwards;
+  animation: Menu_topHam .4s ease-in-out forwards;
+}
+
+.Menu_hamburger.Menu_animateIn:after {
+  -webkit-animation: Menu_bottomHam .4s ease-in-out forwards;
+  animation: Menu_bottomHam .4s ease-in-out forwards;
+}
+
+@keyframes Menu_topHam {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes Menu_middleHam {
+  30% {
+    background-color: #000
+  }
+  50% {
+    background-color: transparent
+  }
+  to {
+    background-color: transparent
+  }
+}
+
+@keyframes Menu_bottomHam {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+}
+
+.Menu_animateIn {
+  -webkit-animation: Menu_middleHam .4s ease-in-out forwards;
+  animation: Menu_middleHam .4s ease-in-out forwards;
+  animation-name: Menu_middleHam;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: initial;
+  animation-iteration-count: initial;
+  animation-direction: initial;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+}
+
+.Menu_hamburger {
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*========menu动态效果END========*/
+
+/*========字体========*/
+div {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.title1{
+  color:#484D51;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "STSongti", "宋体", Arial, sans-serif;
+  font-size:3.0em;
+}
+
+.title2{
+  color:#CAB2A1;
+  font-size:0.8em;
+}
+
+.content1{
+  text-indent: 2em;
+  color:#4A4F53;
+}
+.content2{
+  text-indent: 2em;
+  color:#CBCBCB;
+}
+.text {
+  letter-spacing: 0.2em;
+  line-height: 1.75;
+}
+
+/*========字体END========*/
+$left: 84px;
+
+
+
+
+.wrap-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+}
+
+
+.mask:after {
+  content:"";
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000;
+}
+
+.mainPanel {
+  position: absolute;
+  left: $left;
+  top: 0;
+  margin: 0 0;
+  width: 100%;
+}
+
+.navi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-left: 0;
+  width: $left;
+  height: 100%;
+  background-color: #FEFEFE;
+  z-index: 80;
+}
+
+.logo {
+  margin-left: 48px;
+  margin-top: 38px;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'STSong', 宋体, sans-serif;
+  animation: logo_anim 2s ease-in-out forwards;
+}
+@keyframes logo_anim {
+  from{
+    opacity: 0.2;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.menuPanel {
+  margin-left: 48px;
+  margin-top: 7em;
+}
+
+.menuItem {
+  margin-top: 1em;
+  font-family: '微软雅黑', serif;
+  font-size: 1.8em;
+}
+
+.menuItem:hover {
+  color: #999;
+}
+
+.selected {
+  color: #CCC;
+}
+
+.naviMenu {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  left: $left;
+  width: 45%;
+  height: 100%;
+  border-left: solid 0.5px #CCC;
+  background-color: #FEFEFE;
+  z-index: 50;
+}
+
+.naviShow {
+  animation: nshow 0.5s;
+}
+
+.menuShow {
+  animation: mshow 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes mshow {
+  0% {
+    opacity: 0;
+    transform: translate(-9em);
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes nshow {
+  from {
+    width: 0
+  }
+  to {
+    width: 45%
+  }
+}
+
