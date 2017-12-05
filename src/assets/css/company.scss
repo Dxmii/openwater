@@ -1,0 +1,182 @@
+$pageHeight: 110vh;
+$left: 84px;
+#container {
+  background: #111;
+  width: calc(100% - #{$left});
+  height: 500vh;
+}
+
+.company, .contact, .recruitment ,.cooperation{
+  background: #FFF;
+  width: 100%;
+}
+
+/*=====Company========*/
+.company{
+  height: 150vh;
+}
+.company_image {
+  position: fixed;
+  width: 45%;
+  height: 90vh;
+  float: left;
+  margin: 0 0 0 0;
+  z-index: 0;
+}
+
+.company_info {
+  position: relative;
+  top: 160px;
+  right: 6vw;
+  height: 90vh;
+  float: right;
+}
+
+.letter {
+  position: absolute;
+  top: 70vh;
+  width: 70vw;
+  left: 5%;
+  height: 40vh;
+  text-align: center;
+  background: #FBFBFD;
+  border: solid 1px #C0A490;
+  padding: 3em 5em 5em 5em;
+}
+
+.letter:after {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 1px;
+  height: 70px;
+  background: #C0A490 100%;
+}
+
+.letter div {
+  margin-top: 50px;
+}
+
+.plank {
+  position: absolute;
+  width: 100vw;
+  height: 2000px;
+  background: #FFF;
+  top: 90vh;
+  left: 0;
+}
+
+/*-------Company End-----*/
+
+/*=======Contact=======*/
+.contact {
+  position: relative;
+  text-align: center;
+  height: 250vh;
+}
+
+.contact_top {
+  position:relative;
+  width: 100%;
+  height: 60vh;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact_content {
+  position:relative;
+  padding:10vh 0 20vh 0;
+  background-color:#EEF1F6;
+  text-align: center;
+  height:60vh;
+  div{
+    .contact_way,.contact_address {
+      top:10vh;
+      margin-left:23vw;
+      text-align: left;
+      position: relative;
+      float:left;
+      line-height:1.75em;
+      div{
+        margin-top:2em;
+      }
+    }
+  }
+
+}
+
+.contact_bottom {
+  position:relative;
+  width: 100%;
+  height: 80vh;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*-------Contact End-----*/
+
+/*=======cooperation=======*/
+
+.cooperation{
+  position:relative;
+  text-align:center;
+
+}
+
+.cooperation_top{
+  position:relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  margin:0 auto;
+  img {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+  }
+  .cooperation_title{
+    position:absolute;
+    font-family: 'STSongti', 微软雅黑, serif;
+    color:#fff;
+    font-size:2.5em;
+    text-align: center;
+    margin:0 auto;
+    z-index:1;
+    top:30vh;
+    left:10vw;
+    width:20em;
+  }
+  .hoverButton{
+    position:absolute;
+    top:55vh;
+    left:41%;
+    z-index:1;
+  }
+}
+
+.cooperation_content{
+  position:relative;
+  background-color:#EEF1F6;
+  color:#3F4447;
+  .coopers{
+    position:relative;
+    margin-top:25vh;
+    margin-left:30%;
+    div{
+     line-height:1.5em;
+      text-align: left;
+      font-size:14px;
+    }
+  }
+}
+
+/*-------cooperation End--------*/
+
+/*=======recruitment=======*/
+/*-------recruitment End--------*/

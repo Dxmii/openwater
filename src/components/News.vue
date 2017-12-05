@@ -6,7 +6,7 @@
       </div>
       <div class="coverPanel" ref="coverPanel">
         <div class="panel coverTitle">
-          {{news.cover.head}}
+          <!--{{news.cover.head}}-->
         </div>
         <div class="panel coverIntro">
           <div>
@@ -19,7 +19,7 @@
             -- {{news.cover.time}} --
           </div>
         </div>
-        <div class="panel coverButton">
+        <div class="panel hoverButton">
           <span>详&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情</span>
         </div>
       </div>
@@ -52,7 +52,7 @@
     top: 20%;
     height: 80%;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .article{
@@ -63,68 +63,14 @@
     height:100vh;
   }
 
-  .coverButton:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 1px;
-    width: 10em;
-    height: 2.6em;
-    background: #FFF;
-    z-index: -2;
-    transition: opacity 1s;
-    opacity: 0;
-  }
-
-  .coverButton:hover {
-    color: #000;
-  }
-
-  .coverButton:hover:before {
-    opacity: 1;
-  }
-
   .panel {
     position: relative;
-    text-align: center;
-    margin: 0 auto;
+    margin-left:10%;
     z-index: 1;
     top: 0;
     letter-spacing: 0.1em;
-    color: #FFF;
   }
 
-  .coverTitle {
-    width: 20em;
-    height: 2em;
-    font-size: 1.5em;
-    letter-spacing: 0.5em;
-    color: RGB(192, 164, 144);
-  }
-
-  .coverIntro {
-    width: 20em;
-    height: 4em;
-    font-size: 3em;
-  }
-
-  .coverButton {
-    width: 10em;
-    height: 2.5em;
-    transition: color 3s;
-    line-height: 2.5;
-    margin-top:2em;
-  }
-
-  .coverButton:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10em;
-    height: 2.5em;
-    border: solid #FFF 1px;
-  }
 
   .coverPage {
     position: relative;
