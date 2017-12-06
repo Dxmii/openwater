@@ -42,24 +42,24 @@
     <div class="recruitment">
       <div>
         <img :src="recruitment.image">
-        <div>
-          <div class="text cooperation_title">开水招聘</div>
-          <div ref="recruitment_title" class="text cooperation_title">{{recruitment.title}}</div>
-          <div ref="recruitment_btn" class="hoverButton" style="z-index:1;" @click="scrollInto('recruitment_content')">
+        <div class="recruitment_info_panel">
+          <div class="recruitment_title text" style="font-size:2em;font-weight: bold;">加入我们</div>
+          <div ref="recruitment_title" class="recruitment_title">{{recruitment.title}}</div>
+          <div ref="recruitment_btn" class="recruitment_btn hoverButtonB" style="margin:0 auto;z-index:1;" @click="scrollInto('recruitment_content')">
             <span>打开职位</span>
           </div>
         </div>
       </div>
       <div ref="recruitment_content" class="recruitment_content">
-        <div class="text" style="position:relative;top:8vh;left:83px;text-align:left;">职位招聘</div>
+        <div class="text defFont" style="position:relative;top:10vh;left:83px;text-align:left;">职位招聘</div>
         <div class="jobs text">
           <div class="dark_red line"></div>
-          <br/><br/>
-          <div style="font-size:18px;width:28em;">{{recruitment.introduce}}</div>
+          <br/>
+          <div style="font-size:12px;"><pre>{{recruitment.introduce}}</pre></div>
           <br/>
           <strong v-for="job in recruitment.jobs">
             {{job}}
-            <br/>
+            <br/><br/>
           </strong>
         </div>
       </div>

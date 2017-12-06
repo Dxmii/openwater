@@ -2,18 +2,21 @@ $left: 70px;
 
 /*=======特殊按钮效果=======*/
 
-.hoverButton {
+.hoverButton, .hoverButtonB {
   width: 10em;
   height: 2.5em;
   transition: color 3s;
   line-height: 2.5;
-  margin-top:2em;
+  margin-top: 2em;
   text-align: center;
-  color:#FFF;
+  color: #FFF;
 }
 
+.hoverButtonB {
+  color: #111;
+}
 
-.hoverButton:before {
+.hoverButton:before, .hoverButtonB:before {
   content: "";
   position: absolute;
   top: 0;
@@ -27,17 +30,22 @@ $left: 70px;
   opacity: 0;
 }
 
+.hoverButtonB:before {
+  background: #666;
+}
+
 .hoverButton:hover {
   color: #000;
 }
 
-.hoverButton:hover:before {
-  opacity: 1;
+.hoverButtonB:hover {
+  color: #FFF;
 }
 
-
-
-.hoverButton:after {
+.hoverButton:hover:before ,.hoverButtonB:hover:before  {
+  opacity: 1;
+}
+.hoverButton:after,.hoverButtonB:after {
   content: "";
   position: absolute;
   top: 0;
@@ -45,6 +53,11 @@ $left: 70px;
   width: 10em;
   height: 2.5em;
   border: solid #FFF 1px;
+}
+
+
+.hoverButtonB:after{
+  border: solid #CCC 1px;
 }
 
 /*------特殊按钮End------*/
@@ -63,7 +76,7 @@ $left: 70px;
   width: 20em;
   height: 4em;
   font-size: 3em;
-  color:white;
+  color: white;
 }
 
 /*-------封面End------*/
@@ -215,60 +228,59 @@ $left: 70px;
   right: 0;
   margin: auto;
 }
+
 /*========menu动态效果END========*/
 /*========图形========*/
 
-.dark_red{
-  background-color:#C0A490;
+.dark_red {
+  background-color: #C0A490;
 }
 
-.line{
-  width:3em;
-  height:2px;
-  top:1.5em;
-  left:0;
+.line {
+  width: 3em;
+  height: 2px;
+  top: 1.5em;
+  left: 0;
 }
-
 
 /*--------图形End--------*/
 /*========字体========*/
-div {
+div,pre {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
-.title1{
-  color:#484D51;
+.title1 {
+  color: #484D51;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "STSongti", "宋体", Arial, sans-serif;
-  font-size:3.0em;
+  font-size: 3.0em;
 }
 
-.title2{
-  color:#CAB2A1;
-  font-size:0.8em;
+.title2 {
+  color: #CAB2A1;
+  font-size: 0.8em;
 }
 
-.title3{
+.title3 {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  font-size:24px;
-  font-weight:bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.content1{
+.content1 {
   text-indent: 2em;
-  color:#4A4F53;
+  color: #4A4F53;
 }
-.content2{
-  color:#CBCBCB;
+
+.content2 {
+  color: #CBCBCB;
 }
+
 .text {
   letter-spacing: 0.2em;
   line-height: 1.75;
 }
 
 /*========字体END========*/
-
-
-
 
 .wrap-img {
   width: 100%;
@@ -277,12 +289,11 @@ div {
   border: 1px solid #f0f0f0;
 }
 
-
 .mask:after {
-  content:"";
+  content: "";
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   opacity: 0.5;
@@ -317,14 +328,16 @@ div {
   font-family: 'STSong', 宋体, sans-serif;
   animation: logo_anim 2s ease-in-out forwards;
 }
+
 @keyframes logo_anim {
-  from{
+  from {
     opacity: 0.2;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
+
 .menuPanel {
   margin-left: 48px;
   margin-top: 9em;
@@ -333,7 +346,7 @@ div {
 .menuItem {
   margin-top: 2em;
   font-family: '微软雅黑', serif;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 1.5em;
 }
 
