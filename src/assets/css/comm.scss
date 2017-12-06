@@ -1,5 +1,6 @@
 $left: 70px;
-
+$naviWidth: 50%;
+$naviWidth2:40%;
 /*=======特殊按钮效果=======*/
 
 .hoverButton, .hoverButtonB {
@@ -280,6 +281,24 @@ div,pre {
   line-height: 1.75;
 }
 
+/*========浮现效果=====*/
+.fadeIn{
+  animation:fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: translate(0,1em);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+/*-------浮现效果End------*/
+
 /*========字体END========*/
 
 .wrap-img {
@@ -343,14 +362,22 @@ div,pre {
   margin-top: 9em;
 }
 
-.menuItem {
+.naviItem,.naviItem2 {
   margin-top: 2em;
   font-family: '微软雅黑', serif;
   font-weight: bold;
   font-size: 1.5em;
 }
 
-.menuItem:hover {
+.naviItem2{
+  font-size:1.2em;
+  color:#FFF;
+}
+
+.naviItem2:hover{
+  color:#333;
+}
+.naviItem:hover {
   color: #999;
 }
 
@@ -358,21 +385,33 @@ div,pre {
   color: #CCC;
 }
 
-.naviMenu {
+.naviMenu,.naviMenu2 {
   position: fixed;
   top: 0;
   margin-top: 0;
   margin-left: 0;
   left: $left;
-  width: 38%;
+  width: #{$naviWidth};
   height: 100%;
   border-left: solid 0.5px #CCC;
   background-color: #FEFEFE;
   z-index: 50;
 }
+.naviMenu2{
+  background-color:#484D51;
+  width: #{$naviWidth2}
+}
 
 .naviShow {
   animation: nshow 0.5s;
+}
+
+.naviShow2{
+  animation: nshow2 0.5s;
+}
+
+.naviHide{
+  animation:nhide 0.5s 1s both;
 }
 
 .menuShow {
@@ -394,12 +433,30 @@ div,pre {
   }
 }
 
+@keyframes nhide {
+  from{
+    width: #{$naviWidth};
+  }
+  to{
+    width:0;
+  }
+}
+
 @keyframes nshow {
   from {
     width: 0
   }
   to {
-    width: 38%
+    width: #{$naviWidth}
   }
 }
 
+
+@keyframes nshow2 {
+  from {
+    width: 0
+  }
+  to {
+    width: #{$naviWidth2}
+  }
+}

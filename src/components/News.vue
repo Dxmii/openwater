@@ -1,10 +1,10 @@
 <template>
-  <div style="position:relative;width:100%">
+  <div id="#" style="position:relative;width:100%">
     <div class="coverPage">
       <div class="cover mask"  ref="coverImg">
       <img :src='news.cover.image' style="position:absolute;width:100%;height:100%"/>
       </div>
-      <div class="coverPanel" ref="coverPanel">
+      <div class="fadeIn coverPanel" ref="coverPanel">
         <div class="panel coverTitle">
           <!--{{news.cover.head}}-->
         </div>

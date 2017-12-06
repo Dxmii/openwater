@@ -13,6 +13,16 @@ let data = {
     {
       name: '品牌大事件',
       path: '/Product',
+      children: [
+        {
+          name: 'Hollis',
+          path: '/hollis'
+        },
+        {
+          name: 'Oceanic',
+          path: '/oceanic'
+        },
+      ],
     },
     {
       name: '公司介绍',
@@ -93,6 +103,37 @@ let data = {
     jobs: [
       '高级前端工程师', '高级UI设计师', '产品经理'
     ],
+  },
+  '/hollis': {
+    image:'http://www.openwater.com.cn/uploads/picture/20171124/a7481b91fef5fd060e36c1c94bf65a2e.png',
+    introduce:'BOB HOLLIS在60年代中期已经有了他的第一次使用循环呼吸器的经验。他使用德尔格装置，让他靠近蒙特里湾的其他海洋生\n物。在1970年,HOLLIS在洪都拉斯和博内尔岛上使用了氦氧混合气在300英尺深的水域，使用电肺式循环呼吸器进行了第一次下潜，\n为的是拍摄船舶残骸和深礁。Bob和OCEANIC更在1990年开发了首个"PHIBIAN"循环呼吸器，同时也是当时商业上唯一售卖的装\n置。\n\n\t在2000年，HOLLIS的母公司[美国水下产品公司]根据与美国海军水面作战司令部的单独合同，开发了一个称为"ATUBA"(高\n级战术水下呼吸器)的装置。\n\n\t而这种具有坚实背景的循环呼吸器技术，促使他们其后开发了两款新装置，就是PRISM 2 和EXPLORER SPORT。作为消费者，你将从HOLLIS循环呼吸器经销商里获得更高水平的支持。这并不表示那些非循环呼吸器爱经销商不关心支持，而是HOLLIS循环呼吸器经销商对他们整个产品线有更大的承诺。HOLLIS循环呼吸器经销商已经在潜水技能上达至最完善表现，现在更是他们的教学高峰期。他们致力提供循环呼吸器的培训、服务、消费品、升级和旅行等教学。当你使HOLLIS循环呼吸器进入水下领域时，你会体验到前所未有的风景和感受。HOLLIS GEAR承诺为你提供非一般的体验。',
+    products:[
+      {
+        title:'100LX',
+        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/7e08a5f306f8b0a2db3b3bcd6cfb87d0.jpg',
+        intro:'通过调节器测试黄金标准——ANSTI测试系统严格检测。',
+        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/895ca6d554156bafe191feb6c7d96894.jpg',
+      },
+      {
+        title:'DC3',
+        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
+        intro:'',
+        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
+      }
+    ]
+  },
+  '/oceanic': {
+    image:'http://www.openwater.com.cn/uploads/picture/20171124/9a03f673068259ded79978802360d4b1.png',
+    introduce:'OCEANIC——为生命。\n'+
+    '广州开水信息科技有限公司为美国著名潜水品牌OCEANIC国内总经销商；本文简单介绍OCEANIC部\n分潜水装备，感兴趣的潜水爱好者或企业可以联系我司进行进一步了解。\n',
+    products:[
+      {
+        title:'OCEANIC:EXCURSION  潜水大师',
+        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/07b3c5b7641a648fe19578e43612611b.jpg',
+        intro:'EXCURSIONTM专为一众冒险家而设计。既舒适又稳定的后充气式浮力调整装置适合对冒险狂热的你。',
+        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/b944f4df23acd597688468fea29ffa91.png',
+      }
+    ]
   },
 };
 

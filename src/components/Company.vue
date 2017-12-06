@@ -3,14 +3,14 @@
     <div id="company" class="company">
       <div ref="companyImage" class="company_image mask">
         <img :src="company.image" style="width:100%;height:100%;"></div>
-      <div ref="companyInfo" class="company_info">
+      <div ref="companyInfo" class="fadeIn company_info">
         <div class="text title1">{{company.name}}</div>
         <div style="width:25em;" class="text content2">{{company.intro}}</div>
       </div>
     </div>
     <div class="plank"></div>
     <div class="letter">
-      <div class="text title2">我们的故事</div>
+      <div class="text title2 fadeIn">我们的故事</div>
       <div class="text content1">{{company.story}}</div>
     </div>
     <div id="cooperation" class="cooperation">
