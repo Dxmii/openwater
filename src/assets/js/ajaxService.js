@@ -58,7 +58,7 @@ let data = {
     image: 'http://openwater.com.cn/template/kaishui2017/static/images/index/index_08.jpg'
   },
   '/contact': {
-    title1: '想联系我们吗？',
+    title1: '来联系我们吧!',
     title2: '我们致力于整合潜水资源，搭建互联网+休闲产业集群服务平台',
     city: '广州市',
     street: '天河区黄埔大道西33号',
