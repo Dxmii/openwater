@@ -106,7 +106,15 @@ let data = {
   },
   '/hollis': {
     image:'http://www.openwater.com.cn/uploads/picture/20171124/a7481b91fef5fd060e36c1c94bf65a2e.png',
-    introduce:'BOB HOLLIS在60年代中期已经有了他的第一次使用循环呼吸器的经验。他使用德尔格装置，让他靠近蒙特里湾的其他海洋生\n物。在1970年,HOLLIS在洪都拉斯和博内尔岛上使用了氦氧混合气在300英尺深的水域，使用电肺式循环呼吸器进行了第一次下潜，\n为的是拍摄船舶残骸和深礁。Bob和OCEANIC更在1990年开发了首个"PHIBIAN"循环呼吸器，同时也是当时商业上唯一售卖的装\n置。\n\n\t在2000年，HOLLIS的母公司[美国水下产品公司]根据与美国海军水面作战司令部的单独合同，开发了一个称为"ATUBA"(高\n级战术水下呼吸器)的装置。\n\n\t而这种具有坚实背景的循环呼吸器技术，促使他们其后开发了两款新装置，就是PRISM 2 和EXPLORER SPORT。作为消费者，你将从HOLLIS循环呼吸器经销商里获得更高水平的支持。这并不表示那些非循环呼吸器爱经销商不关心支持，而是HOLLIS循环呼吸器经销商对他们整个产品线有更大的承诺。HOLLIS循环呼吸器经销商已经在潜水技能上达至最完善表现，现在更是他们的教学高峰期。他们致力提供循环呼吸器的培训、服务、消费品、升级和旅行等教学。当你使HOLLIS循环呼吸器进入水下领域时，你会体验到前所未有的风景和感受。HOLLIS GEAR承诺为你提供非一般的体验。',
+    introduce:'BOB HOLLIS在60年代中期已经有了他的第一次使用循环呼吸器的经验。他使用德尔格装置，让他靠近蒙特里湾的其他海洋生\n' +
+    '物。在1970年,HOLLIS在洪都拉斯和博内尔岛上使用了氦氧混合气在300英尺深的水域，使用电肺式循环呼吸器进行了第一次下潜，\n' +
+    '为的是拍摄船舶残骸和深礁。Bob和OCEANIC更在1990年开发了首个"PHIBIAN"循环呼吸器，同时也是当时商业上唯一售卖的装\n' +
+    '置。\n\n\t在2000年，HOLLIS的母公司[美国水下产品公司]根据与美国海军水面作战司令部的单独合同，开发了一个称为"ATUBA"(高\n' +
+    '级战术水下呼吸器)的装置。\n\n\t而这种具有坚实背景的循环呼吸器技术，促使他们其后开发了两款新装置，就是PRISM 2 和EXPLORER SPORT。\n' +
+    '作为消费者，你将从HOLLIS循环呼吸器经销商里获得更高水平的支持。这并不表示那些非循环呼吸器爱经销商不关心支持，\n' +
+    '而是HOLLIS循环呼吸器经销商对他们整个产品线有更大的承诺。HOLLIS循环呼吸器经销商已经在潜水技能上达至最完善表现。\n' +
+    '现在更是他们的教学高峰期。他们致力提供循环呼吸器的培训、服务、消费品、升级和旅行等教学。\n' +
+    '当你使HOLLIS循环呼吸器进入水下领域时，你会体验到前所未有的风景和感受。HOLLIS GEAR承诺为你提供非一般的体验。',
     products:[
       {
         title:'100LX',
@@ -117,8 +125,11 @@ let data = {
       {
         title:'DC3',
         image:'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
-        intro:'',
-        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
+        intro:'由于100LX/DC3呼吸调节器的优秀性能\n' +
+        '对产品细节的把控以及合理的价格，\n' +
+        '这款呼吸调节器被 ScubaLab 推荐成为\n' +
+        'ScubaLab的2016年推荐购买的深潜呼吸调节器。',
+        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/5f9db0e2be162b3314273cbc9f03ab9f.jpg',
       }
     ]
   },
@@ -130,8 +141,13 @@ let data = {
       {
         title:'OCEANIC:EXCURSION  潜水大师',
         image:'http://www.openwater.com.cn/uploads/editor/image/20171116/07b3c5b7641a648fe19578e43612611b.jpg',
-        intro:'EXCURSIONTM专为一众冒险家而设计。既舒适又稳定的后充气式浮力调整装置适合对冒险狂热的你。',
+        intro:'EXCURSIONTM专为一众冒险家而设计。\n既舒适又稳定的后充气式浮力调整装置适合对冒险狂热的你。',
         paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/b944f4df23acd597688468fea29ffa91.png',
+      },
+      {
+        title:'OCEANIC MANTA RAY',
+        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/d660eda6b912379b029794308722652e.jpg',
+        intro:'这款OCEANIC新出的蛙鞋，灵感来自于大海中的Giant：Manta ray（蝠鲼）'
       }
     ]
   },

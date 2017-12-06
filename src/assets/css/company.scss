@@ -1,10 +1,11 @@
 $pageHeight: 110vh;
-$left: 84px;
+$left: 70px;
 #container {
   background: #111;
   width: calc(100% - #{$left});
   height: 500vh;
 }
+
 
 .company, .contact, .recruitment ,.cooperation{
   background: #FFF;

@@ -1,4 +1,46 @@
-.product_intro{
+$pageHeight: 110vh;
+$left: 70px;
+#product {
+  background: #FFF;
+  width: calc(100% - #{$left});
+}
+.brand_intro{
+  position:relative;
+  top:0;
+  left:0;
   width:100%;
   text-align:center;
+  img{
+    width:400px;
+    height:150px;
+  }
+}
+
+.products{
+  position:relative;
+  width:calc(100% - #{$left});
+  top:10vh;
+  left:10vw;
+}
+
+.el-row{
+  margin-bottom:120px;
+}
+.product_img{
+  width:400px;
+  height:400px;
+}
+
+.left{
+  position: relative;
+  float:left;
+  margin-top:10vh;
+  width:40%;
+  left:6vw;
+}
+.right{
+  float:right;
+  position: relative;
+  margin-top:10vh;
+  width:40%;
 }
