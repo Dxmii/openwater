@@ -3,14 +3,14 @@
     <div id="company" class="company">
       <div ref="companyImage" class="company_image mask">
         <img :src="company.image" style="width:100%;height:100%;"></div>
-      <div ref="companyInfo" class="fadeIn company_info">
+      <div ref="companyInfo" class="company_info fadeIn ">
         <div class="text title1">{{company.name}}</div>
-        <div style="width:25em;" class="text content2">{{company.intro}}</div>
+        <div  class="text content2">{{company.intro}}</div>
       </div>
     </div>
     <div class="plank"></div>
     <div class="letter">
-      <div class="text title2 fadeIn">我们的故事</div>
+      <div class="text title2">我们的故事</div>
       <div class="text content1">{{company.story}}</div>
     </div>
     <div id="cooperation" class="cooperation">
@@ -22,12 +22,12 @@
         </div>
       </div>
       <div ref="cooperation_content" class="cooperation_content">
-        <div class="text" style="position:relative;top:8vh;left:83px;text-align:left;">商务合作</div>
+        <div class="text btitle">商务合作</div>
         <div class="coopers text">
           <div v-for="c in cooperation.contents">
             <div class="dark_red line"></div>
             <br/><br/>
-            <div style="font-size:18px;width:28em;"><strong>{{c.title}}</strong></div>
+            <div ><strong class="cooper_title">{{c.title}}</strong></div>
             <br/>
             <div>联系人:{{c.contacts}}</div>
             <br/>
@@ -51,11 +51,11 @@
         </div>
       </div>
       <div ref="recruitment_content" class="recruitment_content">
-        <div class="text defFont" style="position:relative;top:10vh;left:83px;text-align:left;">职位招聘</div>
+        <div class="text btitle">职位招聘</div>
         <div class="jobs text">
           <div class="dark_red line"></div>
           <br/>
-          <div style="font-size:12px;"><pre>{{recruitment.introduce}}</pre></div>
+          <div class="job_intro" style="font-size:12px;">{{recruitment.introduce}}</div>
           <br/>
           <strong v-for="job in recruitment.jobs">
             {{job}}
@@ -88,7 +88,7 @@
           </div>
         </div>
       </div>
-      <div class="contact_bottom mask">
+      <div class="contact_bottom ">
         <img :src="contact.bottomImg"/>
       </div>
     </div>
@@ -150,8 +150,6 @@
           if (off1 > 0) {
             img.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
             title.css('opacity', (400 - off1) / 400);
-
-//            btn.css("transform","translate(0px,-"+off1/1.5+"px)");
             btn.css('opacity', (400 - off1) / 400);
           }
         });

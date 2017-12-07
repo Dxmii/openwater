@@ -1,6 +1,18 @@
 $left: 70px;
 $naviWidth: 50%;
-$naviWidth2:40%;
+$naviWidth2: 40%;
+
+div, pre {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0 0;
+  left: 0;
+  top: 0;
+}
+
 /*=======特殊按钮效果=======*/
 
 .hoverButton, .hoverButtonB {
@@ -43,10 +55,11 @@ $naviWidth2:40%;
   color: #FFF;
 }
 
-.hoverButton:hover:before ,.hoverButtonB:hover:before  {
+.hoverButton:hover:before, .hoverButtonB:hover:before {
   opacity: 1;
 }
-.hoverButton:after,.hoverButtonB:after {
+
+.hoverButton:after, .hoverButtonB:after {
   content: "";
   position: absolute;
   top: 0;
@@ -56,31 +69,11 @@ $naviWidth2:40%;
   border: solid #FFF 1px;
 }
 
-
-.hoverButtonB:after{
+.hoverButtonB:after {
   border: solid #CCC 1px;
 }
 
 /*------特殊按钮End------*/
-
-/*=======封面效果======*/
-
-.coverTitle {
-  width: 20em;
-  height: 2em;
-  font-size: 1.5em;
-  letter-spacing: 0.5em;
-  color: RGB(192, 164, 144);
-}
-
-.coverIntro {
-  width: 20em;
-  height: 4em;
-  font-size: 3em;
-  color: white;
-}
-
-/*-------封面End------*/
 
 /*========menu动态效果========*/
 .Menu_link {
@@ -92,32 +85,65 @@ $naviWidth2:40%;
   border-bottom: 1px solid #f5f5f5;
 }
 
-.Menu_hamburger:before {
-  top: -4px;
+@media screen and (min-width: 600px) {
+  .Menu_hamburger:before {
+    top: -4px;
+  }
+
+  .Menu_hamburger:after {
+    top: 4px;
+  }
+
+  .Menu_hamburger, .Menu_hamburger:after, .Menu_hamburger:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    background-color: #000;
+  }
+
+  .Menu_hamburger.Menu_init_animateIn:before {
+    animation: Anti_Menu_topHam .8s ease-in-out forwards;
+  }
+
+  .Menu_hamburger.Menu_init_animateIn:after {
+    animation: Anti_Menu_bottomHam .8s ease-in-out forwards;
+  }
+
+  .Menu_init_animateIn {
+    animation: Anti_Menu_middleHam .8s ease-in-out forwards;
+  }
+
 }
 
-.Menu_hamburger:after {
-  top: 4px;
-}
+@media screen and (max-width: 780px) {
+  .Menu_link {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    opacity: 0.6;
+    border-bottom: 0px solid #f5f5f5;
+  }
 
-.Menu_hamburger, .Menu_hamburger:after, .Menu_hamburger:before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 1px;
-  background-color: #000;
-}
+  .Menu_hamburger:before {
+    top: -4px;
+  }
 
-.Menu_hamburger.Menu_init_animateIn:before {
-  animation: Anti_Menu_topHam .8s ease-in-out forwards;
-}
+  .Menu_hamburger:after {
+    top: 4px;
+  }
 
-.Menu_hamburger.Menu_init_animateIn:after {
-  animation: Anti_Menu_bottomHam .8s ease-in-out forwards;
-}
+  .Menu_hamburger, .Menu_hamburger:after, .Menu_hamburger:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+  }
 
-.Menu_init_animateIn {
-  animation: Anti_Menu_middleHam .8s ease-in-out forwards;
 }
 
 @keyframes Anti_Menu_middleHam {
@@ -246,9 +272,6 @@ $naviWidth2:40%;
 
 /*--------图形End--------*/
 /*========字体========*/
-div,pre {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-}
 
 .title1 {
   color: #484D51;
@@ -282,18 +305,18 @@ div,pre {
 }
 
 /*========浮现效果=====*/
-.fadeIn{
-  animation:fadeIn 1s;
+.fadeIn {
+  animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
-  from{
+  from {
     opacity: 0;
-    transform: translate(0,1em);
+    transform: translate(0, 1em);
   }
-  to{
+  to {
     opacity: 1;
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
 }
 
@@ -319,12 +342,146 @@ div,pre {
   background: #000;
 }
 
-.mainPanel {
+.pointer {
   position: absolute;
-  left: $left;
+  left: 0;
   top: 0;
-  margin: 0 0;
-  width: 100%;
+  height: 2.4em;
+  width: 2px;
+  background: #597;
+}
+
+/*==========Logo===========*/
+.logo {
+  margin-left: 48px;
+  margin-top: 38px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'STSong', 宋体, sans-serif;
+  animation: logo_anim 2s ease-in-out forwards;
+}
+
+.logowrap {
+  .l1:before {
+    content: 'Open';
+    position: absolute;
+    left: 0.2em;
+    opacity: 1;
+    animation: logo_hide 2s both;
+    animation-delay: 1s;
+  }
+  .l2:before {
+    content: 'Water';
+    position: absolute;
+    left: 2.5em;
+    opacity: 1;
+    animation: logo_hide 2s both;
+    animation-delay: 2s;
+  }
+  .l1:after {
+    content: '开水';
+    position: absolute;
+    left: 0.2em;
+    opacity: 1;
+    width: 4em;
+    animation: logo_show 2s both;
+    animation-delay: 2s;
+  }
+  .l2:after {
+    content: '科技';
+    position: absolute;
+    left: 2.5em;
+    width: 4em;
+    opacity: 1;
+    animation: logo_show 2s both;
+    animation-delay: 3s;
+  }
+  .l1, .l2 {
+    animation: logo_gone 2s both;
+    animation-delay: 5s;
+  }
+}
+
+@keyframes logo_gone {
+  from {
+    opacity:1;
+  }
+  20%{
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+@keyframes logo_show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logo_hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes logo_anim {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*-------Logo End------*/
+.menuPanel {
+  margin-left: 48px;
+  margin-top: 9em;
+}
+
+.naviItem, .naviItem2 {
+  margin-top: 2em;
+  font-family: '微软雅黑', serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.naviItem2 {
+  font-size: 1.2em;
+  color: #FFF;
+}
+
+.naviItem2:hover {
+  color: #333;
+}
+
+.naviItem:hover {
+  color: #999;
+}
+
+.selected {
+  color: #CCC;
+}
+
+.naviMenu, .naviMenu2 {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  left: $left;
+  width: #{$naviWidth};
+  height: 100%;
+  border-left: solid 0.5px #CCC;
+  background-color: #FEFEFE;
+  z-index: 50;
 }
 
 .navi {
@@ -339,66 +496,28 @@ div,pre {
   z-index: 80;
 }
 
-.logo {
-  margin-left: 48px;
-  margin-top: 38px;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: 'STSong', 宋体, sans-serif;
-  animation: logo_anim 2s ease-in-out forwards;
-}
-
-@keyframes logo_anim {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.menuPanel {
-  margin-left: 48px;
-  margin-top: 9em;
-}
-
-.naviItem,.naviItem2 {
-  margin-top: 2em;
-  font-family: '微软雅黑', serif;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-.naviItem2{
-  font-size:1.2em;
-  color:#FFF;
-}
-
-.naviItem2:hover{
-  color:#333;
-}
-.naviItem:hover {
-  color: #999;
-}
-
-.selected {
-  color: #CCC;
-}
-
-.naviMenu,.naviMenu2 {
-  position: fixed;
-  top: 0;
-  margin-top: 0;
-  margin-left: 0;
+.mainPanel {
+  position: absolute;
   left: $left;
-  width: #{$naviWidth};
-  height: 100%;
-  border-left: solid 0.5px #CCC;
-  background-color: #FEFEFE;
-  z-index: 50;
+  top: 0;
+  margin: 0 0;
+  width: 100%;
 }
-.naviMenu2{
-  background-color:#484D51;
+
+@media screen and (max-width: 780px) {
+  .navi {
+    width: 0;
+  }
+  .mainPanel {
+    left: 0;
+  }
+  .naviMenu, .naviMenu2 {
+    left: 0;
+  }
+}
+
+.naviMenu2 {
+  background-color: #484D51;
   width: #{$naviWidth2}
 }
 
@@ -406,12 +525,12 @@ div,pre {
   animation: nshow 0.5s;
 }
 
-.naviShow2{
+.naviShow2 {
   animation: nshow2 0.5s;
 }
 
-.naviHide{
-  animation:nhide 0.5s 1s both;
+.naviHide {
+  animation: nhide 0.5s 1s both;
 }
 
 .menuShow {
@@ -434,11 +553,11 @@ div,pre {
 }
 
 @keyframes nhide {
-  from{
+  from {
     width: #{$naviWidth};
   }
-  to{
-    width:0;
+  to {
+    width: 0;
   }
 }
 
@@ -450,7 +569,6 @@ div,pre {
     width: #{$naviWidth}
   }
 }
-
 
 @keyframes nshow2 {
   from {

@@ -22,8 +22,7 @@
           </router-link>
         </div>
       </div>
-      <div class="pointer" ref="pointer"
-           style="position:absolute;left:0;top:0;height:2.4em;width:2px;background:#597;"></div>
+      <div class="pointer" ref="pointer"></div>
     </div>
     <!--二级导航-->
     <div class="naviMenu2" v-bind:class="{naviShow2:showNavi2}" v-show="showNavi2">
