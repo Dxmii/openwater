@@ -3,20 +3,26 @@ import Router from 'vue-router'
 import Company from '@/components/Company'
 import News from '@/components/News'
 import Product from '@/components/Product'
+import Detail from '@/components/Detail'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/company',
+      path:'/detail',
+      name:'Detail',
+      component:Detail,
+    },
+    {
+      path:'/company',
       name: 'Company',
       component: Company
     },
     {
       path: '/',
       name: 'News',
-      component: News
+      component: News,
     },
     {
       path: '/product',

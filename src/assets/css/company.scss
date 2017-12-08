@@ -18,8 +18,8 @@ $left: 70px;
 
 .company_image {
   position: fixed;
-  width: 45%;
-  height: 90vh;
+  width: 45vw;
+  height: 55vw;
   float: left;
   margin: 0 0 0 0;
   z-index: 0;
@@ -261,6 +261,7 @@ $left: 70px;
   }
   .company_image {
     width: 100vw;
+    height:120vw;
   }
   .company_info {
     position: absolute;

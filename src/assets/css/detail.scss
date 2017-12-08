@@ -1,0 +1,31 @@
+
+.detailPage {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.detailClose {
+  position: fixed;
+  width: 40px;
+  height: 30px;
+  right: 10%;
+  bottom: 10%;
+  background: #123;
+  opacity: 0.5;
+  color: white;
+  text-align: center;
+  line-height: 2.35em;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 780px) {
+  .detailClose{
+    left:15px;
+    top:15px;
+  }
+}
+.detailClose:hover {
+  opacity: 0.8;
+}

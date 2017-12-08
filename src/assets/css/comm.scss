@@ -263,6 +263,13 @@ body {
   background-color: #C0A490;
 }
 
+.v_line {
+  position: relative;
+  width: 1px;
+  left: 50%;
+  height: 80%;
+}
+
 .line {
   width: 3em;
   height: 2px;
@@ -362,6 +369,11 @@ body {
 }
 
 .logowrap {
+  z-index: 20;
+  position: fixed;
+  left: 70px;
+  top: 0;
+  color: #FFF;
   .l1:before {
     content: 'Open';
     position: absolute;
@@ -397,20 +409,20 @@ body {
     animation-delay: 3s;
   }
   .l1, .l2 {
-    animation: logo_gone 2s both;
+    animation: logo_gone 2s infinite both;
     animation-delay: 5s;
   }
 }
 
 @keyframes logo_gone {
   from {
-    opacity:1;
+    opacity: 1;
   }
-  20%{
-    opacity:1;
+  20% {
+    opacity: 0.5;
   }
   to {
-    opacity:0;
+    opacity: 1;
   }
 }
 
@@ -505,6 +517,11 @@ body {
 }
 
 @media screen and (max-width: 780px) {
+  .logowrap {
+    left: 0;
+    .l1, .l2 {
+    }
+  }
   .navi {
     width: 0;
   }

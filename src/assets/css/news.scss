@@ -52,22 +52,6 @@ $left: 70px;
 
 /*-------封面End------*/
 
-@media screen and (max-width: 780px) {
-
-  #news {
-    width: 100%;
-  }
-  .article {
-    left: 0;
-  }
-  .coverPage {
-
-  }
-  .detailButton{
-    top:30px;
-  }
-}
-
 .notelist {
   position: relative;
   width: calc(100% - #{$left});
@@ -88,6 +72,45 @@ $left: 70px;
 .cover {
   position: absolute;
   width: 100%;
+  height: 80vh;
   float: left;
-  height: $pageHeight;
+  border: solid 1px #CCC;
+}
+
+.underCover {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  left: 0;
+  top: 50vh;
+  text-align: center;
+  margin: 0 auto;
+  z-index: -1;
+  opacity: 0.8;
+  font-size: 25px;
+  font-family: 'STSong', 宋体, sans-serif;
+}
+
+@media screen and (max-width: 780px) {
+
+  #news {
+    width: 100%;
+  }
+  .article {
+    left: 0;
+  }
+  .coverPage {
+
+  }
+  .detailButton {
+    top: 30px;
+  }
+  .cover {
+    width:calc(100vw - 2px);
+    height: 115vw;
+  }
+  .underCover {
+    top:0;
+    height:110vh;
+  }
 }

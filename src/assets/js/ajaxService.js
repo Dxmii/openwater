@@ -33,14 +33,23 @@ let data = {
     cover: {
       type: 'text',//text/img
       head: '回顾盛事',
+      title: '香港国际潜水暨度假观光展',
+      title_en: 'DRT SHOW 2017',
+      time: '2017/12/15',
+      about: '一说起潜水胜地，大多数潜水爱好者一定会联想到东南亚、澳洲欧洲那些极富盛名的殿堂级潜水胜地。然而，大多数人都不知道的是，广州也有极富盛名的殿堂级潜水胜地，和潜伴在此间潜水，可以体会到广州浓厚的历史积淀和水上文化底蕴，享受独特、富有浪漫情怀的潜水体验。广州开水信息科技有限公司为您盘点一二：',
+      image: '/static/news/hongkong2.jpg',
+      link: 'http://www.openwater.com.cn/index/content/detail/model_id/6/id/21.html',
+    },
+    toplines: [{
+      type: 'text',//text/img
+      head: '回顾盛事',
       title: 'PADI潜水嘉年华',
       title_en: 'Diving Festval For PADI',
       time: '2017/11/15',
       about: '一说起潜水胜地，大多数潜水爱好者一定会联想到东南亚、澳洲欧洲那些极富盛名的殿堂级潜水胜地。然而，大多数人都不知道的是，广州也有极富盛名的殿堂级潜水胜地，和潜伴在此间潜水，可以体会到广州浓厚的历史积淀和水上文化底蕴，享受独特、富有浪漫情怀的潜水体验。广州开水信息科技有限公司为您盘点一二：',
       image: 'http://openwater.com.cn/uploads/picture/20171116/e4524d5412368b4eced883a016221613.jpg',
       link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/19.html',
-    },
-    toplines: [],
+    }],
     previous: [
       {
         title: "爱上潜水 盘点广州殿堂级潜水胜地",
