@@ -47,26 +47,67 @@ let data = {
       title_en: 'Diving Festval For PADI',
       time: '2017/11/15',
       about: '一说起潜水胜地，大多数潜水爱好者一定会联想到东南亚、澳洲欧洲那些极富盛名的殿堂级潜水胜地。然而，大多数人都不知道的是，广州也有极富盛名的殿堂级潜水胜地，和潜伴在此间潜水，可以体会到广州浓厚的历史积淀和水上文化底蕴，享受独特、富有浪漫情怀的潜水体验。广州开水信息科技有限公司为您盘点一二：',
-      image: 'http://openwater.com.cn/uploads/picture/20171116/e4524d5412368b4eced883a016221613.jpg',
+      image: '/static/news/hongkong.jpg',
       link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/19.html',
-    }],
+    },
+      {
+        title: '潜水特色展',
+        time: '2017/03/25',
+        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
+        image: '/static/news/hongkong2.jpg',
+        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
+      },
+    ],
+    puzzle: {
+      left: {
+        title: '潜水特色展',
+        time: '2017/03/25',
+        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
+        image: '/static/news/puz_left.jpg',
+        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
+      },
+      rightTop: {
+        title: '潜水特色展',
+        time: '2017/03/25',
+        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
+        image: '/static/news/puz_right_top.jpg',
+        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
+      },
+      rightButtom1: {
+        title: '潜水特色展',
+        time: '2017/03/25',
+        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
+        image: '/static/news/puz_right_btm1.jpg',
+        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
+      },
+      rightButtom2: {
+        title: '潜水特色展',
+        time: '2017/03/25',
+        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
+        image: '/static/news/puz_right_btm2.jpg',
+        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
+      },
+    },
     previous: [
       {
         title: "爱上潜水 盘点广州殿堂级潜水胜地",
         about: '一说起潜水胜地，大多数潜水爱好者一定会联想到东南亚、澳洲欧洲那些极富盛名的殿堂级潜水胜地。然而，大多数人都不知道的是，广州也有极富盛名的殿堂级潜水胜地，和潜伴在此间潜水，可以体会到广州浓厚的历史积淀和水上文化底蕴，享受独特、富有浪漫情怀的潜水体验。广州开水信息科技有限公司为您盘点一二：',
         image: 'http://openwater.com.cn/uploads/picture/20171116/e4524d5412368b4eced883a016221613.jpg',
         link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/19.html',
+        time: '2017/03/25',
 
       }, {
         title: '考潜水证应该知道的潜水教学真相',
         about: '想要考潜水证的朋友可以看这篇文章，了解一些PADI的教学要求，用来做选择潜水课程的参考，以免踩雷。考过证书的朋友可以看下，看有没有遇到这种比较不合理的潜水教学',
         image: 'http://openwater.com.cn/uploads/picture/20171121/71c999a8c06a9510234f28719882ea64.jpg',
         link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/16.html',
+        time: '2017/03/25',
       }, {
         title: '女性“潜规则”——广州帕迪7·15女士潜水日泳池体验',
         about: '2017年7月15号下午四点，广州开水信息科技有限公司联合广州潜水专业玩家——帕迪潜水为大家带来的Summer Pool Party–PADI女士潜水日盛夏泳池趴在广州海角红楼游泳场盛大开场！',
         image: 'http://openwater.com.cn/uploads/picture/20171121/776534d4f5e3981244cf16b93d021461.jpg',
         link: './test.html',
+        time: '2017/03/25',
       }
     ]
   },
@@ -114,41 +155,41 @@ let data = {
     ],
   },
   '/hollis': {
-    image:'http://www.openwater.com.cn/uploads/picture/20171124/a7481b91fef5fd060e36c1c94bf65a2e.png',
-    introduce:'当你使HOLLIS循环呼吸器进入水下领域时，你会体验到前所未有的风景和感受。HOLLIS GEAR承诺为你提供非一般的体验。',
-    products:[
+    image: 'http://www.openwater.com.cn/uploads/picture/20171124/a7481b91fef5fd060e36c1c94bf65a2e.png',
+    introduce: '当你使HOLLIS循环呼吸器进入水下领域时，你会体验到前所未有的风景和感受。HOLLIS GEAR承诺为你提供非一般的体验。',
+    products: [
       {
-        title:'100LX',
-        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/7e08a5f306f8b0a2db3b3bcd6cfb87d0.jpg',
-        intro:'通过调节器测试黄金标准——ANSTI测试系统严格检测。',
-        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/895ca6d554156bafe191feb6c7d96894.jpg',
+        title: '100LX',
+        image: 'http://www.openwater.com.cn/uploads/editor/image/20171116/7e08a5f306f8b0a2db3b3bcd6cfb87d0.jpg',
+        intro: '通过调节器测试黄金标准——ANSTI测试系统严格检测。',
+        paramImage: 'http://www.openwater.com.cn/uploads/editor/image/20171116/895ca6d554156bafe191feb6c7d96894.jpg',
       },
       {
-        title:'DC3',
-        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
-        intro:'由于100LX/DC3呼吸调节器的优秀性能' +
+        title: 'DC3',
+        image: 'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
+        intro: '由于100LX/DC3呼吸调节器的优秀性能' +
         '对产品细节的把控以及合理的价格，' +
         '这款呼吸调节器被 ScubaLab 推荐成为' +
         'ScubaLab的2016年推荐购买的深潜呼吸调节器。',
-        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/5f9db0e2be162b3314273cbc9f03ab9f.jpg',
+        paramImage: 'http://www.openwater.com.cn/uploads/editor/image/20171116/5f9db0e2be162b3314273cbc9f03ab9f.jpg',
       }
     ]
   },
   '/oceanic': {
-    image:'http://www.openwater.com.cn/uploads/picture/20171124/9a03f673068259ded79978802360d4b1.png',
-    introduce:'OCEANIC——为生命。'+
+    image: 'http://www.openwater.com.cn/uploads/picture/20171124/9a03f673068259ded79978802360d4b1.png',
+    introduce: 'OCEANIC——为生命。' +
     '广州开水信息科技有限公司为美国著名潜水品牌OCEANIC国内总经销商；本文简单介绍OCEANIC部分潜水装备，感兴趣的潜水爱好者或企业可以联系我司进行进一步了解。',
-    products:[
+    products: [
       {
-        title:'OCEANIC:EXCURSION  潜水大师',
-        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/07b3c5b7641a648fe19578e43612611b.jpg',
-        intro:'EXCURSIONTM专为一众冒险家而设计。既舒适又稳定的后充气式浮力调整装置适合对冒险狂热的你。',
-        paramImage:'http://www.openwater.com.cn/uploads/editor/image/20171116/b944f4df23acd597688468fea29ffa91.png',
+        title: 'OCEANIC:EXCURSION  潜水大师',
+        image: 'http://www.openwater.com.cn/uploads/editor/image/20171116/07b3c5b7641a648fe19578e43612611b.jpg',
+        intro: 'EXCURSIONTM专为一众冒险家而设计。既舒适又稳定的后充气式浮力调整装置适合对冒险狂热的你。',
+        paramImage: 'http://www.openwater.com.cn/uploads/editor/image/20171116/b944f4df23acd597688468fea29ffa91.png',
       },
       {
-        title:'OCEANIC MANTA RAY',
-        image:'http://www.openwater.com.cn/uploads/editor/image/20171116/d660eda6b912379b029794308722652e.jpg',
-        intro:'这款OCEANIC新出的蛙鞋，灵感来自于大海中的Giant：Manta ray（蝠鲼）'
+        title: 'OCEANIC MANTA RAY',
+        image: 'http://www.openwater.com.cn/uploads/editor/image/20171116/d660eda6b912379b029794308722652e.jpg',
+        intro: '这款OCEANIC新出的蛙鞋，灵感来自于大海中的Giant：Manta ray（蝠鲼）'
       }
     ]
   },

@@ -297,6 +297,15 @@ body {
   font-weight: bold;
 }
 
+
+.clickable{
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.clickable:hover{
+  opacity:0.5;
+}
+
 .content1 {
   text-indent: 2em;
   color: #4A4F53;

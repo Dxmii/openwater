@@ -28,17 +28,51 @@
       <div class="dark_red v_line "></div>
       潜水盛事
     </div>
-    <div class="notelist">
-      <div v-for="note in news.previous" key="title" class="note">
-        <a @click="jump(note)" class="noteImage">
-          <img class="wrap-img" :src="note.image"/>
-        </a>
-        <div class="noteTitle">{{note.title}}</div>
-        <div class="text noteAbout">{{note.about}}</div>
+    <div class="topline" >
+      <div class="tl_panel" v-for="(tl,index) in news.toplines" key="title">
+        <div class="clickable" @click="jump(tl)" v-bind:class="{left:index%2==0,right:index%2!=0}">
+          <img :src="tl.image">
+        </div>
+        <div  class="top_content" v-bind:class="{left:index%2!=0,right:index%2==0}">
+          <div @click="jump(tl)" class="title3"><span class="clickable">{{tl.title}}</span></div>
+          <div @click="jump(tl)" class="content2"><span class="clickable">{{tl.about}}</span></div>
+          <div class="content2">{{tl.time}}</div>
+        </div>
 
       </div>
+
     </div>
-    <div class="logo logowrap"><span
+
+
+    <div class="puzzle">
+      <br/>
+      <div class="plz_img  lm">
+        <img class="clickable" @click="news.puzzle&&jump(news.puzzle.left)" :src="news.puzzle?news.puzzle.left.image:null">
+        <div class="plz_img rt">
+          <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightTop)" :src="news.puzzle?news.puzzle.rightTop.image:null">
+          <div class="plz_img rb1">
+            <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightButtom1)" :src="news.puzzle?news.puzzle.rightButtom1.image:null">
+          </div>
+          <div class="plz_img rb2">
+            <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightButtom2)" :src="news.puzzle?news.puzzle.rightButtom2.image:null">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notelist">
+      <div class="title1">更早资讯</div>
+      <div v-for="note in news.previous" key="title" class="note">
+        <a @click="jump(note)" class="noteImage">
+          <img class="wrap-img clickable" :src="note.image"/>
+        </a>
+        <div class="title3 clickable">{{note.title}}</div>
+        <div class="noteAbout content1 clickable">{{note.about}}</div>
+        <div class="noteTime content1">{{note.time}}</div>
+      </div>
+    </div>
+    <div class="logo logowrap" ref="logowrap"><span
       class="l1"></span><span class="l2"></span></div>
   </div>
 </template>
@@ -61,10 +95,10 @@
     beforeDestory(){
       scrollMgr.off('NewsCover');
     },
-    methods:{
-        jump(note){
-          this.$router.push({name:'Detail',params:{link:note.link}});
-        },
+    methods: {
+      jump(note){
+        this.$router.push({name: 'Detail', params: {link: note.link}});
+      },
     },
     mounted(){
       ajax.get('/news').then(news => {
@@ -75,8 +109,14 @@
       //首屏动画效果
       $(() => {
         const coverPanel = $(this.$refs.coverPanel);
+        const logowrap = $(this.$refs.logowrap);
         const coverImg = $(this.$refs.coverImg);
         scrollMgr.on('NewsCover', top => {
+          if (top < 200) {
+            logowrap.css("transform", "translate(0px,-" + top / 2 + "px)");
+          } else {
+            logowrap.css("transform", "translate(0px,-300px)");
+          }
           if (top < 400) {
             coverImg.css("transform", "translate(0px,-" + top / 1.5 + "px)");
             coverPanel.css('opacity', (400 - top) / 400);
