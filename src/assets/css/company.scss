@@ -1,8 +1,6 @@
-$pageHeight: 110vh;
-$left: 70px;
+$pageHeight: 600px;
 #container {
   background: #111;
-  width: calc(100% - #{$left});
 }
 
 .company, .contact, .recruitment, .cooperation {
@@ -12,48 +10,72 @@ $left: 70px;
 
 /*=====Company========*/
 .company {
-  height: 150vh;
+  height: 650px;
+  @media screen and (max-width: 780px) {
+    height: 1000px;
+  }
 }
 
 .company_image {
   position: fixed;
   width: 45vw;
-  height: 55vw;
+  height: 500px;
   float: left;
   margin: 0 0 0 0;
   z-index: 0;
   overflow: hidden;
-  img{
-    width:auto;
-    height:100%;
+  img {
+    width: auto;
+    height: 100%;
   }
 
   @media screen and (max-width: 780px) {
     width: 100vw;
     height: 120vw;
 
-
   }
 }
 
 .company_info {
   position: relative;
-  top: 160px;
-  right: 10vw;
-  height: 90vh;
+  top: 120px;
+  right: 8vw;
+  height: 400px;
   float: right;
+
+  @media screen and (max-width: 780px) {
+    position: absolute;
+    left: 10px;
+    right: auto;
+    top: 150px;
+
+    .title1 {
+      color: #FFF;
+    }
+    .content2 {
+      width: 20em;
+      color: #ccc;
+    }
+  }
 }
 
 .letter {
   position: absolute;
-  top: 70vh;
+  top: 300px;
   width: 70vw;
   left: 5%;
-  height: 40vh;
+  height: 200px;
   text-align: center;
   background: #FBFBFD;
   border: solid 1px #C0A490;
   padding: 3em 5em 5em 5em;
+
+  @media screen and (max-width: 780px) {
+    width: 64vw;
+    left: 1vw;
+    top: 450px;
+    height: 400px;
+  }
 }
 
 .letter:after {
@@ -75,8 +97,12 @@ $left: 70px;
   width: 100vw;
   height: 2000px;
   background: #FFF;
-  top: 90vh;
+  top: 400px;
   left: 0;
+
+  @media screen and (max-width: 780px) {
+    top: 600px;
+  }
 }
 
 /*-------Company End-----*/
@@ -85,29 +111,41 @@ $left: 70px;
 .contact {
   position: relative;
   text-align: center;
-  height: 250vh;
+  height: auto;
+  width: 100%;
+  @media screen and (max-width: 780px) {
+    width: 100vw;
+  }
 }
 
 .contact_top {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 200px;
   overflow: hidden;
-  img{
-    width:100%;
-    height:auto;
+  img {
+    width: 100%;
+    height: auto;
+    @media screen and (max-width: 780px) {
+      width: 100%;
+      height: auto;
+    }
+
   }
 }
 
 .contact_content {
   position: relative;
-  padding: 10vh 0 20vh 0;
+  padding: 20px 0 50px 0;
   background-color: #EEF1F6;
   text-align: center;
-  height: 60vh;
+  height: 550px;
+  @media screen and (max-width: 780px) {
+    height:750px;
+  }
   div {
     .contact_way, .contact_address {
-      top: 10vh;
+      top: 80px;
       margin-left: 23vw;
       text-align: left;
       position: relative;
@@ -124,11 +162,11 @@ $left: 70px;
 .contact_bottom {
   position: relative;
   width: 100vw;
-  height: 40vh;
+  height: 300px;
   overflow: hidden;
-  img{
-    width:100%;
-    height:auto;
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -140,37 +178,69 @@ $left: 70px;
   position: relative;
   text-align: center;
 
+  @media screen and (max-width: 780px) {
+    width: 100vw;
+    img {
+    }
+
+    .hoverButton {
+      position: absolute;
+      top: 600px;
+      left: 10%;
+      z-index: 1;
+    }
+  }
+
 }
 
 .cooperation_top {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 400px;
   text-align: center;
   margin: 0 auto;
+  overflow: hidden;
+
+  @media screen and (max-width: 780px) {
+    img {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      left: 0;
+    }
+  }
+
   img {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
   }
+
   .cooperation_title {
-    position: absolute;
+    position: relative;
     font-family: 'STSongti', 微软雅黑, serif;
     color: #fff;
     font-size: 2.5em;
     text-align: center;
     margin: 0 auto;
     z-index: 1;
-    top: 30vh;
-    left: 10vw;
+    top: 150px;
     width: 20em;
+    @media screen and (max-width: 780px) {
+      font-size: 24px;
+      width: 90vw;
+      text-align: left;
+    }
   }
   .hoverButton {
     position: absolute;
-    top: 55vh;
+    top: 250px;
     left: 41%;
     z-index: 1;
+    @media screen and (max-width: 780px) {
+      left: 6vw;
+    }
   }
 }
 
@@ -178,22 +248,49 @@ $left: 70px;
   position: relative;
   background-color: #EEF1F6;
   color: #3F4447;
+
   .coopers {
     position: relative;
-    margin-top: 25vh;
+    margin-top: 200px;
     margin-left: 30%;
     div {
       line-height: 1.5em;
       text-align: left;
       font-size: 14px;
     }
+
+    .cooper_title {
+      font-size: 18px;
+      width: 380px;
+      display: block;
+    }
+  }
+
+  @media screen and(max-width: 780px) {
+    .coopers {
+      position: relative;
+      margin-top: 200px;
+      margin-left: 10vw;
+      div {
+        line-height: 1.5em;
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+
   }
 }
 
-.cooper_title {
-  font-size: 18px;
-  width: 28em;
-  display: block;
+.btitle {
+  position: relative;
+  top: 100px;
+  left: 83px;
+  width: 6em;
+  text-align: left;
+  @media screen and(max-width: 780px) {
+    top: 80px;
+    left: 23px;
+  }
 }
 
 /*-------cooperation End--------*/
@@ -206,141 +303,39 @@ $left: 70px;
     width: 100%;
     height: 100%;
   }
-  div {
-    //position:absolute;
-  }
-}
 
-//招聘背景面板
-.recruitment_info_panel {
-  position: absolute;
-  width: 60%;
-  height: 70vh;
-  background-color: #FFF;
-  top: 10%;
-  left: 20%;
-  opacity: 0.8;
-  margin: 0 auto;
-}
-
-.recruitment_title {
-  position: relative;
-  font-family: 'STSong', 宋体, sans-serif;
-  top: 20%;
-  margin-top: 1em;
-  font-size: 16px;
-}
-
-.recruitment_btn {
-  position: relative;
-  top: 30%;
-}
-
-.recruitment_content {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #FBFBFD;
-}
-
-.jobs {
-  position: relative;
-  left: 30%;
-  top: 30%;
-  text-align: left;
-}
-
-.job_intro {
-  width: 45em;
-}
-
-.btitle {
-  position: relative;
-  top: 8vh;
-  left: 83px;
-  width: 6em;
-  text-align: left;
-}
-
-/*-------recruitment End--------*/
-
-@media screen and (max-width: 780px) {
-
-  .btitle {
-    position: relative;
-    top: 14vh;
-    left: 23px;
-    width: 6em;
-    text-align: left;
-  }
-  .company_info {
-    position: absolute;
-    left: 10px;
-    right: auto;
-    .content2 {
-      width: 20em;
-    }
-  }
-  .title1 {
-    color: #FFF;
-  }
-  .letter {
-    width: 64vw;
-    left: 1vw;
-    height: 60vh;
-  }
-
-  .cooperation {
-    width: 100vw;
-    img {
-    }
-    .cooperation_title {
-      text-align: left;
-      width: 70vw;
-      font-size: 24px;
-    }
-
-    .hoverButton {
-      position: absolute;
-      top: 55vh;
-      left: 10%;
-      z-index: 1;
-    }
-  }
-
-  .contact_content {
-    height: 120vh;
-  }
-  .cooperation_content {
-    .coopers {
-      position: relative;
-      margin-top: 25vh;
-      margin-left: 10vw;
-      div {
-        line-height: 1.5em;
-        text-align: left;
-        font-size: 14px;
-      }
-    }
-  }
-  .cooper_title {
-    width: 70vw;
-  }
-
-  .jobs {
-    left: 0;
-    padding-left: 30px;
-  }
-  .job_intro {
-    width: 20em;
-  }
-
-  .recruitment {
+  @media screen and(max-width: 780px) {
     position: relative;
     text-align: center;
     width: 100vw;
-    .recruitment_info_panel {
-      height: 20%;
+  }
+
+  //招聘背景面板
+  .recruitment_info_panel {
+    position: absolute;
+    width: 60%;
+    height: 300px;
+    background-color: #FFF;
+    top: 50px;
+    left: 20%;
+    opacity: 0.8;
+    margin: 0 auto;
+
+    .recruitment_title {
+      position: relative;
+      font-family: 'STSong', 宋体, sans-serif;
+      top: 20%;
+      margin-top: 1em;
+      font-size: 16px;
+    }
+
+    .recruitment_btn {
+      position: relative;
+      top: 30%;
+    }
+
+    @media screen and(max-width: 780px) {
+      height: 180px;
       top: 2%;
       .recruitment_title {
         top: 2%;
@@ -350,7 +345,40 @@ $left: 70px;
       }
     }
   }
-  .contact {
-    width: 100vw;
+
+}
+
+.recruitment_content {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  background-color: #FBFBFD;
+
+  @media screen and(max-width: 780px) {
+    height: 800px;
   }
+
+  .jobs {
+    position: relative;
+    left: 20vw;
+    top: 200px;
+    text-align: left;
+    @media screen and(max-width: 780px) {
+      left: 10vw;
+      width: 80vw;
+    }
+  }
+
+}
+
+.job_intro {
+  width: 50vw;
+  @media screen and(max-width: 780px) {
+    width: 80vw;
+  }
+}
+
+/*-------recruitment End--------*/
+
+@media screen and (max-width: 780px) {
 }

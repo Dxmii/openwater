@@ -14,7 +14,8 @@
       <div v-bind:class="{menuPanel:true,menuShow:showNavi}">
 
         <div @mouseenter="movePointer(item.path)" @mouseleave="movePointer(selection.path||selection)"
-             class='naviItem' v-bind:class="{selected:(item.path==(selection.path||selection))}" v-for="item in navi" :ref="item.path"
+             class='naviItem' v-bind:class="{selected:(item.path==(selection.path||selection))}" v-for="item in navi"
+             :ref="item.path"
              @click="selection = item">
           <div v-if="item.children" @click="showNavi=false;showNavi2=true">{{item.name}}</div>
           <router-link v-if="item.children==null||item.children.length==0" :to="item.path" tag="div"
@@ -28,8 +29,10 @@
     <div class="naviMenu2" v-bind:class="{naviShow2:showNavi2}" v-show="showNavi2">
       <div class="logo" style="color:#FFF">OpenWater</div>
       <div class="menuPanel" v-bind:class="{menuShow:showNavi}">
-        <i style="position:relative;width:20px;height:20px;color:white;" class="el-icon-arrow-left" @click="showNavi2=false;showNavi=true"></i>
-        <div class='naviItem2' v-bind:class="{selected:(item==selection2)}" v-for="item in selection.children" :ref="item.path"
+        <i style="position:relative;width:20px;height:20px;color:white;" class="el-icon-arrow-left"
+           @click="showNavi2=false;showNavi=true"></i>
+        <div class='naviItem2' v-bind:class="{selected:(item==selection2)}" v-for="item in selection.children"
+             :ref="item.path"
              @click="selection2 = item">
           <router-link :to="{path:selection.path,query:{index:item.path}}" tag="div"
                        @click.native="showNavi2=false">{{item.name}}
@@ -41,9 +44,15 @@
     </div>
     <div class="mainPanel">
       <router-view></router-view>
+      <div class="tail">
+        <div>
+          Copyright © 2017 <span>广州开水信息科技有限公司</span> 版权所有
+        </div>
+      </div>
     </div>
     <div style="position: fixed;  width: 100%;  height: 100%;  top: 0;  left: 0;  margin: 0 0;
-  background: #111;  Opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2" @click="showNavi=false;showNavi2=false"></div>
+  background: #111;  Opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2"
+         @click="showNavi=false;showNavi2=false"></div>
   </div>
 </template>
 
@@ -56,9 +65,9 @@
     data () {
       return {
         showNavi: false,
-        showNavi2:false,
+        showNavi2: false,
         selection: '/',
-        selection2:{},
+        selection2: {},
         navi: [],
       }
     },

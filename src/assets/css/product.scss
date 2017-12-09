@@ -1,10 +1,9 @@
 $pageHeight: 110vh;
-$left: 80px;
 
 #product {
   background: #FFF;
-  width: calc(100% - #{$left});
 }
+
 .products {
   position: relative;
   top: 10vh;
@@ -34,12 +33,16 @@ $left: 80px;
 }
 
 .product_img {
-  width: 350px;
-  //height: 350px;
+  width: 250px;
+  @media screen and (max-width: 780px) {
+    width: 150px;
+  }
+
 }
-.product_panel{
-  margin:0 auto;
-  padding-right:10vw;
+
+.product_panel {
+  margin: 0 auto;
+  padding-right: 10vw;
 }
 
 .brand_intro {
@@ -48,22 +51,18 @@ $left: 80px;
   width: 90%;
   text-align: center;
   img {
-    width: 400px;
-    height: 150px;
+    width: 300px;
+    height: auto;
   }
 
 }
 
 @media screen and (max-width: 780px) {
-  .product_img {
-    width: 150px;
-    //height: 150px;
-  }
   .left {
     left: 0;
   }
   #product {
-    padding-left:30px;
+    padding-left: 30px;
   }
 
   .brand_intro {
@@ -73,7 +72,7 @@ $left: 80px;
     width: 100%;
     text-align: center;
     img {
-      margin-top:20px;
+      margin-top: 20px;
       width: 150px;
       height: 60px;
     }

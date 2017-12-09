@@ -2,7 +2,7 @@
   <div id="news">
     <div class="coverPage">
       <div class="cover mask" ref="coverImg">
-        <img :src='news.cover.image' style="position:absolute;width:100%;height:100%"/>
+        <img :src='news.cover.image'/>
       </div>
       <div class="fadeIn coverPanel" ref="coverPanel">
         <div class="panel coverTitle">
@@ -24,9 +24,13 @@
         </div>
       </div>
     </div>
-    <div class="underCover text">
-      <div class="dark_red v_line "></div>
-      潜水盛事
+    <div class="underCover titleText">
+      <!--<div class="dark_red v_line "></div>-->
+      <div>
+        <div class="arrow1"></div>
+        <div class="arrow1"></div>
+      </div>
+      <span>潜水盛事</span>
     </div>
     <div class="topline">
       <div class="tl_panel" v-for="(tl,index) in news.toplines" key="title">
@@ -62,11 +66,10 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="notelist">
-      <div class="title1">更早资讯</div>
+       <div class="titleText">更早资讯</div>
       <div v-for="note in news.previous" key="title" class="note">
 
         <div @click="jump(note)" class="noteImage">

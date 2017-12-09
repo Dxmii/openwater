@@ -8,8 +8,12 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped="">
   @import '../assets/css/detail.scss';
+
+  .tail{
+    visibility: hidden;
+  }
 </style>
 <script>
   export default{
