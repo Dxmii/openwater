@@ -106,7 +106,7 @@ let data = {
         title: '女性“潜规则”——广州帕迪7·15女士潜水日泳池体验',
         about: '2017年7月15号下午四点，广州开水信息科技有限公司联合广州潜水专业玩家——帕迪潜水为大家带来的Summer Pool Party–PADI女士潜水日盛夏泳池趴在广州海角红楼游泳场盛大开场！',
         image: 'http://openwater.com.cn/uploads/picture/20171121/776534d4f5e3981244cf16b93d021461.jpg',
-        link: './test.html',
+        link: 'http://www.openwater.com.cn/index/content/detail/model_id/6/id/17.html',
         time: '2017/03/25',
       }
     ]
@@ -126,7 +126,7 @@ let data = {
     phone: '020-37209341',
     fax: '020-37209341-802',
     wechat: '开水有文（iopenwater）',
-    topImg: 'http://openwater.com.cn/template/kaishui2017/static/images/list_01.jpg',
+    topImg: '/static/company/contact_top.jpg',
     bottomImg: 'http://openwater.com.cn/uploads/picture/20171124/2d4a58db080179333c194306e79c799e.png',
   },
   '/cooperation': {

@@ -1,4 +1,4 @@
-$left: 70px;
+$left: 69px;
 $naviWidth: 50%;
 $naviWidth2: 40%;
 
@@ -297,13 +297,13 @@ body {
   font-weight: bold;
 }
 
-
-.clickable{
+.clickable {
   transition: opacity 0.5s;
   cursor: pointer;
 }
-.clickable:hover{
-  opacity:0.5;
+
+.clickable:hover {
+  opacity: 0.5;
 }
 
 .content1 {
@@ -318,6 +318,23 @@ body {
 .text {
   letter-spacing: 0.2em;
   line-height: 1.75;
+}
+
+$font-size: 12px;
+$line-height: 1.4;
+$lines-to-show: 2;
+
+.ellipsis {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 300px;
+  height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*========浮现效果=====*/
@@ -513,6 +530,7 @@ body {
   margin-left: 0;
   width: $left;
   height: 100%;
+  border-right:solid 1px #f5f5f5;
   background-color: #FEFEFE;
   z-index: 80;
 }

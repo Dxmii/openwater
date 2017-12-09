@@ -2,7 +2,7 @@
   <div id="container">
     <div id="company" class="company">
       <div ref="companyImage" class="company_image mask">
-        <img :src="company.image" style="width:100%;height:100%;"></div>
+        <img :src="company.image"></div>
       <div ref="companyInfo" class="company_info fadeIn ">
         <div class="text title1">{{company.name}}</div>
         <div  class="text content2">{{company.intro}}</div>

@@ -28,12 +28,12 @@
       <div class="dark_red v_line "></div>
       潜水盛事
     </div>
-    <div class="topline" >
+    <div class="topline">
       <div class="tl_panel" v-for="(tl,index) in news.toplines" key="title">
         <div class="clickable" @click="jump(tl)" v-bind:class="{left:index%2==0,right:index%2!=0}">
           <img :src="tl.image">
         </div>
-        <div  class="top_content" v-bind:class="{left:index%2!=0,right:index%2==0}">
+        <div class="top_content" v-bind:class="{left:index%2!=0,right:index%2==0}">
           <div @click="jump(tl)" class="title3"><span class="clickable">{{tl.title}}</span></div>
           <div @click="jump(tl)" class="content2"><span class="clickable">{{tl.about}}</span></div>
           <div class="content2">{{tl.time}}</div>
@@ -47,14 +47,18 @@
     <div class="puzzle">
       <br/>
       <div class="plz_img  lm">
-        <img class="clickable" @click="news.puzzle&&jump(news.puzzle.left)" :src="news.puzzle?news.puzzle.left.image:null">
+        <img class="clickable" @click="news.puzzle&&jump(news.puzzle.left)"
+             :src="news.puzzle?news.puzzle.left.image:null">
         <div class="plz_img rt">
-          <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightTop)" :src="news.puzzle?news.puzzle.rightTop.image:null">
+          <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightTop)"
+               :src="news.puzzle?news.puzzle.rightTop.image:null">
           <div class="plz_img rb1">
-            <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightButtom1)" :src="news.puzzle?news.puzzle.rightButtom1.image:null">
+            <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightButtom1)"
+                 :src="news.puzzle?news.puzzle.rightButtom1.image:null">
           </div>
           <div class="plz_img rb2">
-            <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightButtom2)" :src="news.puzzle?news.puzzle.rightButtom2.image:null">
+            <img class="clickable" @click="news.puzzle&&jump(news.puzzle.rightButtom2)"
+                 :src="news.puzzle?news.puzzle.rightButtom2.image:null">
           </div>
         </div>
       </div>
@@ -64,12 +68,16 @@
     <div class="notelist">
       <div class="title1">更早资讯</div>
       <div v-for="note in news.previous" key="title" class="note">
-        <a @click="jump(note)" class="noteImage">
-          <img class="wrap-img clickable" :src="note.image"/>
-        </a>
-        <div class="title3 clickable">{{note.title}}</div>
-        <div class="noteAbout content1 clickable">{{note.about}}</div>
-        <div class="noteTime content1">{{note.time}}</div>
+
+        <div @click="jump(note)" class="noteImage">
+          <img class="clickable" :src="note.image"/>
+        </div>
+
+        <div class="noteInfo">
+          <span class="title3 clickable">{{note.title}}</span>
+          <div class="noteAbout clickable ">{{ellipsis(note.about)}}</div>
+          <div class="noteTime">{{note.time}}</div>
+        </div>
       </div>
     </div>
     <div class="logo logowrap" ref="logowrap"><span
@@ -90,6 +98,7 @@
       return {
         reading: null,
         news: {cover: {}, toplines: [], previous: []},
+        ELLIPSIS:200,
       };
     },
     beforeDestory(){
@@ -99,8 +108,22 @@
       jump(note){
         this.$router.push({name: 'Detail', params: {link: note.link}});
       },
+      ellipsis(str){
+        let l = str.length;
+        let blen = 0;
+        for(let i=0; i<l; i++) {
+          if ((str.charCodeAt(i) & 0xff00) != 0) {
+              blen++;
+            }
+          if(blen ++>this.ELLIPSIS){
+            return str.substr(0,i)+'..';
+          }
+        }
+        return str;
+      },
     },
     mounted(){
+
       ajax.get('/news').then(news => {
         this.news = news;
       });
