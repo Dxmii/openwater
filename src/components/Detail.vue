@@ -1,6 +1,6 @@
 <template>
   <div class="article">
-    <iframe class="detailPage" scrolling=auto    :src="link">
+    <iframe target="_parent" class="detailPage" scrolling=auto security="restricted" sandbox=""   :src="link">
 
     </iframe>
     <div @click='back' class="detailClose">

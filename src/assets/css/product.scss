@@ -2,20 +2,17 @@ $pageHeight: 110vh;
 
 #product {
   background: #FFF;
+  margin: 0 auto 120px auto;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 
 .products {
   position: relative;
-  top: 10vh;
-  left: 10vw;
-}
+  height: auto;
+  width: 100%;
 
-.el-row {
-  margin-bottom: 120px;
-}
-
-.content1 {
-  margin-top: 30px;
 }
 
 .content2 {
@@ -24,25 +21,50 @@ $pageHeight: 110vh;
   width: 20em;
 }
 
-.left {
+.product_panel {
   position: relative;
-  float: left;
-  margin-top: 10vh;
-  width: 40%;
-  left: 6vw;
+  top: 50px;
+  height: 400px;
+  zoom: 1;
+  overflow: auto;
+  margin-bottom: 40px;
+  @media screen and (max-width: 780px) {
+    margin: 0 auto;
+    height: 600px;
+  }
+  .left {
+    position: relative;
+    float: left;
+    width: 50%;
+    @media screen and (max-width: 780px) {
+      float: none;
+      width: 100%;
+    }
+  }
+  .right {
+    position: relative;
+    float: right;
+    width: 50%;
+    @media screen and (max-width: 780px) {
+      float: none;
+      width: 100%;
+    }
+  }
 }
 
 .product_img {
-  width: 250px;
-  @media screen and (max-width: 780px) {
-    width: 150px;
+  img {
+    width: 250px;
+    height: auto;
   }
-
 }
 
-.product_panel {
-  margin: 0 auto;
-  padding-right: 10vw;
+.product_info {
+  .title2 {
+    font-size: 26px;
+  }
+  text-align: left;
+  margin-top: 20px;
 }
 
 .brand_intro {
@@ -50,6 +72,7 @@ $pageHeight: 110vh;
   top: 20px;
   width: 90%;
   text-align: center;
+
   img {
     width: 300px;
     height: auto;
@@ -57,13 +80,14 @@ $pageHeight: 110vh;
 
 }
 
+@media screen and (min-width: 600px) {
+  .product_info.left>div{
+      position:absolute;
+      right:10vw;
+  }
+}
+
 @media screen and (max-width: 780px) {
-  .left {
-    left: 0;
-  }
-  #product {
-    padding-left: 30px;
-  }
 
   .brand_intro {
     position: relative;
@@ -79,9 +103,3 @@ $pageHeight: 110vh;
   }
 }
 
-.right {
-  float: right;
-  position: relative;
-  margin-top: 10vh;
-  width: 40%;
-}

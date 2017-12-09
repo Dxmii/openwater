@@ -34,7 +34,7 @@
     </div>
     <div class="topline">
       <div class="tl_panel" v-for="(tl,index) in news.toplines" key="title">
-        <div class="clickable" @click="jump(tl)" v-bind:class="{left:index%2==0,right:index%2!=0}">
+        <div class="clickable tl_image" @click="jump(tl)" v-bind:class="{left:index%2==0,right:index%2!=0}">
           <img :src="tl.image">
         </div>
         <div class="top_content" v-bind:class="{left:index%2!=0,right:index%2==0}">

@@ -2,17 +2,17 @@
   <div id="product">
     <div class="brand_intro">
       <img :src="brand.image">
-      <div class="text content1">
+      <div class="text">
         <span>{{brand.introduce}}</span>
       </div>
     </div>
     <div class="products">
-      <el-row v-for="(p,index) in brand.products" key="title">
-        <el-col :span="mobile?24:10">
+      <div class="product_panel" v-for="(p , index) in brand.products">
+        <div class='product_img' v-bind:class="{left:index%2==0,right:index%2!=0}">
+          <img :src="p.image">
+        </div>
+        <div class="product_info" v-bind:class="{left:index%2!=0,right:index%2==0}">
           <div>
-            <img class='product_img' v-if='mobile||index%2==0' :src="p.image">
-          </div>
-          <div v-if="!mobile&&index%2!=0">
             <br/><br/><br/>
             <div class="title2">产品介绍</div>
             <br/><br/><br/><br/>
@@ -21,20 +21,8 @@
               <span class="content2">{{p.intro}}</span>
             </div>
           </div>
-        </el-col>
-        <el-col :span="mobile?24:14">
-          <img class='product_img' v-if='!mobile&&index%2!=0' :src="p.image">
-          <div class="product_panel" v-if="mobile||index%2==0">
-            <br/><br/><br/>
-            <div class="title2">产品介绍</div>
-            <br/><br/><br/><br/>
-            <div class="title3"><strong>{{p.title}}</strong></div>
-            <div>
-              <span class="content2">{{p.intro}}</span>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
     </div>
   </div>
 </template>
