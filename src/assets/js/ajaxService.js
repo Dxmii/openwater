@@ -129,7 +129,7 @@ let data = {
     name: '开水科技',
     intro: '拥有市中心潜水泳池，五米深潜，城市中心也能畅享潜水体验',
     story: '广州开水作为休闲运动产业发展的服务者、拓展者、引领者，致力于建立和发展休闲水上运动行业服务体系，提供双向、多元、跨界、互动、商业推广等国内外资源整合服务，培养专业氛围，是孵化休闲水上运动文化基地。',
-    image: 'http://openwater.com.cn/template/kaishui2017/static/images/index/index_08.jpg'
+    image: '/static/company/company.jpg',
   },
   '/contact': {
     title1: '来联系我们吧!',
@@ -140,11 +140,11 @@ let data = {
     phone: '020-37209341',
     fax: '020-37209341-802',
     wechat: '开水有文（iopenwater）',
-    topImg: '/static/company/contact_top.jpg',
-    bottomImg: 'http://openwater.com.cn/uploads/picture/20171124/2d4a58db080179333c194306e79c799e.png',
+    topImg: '/static/company/contact.jpg',
+    bottomImg:'/static/company/wechat.jpg',
   },
   '/cooperation': {
-    image: 'http://openwater.com.cn/template/kaishui2017/static/images/index/index_14.jpg',
+    image: '/static/company/cooperation.jpg',
     title: '我们为休闲产业集群制造平台，准备抓住时机',
     contents: [
       {
@@ -161,7 +161,7 @@ let data = {
     ],
   },
   '/recruitment': {
-    image: 'http://blog.flatironschool.com/wp-content/uploads/2016/12/Kailee-Gray-background2.png',
+    image:'/static/company/job.jpg',
     title: '只要，你是独一无二的你',
     introduce: '开水科技的迅速增长使得我们需要继续储备我们的人才库。我们目前有一个小团队，但我们的业务正在迅速扩大，我们正在招聘以满足对我们产品的需求。如果你看到一个让你感兴趣的职位，请发给我们一份简历或者你的作品，在主题栏中写上该职位和姓名',
     jobs: [

@@ -65,7 +65,7 @@
       </div>
     </div>
     <div id="contact" class="contact">
-      <div class="contact_top mask">
+      <div class="contact_top">
         <img :src="contact.topImg">
       </div>
       <div class="contact_content">
