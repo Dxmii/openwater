@@ -4,14 +4,14 @@
       <div ref="companyImage" class="company_image" v-bind:class="{mask:mobile}">
         <img :src="company.image"></div>
       <div ref="companyInfo" class="company_info fadeIn ">
-        <div class="text title1">{{company.name}}</div>
-        <div  class="text content2">{{company.intro}}</div>
+        <div class="text title1 bold">{{company.name}}</div>
+        <div class="text content2">{{company.intro}}</div>
       </div>
     </div>
     <div class="plank"></div>
     <div class="letter">
       <div class="text title2">我们的故事</div>
-      <div class="text content1">{{company.story}}</div>
+      <div class="text content1 songti">{{company.story}}</div>
     </div>
     <div id="cooperation" class="cooperation">
       <div ref="cooperation_img" class="cooperation_top mask">
@@ -27,13 +27,13 @@
           <div v-for="c in cooperation.contents">
             <div class="dark_red line"></div>
             <br/><br/>
-            <div ><strong class="cooper_title">{{c.title}}</strong></div>
+            <div ><strong class="cooper_title yahei">{{c.title}}</strong></div>
             <br/>
-            <div>联系人:{{c.contacts}}</div>
+            <div class="cooper_content font14 light_brown yahei">联系人:{{c.contacts}}</div>
             <br/>
-            <div>电子邮箱:{{c.email}}</div>
+            <div class="cooper_content font14 light_brown yahei">电子邮箱:{{c.email}}</div>
             <br/>
-            <div>联系电话:{{c.phone}}</div>
+            <div class="cooper_content font14 light_brown yahei">联系电话:{{c.phone}}</div>
             <br/><br/><br/><br/>
           </div>
         </div>
@@ -55,12 +55,13 @@
         <div class="jobs text">
           <div class="dark_red line"></div>
           <br/>
-          <div class="job_intro" style="font-size:12px;">{{recruitment.introduce}}</div>
+          <div class="job_intro font12 yahei light_brown">{{recruitment.introduce}}</div>
           <br/>
-          <strong v-for="job in recruitment.jobs">
-            {{job}}
-            <br/><br/>
-          </strong>
+
+          <div class="job yahei font14" v-for="job in recruitment.jobs">
+            <strong>{{job}}</strong>
+          </div>
+
         </div>
       </div>
     </div>
@@ -69,26 +70,26 @@
         <img :src="contact.topImg">
       </div>
       <div class="contact_content">
-        <div class="title1">{{contact.title1}}</div>
+        <div class="title songti font20">{{contact.title1}}</div>
         <div class="content2">{{contact.title2}}</div>
         <div>
           <div class="contact_address">
-            <div class="title3">我在这里</div>
-            <div class="dark_red line"></div>
-            <div>{{contact.city}}</div>
-            <div>{{contact.street}}</div>
-            <div>{{contact.building}}</div>
+            <div class="yahei font16 bold dark_ink">我在这里</div>
+            <div class="yahei dark_red line" style="width:30px"></div>
+            <div class="yahei contact_info">{{contact.city}}</div>
+            <div class="yahei contact_info">{{contact.street}}</div>
+            <div class="yahei contact_info">{{contact.building}}</div>
           </div>
           <div class="contact_way">
-            <div class="title3">等你联系</div>
-            <div class="dark_red line"></div>
-            <div>电话：{{contact.phone}}</div>
-            <div>传真：{{contact.fax}}</div>
-            <div>公众号：{{contact.wechat}}</div>
+            <div class="yahei font16 bold  dark_ink">等你联系</div>
+            <div class="dark_red line" style="width:30px"></div>
+            <div class="yahei contact_info">电话：{{contact.phone}}</div>
+            <div class="yahei contact_info">传真：{{contact.fax}}</div>
+            <div class="yahei contact_info">公众号：{{contact.wechat}}</div>
           </div>
         </div>
       </div>
-      <div class="contact_bottom ">
+      <div class="contact_bottom">
         <img :src="contact.bottomImg"/>
       </div>
     </div>
@@ -139,7 +140,7 @@
         const info = $(this.$refs.companyInfo);
         const title = $(this.$refs.cooperation_title);
         const btn = $(this.$refs.cooperation_btn);
-        const img = $(this.$refs.cooperation_img);
+//        const img = $(this.$refs.cooperation_img);
         const coop = $('#cooperation').offset().top;
         scrollMgr.on('CompanyInfo', top => {
           if (top < 400) {
@@ -150,7 +151,8 @@
 
           let off1 = top - coop;
           if (off1 > 0) {
-            img.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
+            title.css("transform", "translate(0px," + off1 / 1.5 + "px)");
+            btn.css("transform", "translate(0px," + off1 / 1.5 + "px)");
             title.css('opacity', (400 - off1) / 400);
             btn.css('opacity', (400 - off1) / 400);
           }

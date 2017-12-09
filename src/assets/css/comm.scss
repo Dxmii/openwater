@@ -3,7 +3,7 @@ $naviWidth: 50%;
 $naviWidth2: 40%;
 
 div, pre {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: "STSong", "宋体", Arial, sans-serif;
 }
 
 body {
@@ -15,14 +15,18 @@ body {
 
 /*=======特殊按钮效果=======*/
 
+$btn_w: 11;
+$btn_h: 3;
+
 .hoverButton, .hoverButtonB {
-  width: 10em;
-  height: 2.5em;
-  transition: color 3s;
-  line-height: 2.5;
+  width: #{$btn_w}em;
+  height: #{$btn_h}em;
+  transition: color 2s;
+  line-height: #{$btn_h};
   margin-top: 2em;
   text-align: center;
   color: #FFF;
+  cursor: pointer;
 }
 
 .hoverButtonB {
@@ -34,8 +38,8 @@ body {
   position: absolute;
   top: 0;
   left: 1px;
-  width: 10em;
-  height: 2.6em;
+  width: #{$btn_w}em;
+  height: #{$btn_h+0.1}em;
   background: #FFF;
   text-align: center;
   z-index: -2;
@@ -64,8 +68,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 10em;
-  height: 2.5em;
+  width: #{$btn_w}em;
+  height: #{$btn_h}em;
   border: solid #FFF 1px;
 }
 
@@ -261,6 +265,43 @@ body {
 
 .dark_red {
   background-color: #C0A490;
+  color: #C0A490;
+}
+
+.dark_ink {
+  color: #484d51;
+}
+
+.light_brown {
+  color: #a3a6a8;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.font30 {
+  font-size: 30px;
 }
 
 .v_line {
@@ -271,10 +312,10 @@ body {
 }
 
 .line {
-  width: 3em;
-  height: 2px;
+  width: 45px;
   top: 1.5em;
   left: 0;
+  border-top: 1px solid;
 }
 
 /*--------图形End--------*/
@@ -282,13 +323,14 @@ body {
 
 .title1 {
   color: #484D51;
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "STSongti", "宋体", Arial, sans-serif;
-  font-size: 3.0em;
+  font-family: "STSong", "宋体", Arial, sans-serif;
+  font-size: 36px;
 }
 
 .title2 {
   color: #CAB2A1;
-  font-size: 0.8em;
+  font-family: "STSong", "宋体", Arial, sans-serif;
+  font-size: 12px;
 }
 
 .title3 {
@@ -306,18 +348,30 @@ body {
   opacity: 0.5;
 }
 
+.songti {
+  font-family: 'STSong', 宋体, sans-serif;
+}
+
+.yahei {
+  font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+}
+
 .content1 {
-  text-indent: 2em;
   color: #4A4F53;
+  font-size: 14px;
 }
 
 .content2 {
-  color: #5B5B5B;
+  color: #A3A6A8;
+  font-size: 12px;
 }
 
 .text {
-  letter-spacing: 0.2em;
   line-height: 1.75;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .tail {
@@ -327,11 +381,11 @@ body {
   background: #111;
   div {
     position: absolute;
-    top:15px;
-    left:25px;
-    color:#555;
-    span{
-      color:#CCC;
+    top: 15px;
+    left: 25px;
+    color: #555;
+    span {
+      color: #CCC;
     }
   }
 }
@@ -370,8 +424,6 @@ $lines-to-show: 2;
 }
 
 /*-------浮现效果End------*/
-
-/*========字体END========*/
 
 .wrap-img {
   width: 100%;
@@ -557,10 +609,10 @@ $lines-to-show: 2;
   top: 0;
   margin: 0 0;
   width: calc(100vw - #{$left});
-  @media screen and(max-width: 780px){
-    width:100vw;
+  @media screen and(max-width: 780px) {
+    width: 100vw;
   }
-  height:auto;
+  height: auto;
 }
 
 @media screen and (max-width: 780px) {

@@ -10,7 +10,7 @@ $pageHeight: 600px;
 
 /*=====Company========*/
 .company {
-  height: 650px;
+  height: 150vh;
   @media screen and (max-width: 780px) {
     height: 1000px;
   }
@@ -19,7 +19,7 @@ $pageHeight: 600px;
 .company_image {
   position: fixed;
   width: 45vw;
-  height: 500px;
+  height: 100vh;
   float: left;
   margin: 0 0 0 0;
   z-index: 0;
@@ -38,10 +38,18 @@ $pageHeight: 600px;
 
 .company_info {
   position: relative;
-  top: 120px;
-  right: 8vw;
+  top: 25vh;
+  left: 48vw;
   height: 400px;
-  float: right;
+  float: left;
+
+  .content2 {
+    margin-top: 10px;
+    width: 32vw;
+    @media screen and (max-width: 780px) {
+      width: 20em;
+    }
+  }
 
   @media screen and (max-width: 780px) {
     position: absolute;
@@ -52,29 +60,33 @@ $pageHeight: 600px;
     .title1 {
       color: #FFF;
     }
-    .content2 {
-      width: 20em;
-      color: #ccc;
-    }
   }
 }
 
 .letter {
   position: absolute;
-  top: 300px;
-  width: 70vw;
-  left: 5%;
-  height: 200px;
+  top: 85vh;
+  width: 82vw;
+  left: 5vw;
+  height: 250px;
   text-align: center;
+  margin: 0 auto;
   background: #FBFBFD;
-  border: solid 1px #C0A490;
-  padding: 3em 5em 5em 5em;
+  padding-top: 60px;
 
   @media screen and (max-width: 780px) {
     width: 64vw;
     left: 1vw;
     top: 450px;
     height: 400px;
+  }
+  .content1 {
+    position: relative;
+    left: 0;
+    top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 49.2vw;
   }
 }
 
@@ -84,12 +96,13 @@ $pageHeight: 600px;
   bottom: 30px;
   left: 50%;
   width: 1px;
-  height: 60px;
+  height: 50px;
   background: #C0A490 100%;
+  opacity: 0.5;
 }
 
 .letter div {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .plank {
@@ -97,7 +110,7 @@ $pageHeight: 600px;
   width: 100vw;
   height: 2000px;
   background: #FFF;
-  top: 400px;
+  top: 100vh;
   left: 0;
 
   @media screen and (max-width: 780px) {
@@ -124,9 +137,9 @@ $pageHeight: 600px;
   height: 300px;
   overflow: hidden;
   @media screen and(max-width: 780px) {
-    height:220px;
+    height: 220px;
   }
-    img {
+  img {
     width: 100%;
     height: auto;
     @media screen and (max-width: 780px) {
@@ -142,20 +155,39 @@ $pageHeight: 600px;
   padding: 20px 0 50px 0;
   background-color: #EEF1F6;
   text-align: center;
-  height: 400px;
+  height: 100vh;
+  margin: 0 auto;
   @media screen and (max-width: 780px) {
     height: 750px;
   }
+  .title {
+    position: relative;
+    top: 10%;
+  }
+  .content2 {
+    position: relative;
+    top: 15%;
+  }
   div {
+    position: relative;
     .contact_way, .contact_address {
-      top: 80px;
-      margin-left: 23vw;
+      top: 50px;
+      margin-left: 42vw;
+      margin-top: 100px;
+      @media screen and(max-width: 780px) {
+        margin-top: 90px;
+        top: 120px;
+        margin-left: 30%;
+      }
       text-align: left;
       position: relative;
-      float: left;
-      line-height: 1.75em;
-      div {
-        margin-top: 2em;
+      .line {
+        position: relative;
+        top: 20px;
+      }
+      .contact_info {
+        position: relative;
+        top: 30px;
       }
     }
   }
@@ -172,7 +204,7 @@ $pageHeight: 600px;
     height: auto;
   }
   @media screen and(max-width: 780px) {
-    height:180px;
+    height: 180px;
   }
 }
 
@@ -183,7 +215,7 @@ $pageHeight: 600px;
 .cooperation {
   position: relative;
   text-align: center;
-
+  margin: 0 auto;
   @media screen and (max-width: 780px) {
     width: 100vw;
     img {
@@ -202,12 +234,13 @@ $pageHeight: 600px;
 .cooperation_top {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   text-align: center;
   margin: 0 auto;
   overflow: hidden;
 
   @media screen and (max-width: 780px) {
+    height: 500px;
     img {
       position: absolute;
       width: auto;
@@ -225,13 +258,12 @@ $pageHeight: 600px;
 
   .cooperation_title {
     position: relative;
-    font-family: 'STSongti', 微软雅黑, serif;
     color: #fff;
     font-size: 2.5em;
     text-align: center;
     margin: 0 auto;
     z-index: 1;
-    top: 150px;
+    top: 180px;
     width: 25em;
     @media screen and (max-width: 780px) {
       font-size: 24px;
@@ -240,12 +272,12 @@ $pageHeight: 600px;
     }
   }
   .hoverButton {
-    position: absolute;
-    top: 250px;
-    left: 41%;
+    margin: 0 auto;
+    position: relative;
+    top: 205px;
     z-index: 1;
     @media screen and (max-width: 780px) {
-      left: 6vw;
+      margin: 0 0;
     }
   }
 }
@@ -254,20 +286,27 @@ $pageHeight: 600px;
   position: relative;
   background-color: #EEF1F6;
   color: #3F4447;
-
+  height: 700px;
+  @media screen and(max-width: 780px) {
+    height: 800px;
+  }
   .coopers {
     position: relative;
     margin-top: 200px;
     margin-left: 30%;
     div {
-      line-height: 1.5em;
+      line-height: 1.1em;
       text-align: left;
-      font-size: 14px;
     }
 
+    .cooper_content {
+      position: relative;
+      top: 10px;
+    }
     .cooper_title {
-      font-size: 18px;
-      width: 380px;
+      font-size: 14px;
+      width: 46vw;
+      line-height: 1.3em;
       display: block;
     }
   }
@@ -293,6 +332,8 @@ $pageHeight: 600px;
   left: 83px;
   width: 6em;
   text-align: left;
+  font-size: 20px;
+  color: #484d51;
   @media screen and(max-width: 780px) {
     top: 80px;
     left: 23px;
@@ -307,7 +348,7 @@ $pageHeight: 600px;
   text-align: center;
   img {
     width: 100%;
-    height: 450px;
+    height: 100vh;
     @media screen and(max-width: 780px) {
       height: 250px;
     }
@@ -322,9 +363,9 @@ $pageHeight: 600px;
   .recruitment_info_panel {
     position: absolute;
     width: 60%;
-    height: 300px;
+    height: 60vh;
     background-color: #FFF;
-    top: 50px;
+    top: 20vh;
     left: 20%;
     opacity: 0.8;
     margin: 0 auto;
@@ -359,31 +400,37 @@ $pageHeight: 600px;
 .recruitment_content {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 550px;
   background-color: #FBFBFD;
 
   @media screen and(max-width: 780px) {
-    height: 800px;
+    height: 600px;
   }
 
   .jobs {
     position: relative;
     left: 20vw;
-    top: 200px;
+    top: 180px;
     text-align: left;
     @media screen and(max-width: 780px) {
       left: 10vw;
       width: 80vw;
     }
+    .job_intro {
+      position: relative;
+      top: 10px;
+      width: 50vw;
+      @media screen and(max-width: 780px) {
+        width: 80vw;
+      }
+    }
+    .job {
+      position: relative;
+      top: 30px;
+      margin-bottom: 10px;
+    }
   }
 
-}
-
-.job_intro {
-  width: 50vw;
-  @media screen and(max-width: 780px) {
-    width: 80vw;
-  }
 }
 
 /*-------recruitment End--------*/
