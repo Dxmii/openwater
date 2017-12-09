@@ -1,7 +1,7 @@
 <template xmlns:v-bind="http://www.w3.org/1999/xhtml">
   <div id="container">
     <div id="company" class="company">
-      <div ref="companyImage" class="company_image mask">
+      <div ref="companyImage" class="company_image" v-bind:class="{mask:mobile}">
         <img :src="company.image"></div>
       <div ref="companyInfo" class="company_info fadeIn ">
         <div class="text title1">{{company.name}}</div>
@@ -14,7 +14,7 @@
       <div class="text content1">{{company.story}}</div>
     </div>
     <div id="cooperation" class="cooperation">
-      <div ref="cooperation_img" class="mask cooperation_top">
+      <div ref="cooperation_img" class="cooperation_top mask">
         <img :src="cooperation.image"/>
         <div ref="cooperation_title" class="text cooperation_title">{{cooperation.title}}</div>
         <div ref="cooperation_btn" class="hoverButton" style="z-index:1;" @click="scrollInto('cooperation_content')">
@@ -107,6 +107,7 @@
         contact: {},
         recruitment: {},
         cooperation: {},
+        mobile:false,
       }
     },
     beforeDestroy(){
@@ -131,6 +132,7 @@
       ajax.get('/cooperation').then(cooperation => {
         this.cooperation = cooperation;
       });
+      this.mobile = screen.width < 780;
 
       //滚屏动画效果
       $(() => {
