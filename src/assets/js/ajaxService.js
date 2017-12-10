@@ -134,7 +134,7 @@ let data = {
     fax: '020-37209341-802',
     wechat: '开水有文（iopenwater）',
     topImg: '/static/company/contact.jpg',
-    bottomImg:'/static/company/wechat.jpg',
+    bottomImg: '/static/company/wechat.jpg',
   },
   '/cooperation': {
     image: '/static/company/cooperation.jpg',
@@ -154,7 +154,7 @@ let data = {
     ],
   },
   '/recruitment': {
-    image:'/static/company/job.jpg',
+    image: '/static/company/job.jpg',
     title: '只要，你是独一无二的你',
     introduce: '开水科技的迅速增长使得我们需要继续储备我们的人才库。我们目前有一个小团队，但我们的业务正在迅速扩大，我们正在招聘以满足对我们产品的需求。如果你看到一个让你感兴趣的职位，请发给我们一份简历或者你的作品，在主题栏中写上该职位和姓名',
     jobs: [
@@ -162,18 +162,32 @@ let data = {
     ],
   },
   '/hollis': {
-    image: 'http://www.openwater.com.cn/uploads/picture/20171124/a7481b91fef5fd060e36c1c94bf65a2e.png',
+    image: '/static/products/hollis.png',
     introduce: '当你使HOLLIS循环呼吸器进入水下领域时，你会体验到前所未有的风景和感受。HOLLIS GEAR承诺为你提供非一般的体验。',
     products: [
       {
         title: '100LX',
-        image: 'http://www.openwater.com.cn/uploads/editor/image/20171116/7e08a5f306f8b0a2db3b3bcd6cfb87d0.jpg',
+        image: '/static/products/p1.jpg',
         intro: '通过调节器测试黄金标准——ANSTI测试系统严格检测。',
         paramImage: 'http://www.openwater.com.cn/uploads/editor/image/20171116/895ca6d554156bafe191feb6c7d96894.jpg',
       },
       {
         title: 'DC3',
-        image: 'http://www.openwater.com.cn/uploads/editor/image/20171116/90b2195be3cd87a3150031a043ee53d1.jpg',
+        image: '/static/products/p2.jpg',
+        intro: '由于100LX/DC3呼吸调节器的优秀性能' +
+        '对产品细节的把控以及合理的价格，' +
+        '这款呼吸调节器被 ScubaLab 推荐成为' +
+        'ScubaLab的2016年推荐购买的深潜呼吸调节器。',
+        paramImage: 'http://www.openwater.com.cn/uploads/editor/image/20171116/5f9db0e2be162b3314273cbc9f03ab9f.jpg',
+      }, {
+        title: '100LX',
+        image: '/static/products/p1.jpg',
+        intro: '通过调节器测试黄金标准——ANSTI测试系统严格检测。',
+        paramImage: 'http://www.openwater.com.cn/uploads/editor/image/20171116/895ca6d554156bafe191feb6c7d96894.jpg',
+      },
+      {
+        title: 'DC3',
+        image: '/static/products/p2.jpg',
         intro: '由于100LX/DC3呼吸调节器的优秀性能' +
         '对产品细节的把控以及合理的价格，' +
         '这款呼吸调节器被 ScubaLab 推荐成为' +
@@ -183,7 +197,7 @@ let data = {
     ]
   },
   '/oceanic': {
-    image: 'http://www.openwater.com.cn/uploads/picture/20171124/9a03f673068259ded79978802360d4b1.png',
+    image: '/static/products/oceanic.png',
     introduce: 'OCEANIC——为生命。' +
     '广州开水信息科技有限公司为美国著名潜水品牌OCEANIC国内总经销商；本文简单介绍OCEANIC部分潜水装备，感兴趣的潜水爱好者或企业可以联系我司进行进一步了解。',
     products: [

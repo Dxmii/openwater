@@ -53,8 +53,8 @@
       <div class="plz_img  lm">
         <div class="img">
           <img class="" @click="news.puzzle&&jump(news.puzzle.left)"
-               :src="news.puzzle?news.puzzle.left.image:null">
-        </div>
+               :src="news.puzzle?news.puzzle.left.image:null" style="float:left;">
+          </div>
         <div class="plz_img rt">
           <div class="img">
             <img class="" @click="news.puzzle&&jump(news.puzzle.rightTop)"
@@ -152,7 +152,7 @@
             coverPanel.css('opacity', (400 - top) / 400);
           }
           let off1 = top - puzzleOffset;
-          if (off1 > -200) {
+          if (off1 >0) {
             puzzle.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
           }
         });

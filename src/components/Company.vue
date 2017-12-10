@@ -114,7 +114,7 @@
     },
     watch: {
       '$route.params.id'(id){
-        this.scrollInto(id?id:"company");
+        this.scrollInto(id ? id : "company");
       }
     },
     beforeDestroy(){
@@ -143,6 +143,8 @@
 
       //滚屏动画效果
       $(() => {
+        //第一次加载时跳转页面
+        this.scrollInto(this.$route.params.id);
         let info = $(this.$refs.companyInfo);
         let title = $(this.$refs.cooperation_title);
         let btn = $(this.$refs.cooperation_btn);

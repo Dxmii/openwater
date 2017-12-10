@@ -13,6 +13,8 @@ $pz_mh: 250;
     top: 100px;
     height: 200px;
     padding-top: 0;
+    //visibility: hidden;
+    display: none;
   }
 }
 
@@ -243,7 +245,7 @@ $tl_padding: 6;
   top: -3vh;
 
   @media screen {
-
+    top: -20px
   }
 }
 
@@ -302,6 +304,10 @@ $tl_padding: 6;
     margin-bottom: 40px;
     @media screen and (max-width: 780px) {
       border-bottom: solid 1px #f2f2f2;
+      transform: translate(0, 0);
+    }
+    span{
+      margin:0 auto;
     }
   }
 }
@@ -315,14 +321,14 @@ $line-height: 1.85;
   position: relative;
   border-bottom: dashed 1px #F2F2F2;
   width: calc(#{$note_i_w} + #{$note_art_w+$note_sp_w});
-  height: 170px;
+  height: 150px;
   left: 6vw;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media screen and (max-width: 780px) {
     left: 2vw;
-    height: 350px;
+    height: 400px;
     width: 98vw;
     border-bottom: dashed 1px #CCC;
   }
@@ -346,26 +352,24 @@ $line-height: 1.85;
     .noteAbout {
       position: relative;
       width: $note_art_w;
-      height: 10vh;
       top: 3vh;
       line-height: #{$line-height}em;
       font-size: #{$note_font}em;
+      height: #{$note_font*$line-height*2 + $line-height}em;
       @media screen and (max-width: 780px) {
-        width: 95vw;
+        width: 90vw;
         display: block; /* Fallback for non-webkit */
         display: -webkit-box;
-        max-width: 95vw;
-        height: #{$note_font*$line-height*2 - 1}em; /* Fallback for non-webkit */
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
+        max-width: 90vw;
         overflow: hidden;
+        height: #{$note_font*$line-height*5 +1}em;
         text-overflow: ellipsis;
       }
     }
     .noteTime {
+      position: relative;
       color: #cbcbcb;
       @media screen and (max-width: 780px) {
-        margin-top: 1.2em;
       }
     }
   }

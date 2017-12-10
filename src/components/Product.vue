@@ -3,7 +3,7 @@
     <div class="brand_intro">
       <img :src="brand.image">
       <div class="text">
-        <span>{{brand.introduce}}</span>
+        <p>{{brand.introduce}}</p>
       </div>
     </div>
     <div class="products">
@@ -12,13 +12,11 @@
           <img :src="p.image">
         </div>
         <div class="product_info" v-bind:class="{left:index%2!=0,right:index%2==0}">
-          <div>
-            <br/><br/><br/>
+          <div class="panel">
             <div class="title2">产品介绍</div>
-            <br/><br/><br/><br/>
-            <div class="title3"><strong>{{p.title}}</strong></div>
-            <div>
-              <span class="content2">{{p.intro}}</span>
+            <div class="product_name font18 songti bold dark_ink"><strong>{{p.title}}</strong></div>
+            <div class="product_desc">
+              <span class="font12 light_brown songti">{{p.intro}}</span>
             </div>
           </div>
         </div>
