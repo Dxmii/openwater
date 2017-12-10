@@ -589,6 +589,10 @@ $lines-to-show: 2;
 .menuPanel {
   margin-left: 48px;
   margin-top: 9em;
+
+  @media screen and (max-width:780px){
+    margin-left: 20vw;
+  }
 }
 
 .naviItem div, .naviItem2 div {
@@ -597,6 +601,12 @@ $lines-to-show: 2;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
+
+  @media screen and (max-width:780px){
+    font-size: 25px;
+  }
+
+
 }
 
 .naviItem2 {
@@ -654,6 +664,26 @@ $lines-to-show: 2;
   height: auto;
 }
 
+
+@keyframes nshow {
+  from {
+    width: 0
+  }
+  to {
+    width: #{$naviWidth}
+  }
+}
+
+@keyframes nshow2 {
+  from {
+    width: 0
+  }
+  to {
+    width: #{$naviWidth2}
+  }
+}
+
+
 @media screen and (max-width: 780px) {
   .logowrap {
     left: 0;
@@ -668,6 +698,25 @@ $lines-to-show: 2;
   }
   .naviMenu, .naviMenu2 {
     left: 0;
+    width:100vw;
+  }
+
+  @keyframes nshow {
+    from {
+      width: 0
+    }
+    to {
+      width: 100vw
+    }
+  }
+
+  @keyframes nshow2 {
+    from {
+      width: 0
+    }
+    to {
+      width: 100vw
+    }
   }
 }
 
@@ -681,7 +730,7 @@ $lines-to-show: 2;
 }
 
 .naviShow2 {
-  animation: nshow2 0.5s;
+  animation: nshow2 0.5s forwards;
 }
 
 .naviHide {
@@ -716,20 +765,3 @@ $lines-to-show: 2;
   }
 }
 
-@keyframes nshow {
-  from {
-    width: 0
-  }
-  to {
-    width: #{$naviWidth}
-  }
-}
-
-@keyframes nshow2 {
-  from {
-    width: 0
-  }
-  to {
-    width: #{$naviWidth2}
-  }
-}
