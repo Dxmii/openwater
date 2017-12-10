@@ -87,7 +87,7 @@ $hum_w: 17;
   display: block;
   position: relative;
   width: #{$left};
-  height: #{$left};
+  height: #{$left+5};
   cursor: pointer;
   border-bottom: 1px solid #f5f5f5;
 }
@@ -105,7 +105,7 @@ $hum_w: 17;
     content: "";
     position: absolute;
     width: #{$hum_w}px;
-    height: 1px;
+    height: 2px;
     background-color: #000;
   }
 
@@ -592,7 +592,7 @@ $lines-to-show: 2;
 }
 
 .naviItem2:hover {
-  color: #333;
+  color: #c0a490;
 }
 
 .naviItem:hover {
