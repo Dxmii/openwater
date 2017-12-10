@@ -1,49 +1,76 @@
-$pageHeight: 600px;
-
 /*====puzzle====*/
 
-$pz_width: 100%;
+$pz_w: 100%;
+$pz_h: 90;
+$pz_mh: 250;
 .puzzle {
-  top: 80px;
-  width: #{$pz_width};
-  height: 400px;
-  @media screen and (max-width:780px) {
-    height:200px;
+  position: relative;
+  padding-top: 7vh;
+  width: #{$pz_w};
+  height: #{$pz_h}vh;
+  z-index: 1;
+  @media screen and (max-width: 780px) {
+    top: 100px;
+    height: 200px;
+    padding-top: 0;
   }
 }
 
 .lm {
   position: relative;
-  width: #{$pz_width};
-  height: 120px;
-  img {
+  width: #{$pz_w};
+  height: #{$pz_h}vh;
+  cursor: pointer;
+  .img {
     position: relative;
     float: left;
-    width: #{$pz_width/2};
-    height: 30vw;
-  }
-}
-
-.rt {
-  position: relative;
-  width: #{$pz_width/2};
-  height: 15vw;
-  float: right;
-  img {
-    width: 100%;
+    width: 50%;
     height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
+  @media screen and (max-width: 780px) {
+    height: #{$pz_mh}px;
+  }
+  .rt {
+    position: relative;
+    width: #{$pz_w/2};
+    height: #{$pz_h/2}vh;
+    float: right;
+    .img {
+      width: 100%;
 
-.rb1, .rb2 {
-  position: relative;
-  width: #{$pz_width / 2};
-  height: 15vw;
-  float: left;
-  img {
-    width: 100%;
-    height: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @media screen and (max-width: 780px) {
+      height: #{$pz_mh/2}px;
+    }
   }
+
+  .rb1, .rb2 {
+    position: relative;
+    width: #{$pz_w / 2};
+    height: #{$pz_h/2}vh;
+    float: left;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 780px) {
+      height: #{$pz_mh/2}px;
+    }
+  }
+
 }
 
 /*-----puzzle end----*/
@@ -56,18 +83,23 @@ $pz_width: 100%;
   height: auto;
   min-height: 800px;
   display: block;
-  zoom:1;
+  zoom: 1;
 }
 
+$tl_sp: 4;
+$tl_p_h: 78;
+$tl_padding: 6;
 .tl_panel {
   position: relative;
   width: 100%;
-  height: 400px;
-  border-bottom: 1px #f2f2f2 solid ;
-  zoom: 1; overflow:auto;
-
-  @media screen and (max-width:780px){
-    height:700px;
+  height: #{$tl_p_h}vh;
+  border-bottom: 1px #f2f2f2 solid;
+  zoom: 1;
+  overflow: auto;
+  padding-top: 6vh;
+  padding-bottom: 8vh;
+  @media screen and (max-width: 780px) {
+    height: 800px;
   }
 
   .left {
@@ -84,43 +116,95 @@ $pz_width: 100%;
   div {
     position: relative;
     width: 50%;
-    height: 350px;
-    top: 50px;
     @media screen and (max-width: 780px) {
       width: 100%;
     }
   }
-  .top_content {
-    .title3 {
-      margin-left: 50px;
-      width: 80%;
-      height: 2em;
-    }
 
-    .content2 {
-      margin-left: 50px;
-      margin-top: 30px;
+  .top_content {
+    margin-top: 2.5vh;
+    padding: 12vh 0;
+    @media screen and (max-width: 780px) {
+      margin-top: 0;
+      top: 80px;
+    }
+    .title {
+      margin-left: #{$tl_sp}vw;
       width: 80%;
       height: auto;
+      font-size: 2vw;
+      @media screen and (max-width: 780px) {
+        font-size: 26px;
+      }
+    }
+
+    .info {
+      margin-left: #{$tl_sp}vw;
+      margin-top: 5vh;
+      width: 80%;
+      line-height: 2em;
+      height: auto;
+      font-size: 1.2vw;
+
+      @media screen and (max-width: 780px) {
+        font-size: 18px;
+        margin-top: 30px;
+      }
+    }
+    .time {
+      margin-left: #{$tl_sp}vw;
+      margin-top: 1.2vh;
+      width: 80%;
+      line-height: 2em;
+      height: auto;
+      font-size: 1vw;
+
+      @media screen and (max-width: 780px) {
+        font-size: 14px;
+      }
+
+    }
+    .readBtn {
+      margin-left: #{$tl_sp}vw;
+      width: 100px;
+      top: 1.5vh;
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid;
+      border-radius: 2px;
+      height: 28px;
+      line-height: 28px;
+      color: #cbcbcb;
+    }
+    .readBtn:hover {
+      color: #484d51;
     }
   }
 
   .tl_image {
     overflow: hidden;
     border-radius: 5px;
-    height:300px;
+    //height: #{$tl_p_h - 12}vh;
+    height: 100%;
+    @media screen and (max-width: 780px) {
+      height: auto;
+    }
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 }
 
 .coverPanel {
   position: relative;
-  top: 20%;
+  top: 28vh;
   width: 100%;
   text-align: left;
+
+  @media screen and (max-width: 780px) {
+    top: 120px;
+  }
 }
 
 .article {
@@ -130,20 +214,12 @@ $pz_width: 100%;
   height: 600px;
 }
 
-.panel {
-  position: relative;
-  margin-left: 10%;
-  z-index: 1;
-  top: 0;
-  letter-spacing: 0.1em;
-}
-
 .coverPage {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   @media screen and (max-width: 780px) {
-    height:650px;
+    height: 650px;
   }
 }
 
@@ -156,10 +232,57 @@ $pz_width: 100%;
   color: RGB(192, 164, 144);
 }
 
+.arrow1 {
+  background-image: url('/static/image/downArrow.png');
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  width: 22px;
+  height: 15px;
+  top: -3vh;
+
+  @media screen {
+
+  }
+}
+
 .coverIntro {
-  height: 4em;
-  font-size: 3em;
+  position: relative;
+  top: 0;
+  //left:10vw;
+  height: 16vh;
   color: white;
+  .detailButton {
+    position: relative;
+    margin-left: 10vw;
+    top: 10px;
+    z-index: 1;
+  }
+  .info {
+    margin-left: 10vw;
+    width: 60vw;
+    position: relative;
+    margin-top: 1vh;
+    font-size: 2.5vw;
+    @media screen and (max-width: 780px) {
+      font-size: 28px;
+    }
+  }
+  .time {
+    margin-left: 10vw;
+    width: 40vw;
+    position: relative;
+    margin-top: 2vh;
+    font-size: 1.8vw;
+    @media screen and (max-width: 780px) {
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    top: 30px;
+    width: 100vw;
+  }
 }
 
 /*-------封面End------*/
@@ -171,9 +294,11 @@ $pz_width: 100%;
   zoom: 1;
   margin: 0 auto;
   .titleText {
+    position: relative;
     text-align: center;
     width: 100%;
     height: 2em;
+    transform: translate(0, -20vh);
     margin-bottom: 40px;
     @media screen and (max-width: 780px) {
       border-bottom: solid 1px #f2f2f2;
@@ -182,8 +307,8 @@ $pz_width: 100%;
 }
 
 $note_i_w: 180px;
-$note_art_w: 60vw;
-$note_sp_w: 5vw;
+$note_art_w: 58vw;
+$note_sp_w: 7vw;
 $note_font: 1.1;
 $line-height: 1.85;
 .note {
@@ -191,7 +316,7 @@ $line-height: 1.85;
   border-bottom: dashed 1px #F2F2F2;
   width: calc(#{$note_i_w} + #{$note_art_w+$note_sp_w});
   height: 170px;
-  left: 5vw;
+  left: 6vw;
   margin-top: 40px;
   margin-bottom: 40px;
 
@@ -204,11 +329,15 @@ $line-height: 1.85;
   .noteInfo {
     position: relative;
     float: left;
+    top: 3vh;
+    @media screen and (max-width: 780px) {
+      top: 10px;
+    }
     .title3 {
       position: relative;
       top: 10px;
       display: block;
-      height: 3em;
+      height: 10vh;
       font-size: 1.5em;
       @media screen and (max-width: 780px) {
         width: 98vw;
@@ -217,7 +346,8 @@ $line-height: 1.85;
     .noteAbout {
       position: relative;
       width: $note_art_w;
-      height: 6.5em;
+      height: 10vh;
+      top: 3vh;
       line-height: #{$line-height}em;
       font-size: #{$note_font}em;
       @media screen and (max-width: 780px) {
@@ -233,8 +363,7 @@ $line-height: 1.85;
       }
     }
     .noteTime {
-      color: #ec6149 !important;
-
+      color: #cbcbcb;
       @media screen and (max-width: 780px) {
         margin-top: 1.2em;
       }
@@ -244,16 +373,16 @@ $line-height: 1.85;
   .noteImage {
     position: relative;
     float: right;
-    width: 160px;
+    width: 200px;
     height: 130px;
     overflow: hidden;
     img {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
     }
 
     @media screen and (min-width: 600px) {
-      border-radius: 4px;
+      border-radius: 2px;
     }
     @media screen and (max-width: 780px) {
       width: 95vw;
@@ -270,7 +399,7 @@ $line-height: 1.85;
 .cover {
   position: absolute;
   width: 100%;
-  height: 450px;
+  height: 90vh;
   float: left;
 
   overflow: hidden;
@@ -298,7 +427,7 @@ $line-height: 1.85;
 .underCover {
   position: absolute;
   width: 100%;
-  top: 400px;
+  top: 80vh;
   text-align: center;
   margin: 0 auto;
   z-index: -1;
@@ -344,7 +473,5 @@ $line-height: 1.85;
   .coverPage {
 
   }
-  .detailButton {
-    top: 30px;
-  }
+
 }

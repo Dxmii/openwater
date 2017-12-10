@@ -17,7 +17,15 @@ export default new Router({
     {
       path:'/company',
       name: 'Company',
-      component: Company
+      component: Company,
+      children:[
+        {
+          path:'/company/:id',
+          name: 'Company',
+          component: Company,
+
+        }
+      ],
     },
     {
       path: '/',

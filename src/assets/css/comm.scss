@@ -7,7 +7,7 @@ div, pre {
 }
 
 body {
-  overflow-x: hidden;
+  //overflow-x: hidden;
   margin: 0 0;
   left: 0;
   top: 0;
@@ -80,6 +80,9 @@ $btn_h: 3;
 /*------特殊按钮End------*/
 
 /*========menu动态效果========*/
+$hum_h: 4;
+$hum_w: 17;
+
 .Menu_link {
   display: block;
   position: relative;
@@ -91,17 +94,17 @@ $btn_h: 3;
 
 @media screen and (min-width: 600px) {
   .Menu_hamburger:before {
-    top: -4px;
+    top: #{$hum_h}px;
   }
 
   .Menu_hamburger:after {
-    top: 4px;
+    top: #{$hum_h}px;
   }
 
   .Menu_hamburger, .Menu_hamburger:after, .Menu_hamburger:before {
     content: "";
     position: absolute;
-    width: 18px;
+    width: #{$hum_w}px;
     height: 1px;
     background-color: #000;
   }
@@ -172,7 +175,7 @@ $btn_h: 3;
     transform: rotate(0deg);
   }
   100% {
-    top: 5px;
+    top: #{$hum_h}px;
     transform: rotate(0deg);
   }
 }
@@ -187,7 +190,7 @@ $btn_h: 3;
     transform: rotate(0deg);
   }
   100% {
-    top: -5px;
+    top: -#{$hum_h}px;
     transform: rotate(0deg);
   }
 }
@@ -272,6 +275,10 @@ $btn_h: 3;
   color: #484d51;
 }
 
+.light_gray {
+  color: #cbcbcb;
+}
+
 .light_brown {
   color: #a3a6a8;
 }
@@ -348,6 +355,14 @@ $btn_h: 3;
   opacity: 0.5;
 }
 
+.scalable{
+  transition: all 1s;
+}
+
+.scalable:hover{
+  transform: scale(1.1);
+}
+
 .songti {
   font-family: 'STSong', 宋体, sans-serif;
 }
@@ -377,15 +392,25 @@ $btn_h: 3;
 .tail {
   position: relative;
   width: 100%;
-  height: 40px;
-  background: #111;
+  height: 16vh;
+  background: #f6f7f8;
+  color: #cbcbcb;
   div {
     position: absolute;
-    top: 15px;
-    left: 25px;
-    color: #555;
-    span {
-      color: #CCC;
+    top: 7vh;
+    left: 6vw;
+  }
+
+   div>span{
+       @media screen and (max-width: 780px) {
+         display: block;
+       }
+   }
+
+  .icp {
+    margin-left: 5vw;
+    @media screen and (max-width: 780px) {
+      margin-left: 0;
     }
   }
 }
@@ -447,9 +472,9 @@ $lines-to-show: 2;
   position: absolute;
   left: 0;
   top: 0;
-  height: 2.4em;
+  height: 3em;
   width: 2px;
-  background: #597;
+  background: #C0A490;
 }
 
 /*==========Logo===========*/
@@ -553,11 +578,12 @@ $lines-to-show: 2;
   margin-top: 9em;
 }
 
-.naviItem, .naviItem2 {
-  margin-top: 2em;
-  font-family: '微软雅黑', serif;
-  font-weight: bold;
-  font-size: 1.5em;
+.naviItem div, .naviItem2 div {
+  margin-top: 1.8em;
+  font-family:'Microsoft YaHei' ,微软雅黑, serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .naviItem2 {
@@ -608,7 +634,7 @@ $lines-to-show: 2;
   left: $left;
   top: 0;
   margin: 0 0;
-  width: calc(100vw - #{$left});
+  width: calc(100% - #{$left});
   @media screen and(max-width: 780px) {
     width: 100vw;
   }

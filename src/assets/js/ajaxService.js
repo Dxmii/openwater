@@ -25,8 +25,16 @@ let data = {
       ],
     },
     {
-      name: '公司介绍',
+      name: '关于公司',
       path: '/Company',
+    },
+    {
+      name: '商务合作',
+      path: '/Company/cooperation',
+    },
+    {
+      name: '招聘',
+      path: '/Company/job',
     },
   ],
   '/news': {
@@ -50,20 +58,6 @@ let data = {
       image: '/static/news/hongkong.jpg',
       link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/19.html',
     },
-      {
-        title: '潜水特色展',
-        time: '2017/03/25',
-        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
-        image: '/static/news/diver1.png',
-        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
-      },
-      {
-        title: '潜水特色展',
-        time: '2017/03/25',
-        about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
-        image: '/static/news/diver1.png',
-        link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
-      },
       {
         title: '潜水特色展',
         time: '2017/03/25',
@@ -109,7 +103,6 @@ let data = {
         image: 'http://openwater.com.cn/uploads/picture/20171116/e4524d5412368b4eced883a016221613.jpg',
         link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/19.html',
         time: '2017/03/25',
-
       }, {
         title: '考潜水证应该知道的潜水教学真相',
         about: '想要考潜水证的朋友可以看这篇文章，了解一些PADI的教学要求，用来做选择潜水课程的参考，以免踩雷。考过证书的朋友可以看下，看有没有遇到这种比较不合理的潜水教学',

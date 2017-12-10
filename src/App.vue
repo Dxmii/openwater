@@ -17,7 +17,7 @@
              class='naviItem' v-bind:class="{selected:(item.path==(selection.path||selection))}" v-for="item in navi"
              :ref="item.path"
              @click="selection = item">
-          <div v-if="item.children" @click="showNavi=false;showNavi2=true">{{item.name}}</div>
+          <div v-if="item.children"  @click="showNavi=false;showNavi2=true">{{item.name}}</div>
           <router-link v-if="item.children==null||item.children.length==0" :to="item.path" tag="div"
                        @click.native="showNavi=false;showNavi2=false">{{item.name}}
           </router-link>
@@ -45,8 +45,9 @@
     <div class="mainPanel">
       <router-view></router-view>
       <div class="tail">
-        <div>
-          Copyright © 2017 <span>广州开水信息科技有限公司</span> 版权所有
+        <div class="yahei font12">
+          <span class="auth">Copyright © 2017 <span class="dark_ink">广州开水信息科技有限公司</span> 版权所有</span>
+          <span class="icp">粤ICP备16048076号-1</span>
         </div>
       </div>
     </div>

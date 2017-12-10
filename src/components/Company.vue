@@ -1,6 +1,6 @@
 <template xmlns:v-bind="http://www.w3.org/1999/xhtml">
   <div id="container">
-    <div id="company" class="company">
+    <div id="company" ref="company" class="company">
       <div ref="companyImage" class="company_image" v-bind:class="{mask:mobile}">
         <img :src="company.image"></div>
       <div ref="companyInfo" class="company_info fadeIn ">
@@ -13,7 +13,7 @@
       <div class="text title2">我们的故事</div>
       <div class="text content1 songti">{{company.story}}</div>
     </div>
-    <div id="cooperation" class="cooperation">
+    <div ref="cooperation" class="cooperation">
       <div ref="cooperation_img" class="cooperation_top mask">
         <img :src="cooperation.image"/>
         <div ref="cooperation_title" class="text cooperation_title">{{cooperation.title}}</div>
@@ -27,7 +27,7 @@
           <div v-for="c in cooperation.contents">
             <div class="dark_red line"></div>
             <br/><br/>
-            <div ><strong class="cooper_title yahei">{{c.title}}</strong></div>
+            <div><strong class="cooper_title yahei">{{c.title}}</strong></div>
             <br/>
             <div class="cooper_content font14 light_brown yahei">联系人:{{c.contacts}}</div>
             <br/>
@@ -39,13 +39,14 @@
         </div>
       </div>
     </div>
-    <div class="recruitment">
+    <div ref="job" class="recruitment">
       <div>
         <img :src="recruitment.image">
         <div class="recruitment_info_panel">
           <div class="recruitment_title text" style="font-size:2em;font-weight: bold;">加入我们</div>
           <div ref="recruitment_title" class="recruitment_title">{{recruitment.title}}</div>
-          <div ref="recruitment_btn" class="recruitment_btn hoverButtonB" style="margin:0 auto;z-index:1;" @click="scrollInto('recruitment_content')">
+          <div ref="recruitment_btn" class="recruitment_btn hoverButtonB" style="margin:0 auto;z-index:1;"
+               @click="scrollInto('recruitment_content')">
             <span>打开职位</span>
           </div>
         </div>
@@ -108,7 +109,12 @@
         contact: {},
         recruitment: {},
         cooperation: {},
-        mobile:false,
+        mobile: false,
+      }
+    },
+    watch: {
+      '$route.params.id'(id){
+        this.scrollInto(id?id:"company");
       }
     },
     beforeDestroy(){
@@ -137,11 +143,11 @@
 
       //滚屏动画效果
       $(() => {
-        const info = $(this.$refs.companyInfo);
-        const title = $(this.$refs.cooperation_title);
-        const btn = $(this.$refs.cooperation_btn);
+        let info = $(this.$refs.companyInfo);
+        let title = $(this.$refs.cooperation_title);
+        let btn = $(this.$refs.cooperation_btn);
 //        const img = $(this.$refs.cooperation_img);
-        const coop = $('#cooperation').offset().top;
+        let coop = $(this.$refs.cooperation).offset().top;
         scrollMgr.on('CompanyInfo', top => {
           if (top < 400) {
             info.css("transform", "translate(0px," + top / 2 + "px)");
