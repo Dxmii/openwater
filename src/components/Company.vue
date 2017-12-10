@@ -123,8 +123,15 @@
     },
     methods: {
       scrollInto(id){
-        this.$refs[id].scrollIntoView();
+        this.$refs[id?id:'company'].scrollIntoView();
       },
+    },
+    beforeRouteEnter(to, from, next){
+      next(vm => {
+        setTimeout(() =>
+          vm.$route.params.id = to.params.id, 10);
+
+      })
     },
     mounted(){
       ajax.get('/company').then(company => {
@@ -144,7 +151,7 @@
       //滚屏动画效果
       $(() => {
         //第一次加载时跳转页面
-        this.scrollInto(this.$route.params.id);
+        setTimeout(() => this.scrollInto(this.$route.params.id), 0);
         let info = $(this.$refs.companyInfo);
         let title = $(this.$refs.cooperation_title);
         let btn = $(this.$refs.cooperation_btn);
