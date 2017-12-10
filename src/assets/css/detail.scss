@@ -6,26 +6,36 @@
   height: 100vh;
 }
 
+.blank{
+  position: fixed;
+  width:100%;
+  height:14vh;
+  top:0;
+  left:0;
+  background: #FFF;
+  z-index:32;
+}
 .detailClose {
   position: fixed;
-  width: 40px;
-  height: 30px;
-  right: 10%;
-  top: 10%;
-  background: #123;
+  right: 3%;
+  top: 5%;
+  width:14px;
+  height:14px;
+  background: url('/static/image/close.png') no-repeat;
+  background-size: 100% 100%;
   opacity: 0.5;
   color: white;
   text-align: center;
-  line-height: 2.35em;
-  border-radius: 5px;
-}
+  z-index:33;
+  cursor: pointer;
 
-@media screen and (max-width: 780px) {
-  .detailClose{
+  @media screen and (max-width: 780px) {
     left:15px;
     top:15px;
   }
+
 }
 .detailClose:hover {
-  opacity: 0.8;
+  transform:  scale(1.2);
+
 }

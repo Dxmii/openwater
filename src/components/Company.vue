@@ -43,8 +43,8 @@
       <div>
         <img :src="recruitment.image">
         <div class="recruitment_info_panel">
-          <div class="recruitment_title text" style="font-size:2em;font-weight: bold;">加入我们</div>
-          <div ref="recruitment_title" class="recruitment_title">{{recruitment.title}}</div>
+          <div class="recruitment_title1">加入我们</div>
+          <div ref="recruitment_title" class="recruitment_title2">{{recruitment.title}}</div>
           <div ref="recruitment_btn" class="recruitment_btn hoverButtonB" style="margin:0 auto;z-index:1;"
                @click="scrollInto('recruitment_content')">
             <span>打开职位</span>
@@ -71,18 +71,18 @@
         <img :src="contact.topImg">
       </div>
       <div class="contact_content">
-        <div class="title songti font20">{{contact.title1}}</div>
-        <div class="content2">{{contact.title2}}</div>
+        <div class="title songti font26 bold">{{contact.title1}}</div>
+        <div class="cont font12 yahei">{{contact.title2}}</div>
         <div>
           <div class="contact_address">
-            <div class="yahei font16 bold dark_ink">我在这里</div>
+            <div class="yahei font18 bold dark_ink">我在这里</div>
             <div class="yahei dark_red line" style="width:30px"></div>
             <div class="yahei contact_info">{{contact.city}}</div>
             <div class="yahei contact_info">{{contact.street}}</div>
             <div class="yahei contact_info">{{contact.building}}</div>
           </div>
           <div class="contact_way">
-            <div class="yahei font16 bold  dark_ink">等你联系</div>
+            <div class="yahei font18 bold  dark_ink">等你联系</div>
             <div class="dark_red line" style="width:30px"></div>
             <div class="yahei contact_info">电话：{{contact.phone}}</div>
             <div class="yahei contact_info">传真：{{contact.fax}}</div>

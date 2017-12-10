@@ -27,6 +27,7 @@ $btn_h: 3;
   text-align: center;
   color: #FFF;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .hoverButtonB {
@@ -307,6 +308,18 @@ $hum_w: 17;
   font-size: 24px;
 }
 
+.font22 {
+  font-size: 22px;
+}
+
+.font28 {
+  font-size: 28px;
+}
+
+.font26 {
+  font-size: 26px;
+}
+
 .font30 {
   font-size: 30px;
 }
@@ -355,11 +368,11 @@ $hum_w: 17;
   opacity: 0.5;
 }
 
-.scalable{
+.scalable {
   transition: all 1s;
 }
 
-.scalable:hover{
+.scalable:hover {
   transform: scale(1.1);
 }
 
@@ -401,11 +414,11 @@ $hum_w: 17;
     left: 6vw;
   }
 
-   div>span{
-       @media screen and (max-width: 780px) {
-         display: block;
-       }
-   }
+  div > span {
+    @media screen and (max-width: 780px) {
+      display: block;
+    }
+  }
 
   .icp {
     margin-left: 5vw;
@@ -580,7 +593,7 @@ $lines-to-show: 2;
 
 .naviItem div, .naviItem2 div {
   margin-top: 1.8em;
-  font-family:'Microsoft YaHei' ,微软雅黑, serif;
+  font-family: 'Microsoft YaHei', 微软雅黑, serif;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
