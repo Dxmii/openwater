@@ -1,5 +1,5 @@
 <template>
-  <div id="news">
+  <div id="news" v-bind:class="{blue2yellow,yellow2blue}">
     <div class="coverPage">
       <div class="cover mask" ref="coverImg">
         <img :src='news.cover.image'/>
@@ -49,27 +49,27 @@
 
 
     <!--<div class="puzzle" ref="puzzle">-->
-      <!--<br/>-->
-      <!--<div class="plz_img  lm">-->
-        <!--<div class="img">-->
-          <!--<img class="" @click="news.puzzle&&jump(news.puzzle.left)"-->
-               <!--:src="news.puzzle?news.puzzle.left.image:null" style="float:left;">-->
-          <!--</div>-->
-        <!--<div class="plz_img rt">-->
-          <!--<div class="img">-->
-            <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightTop)"-->
-                 <!--:src="news.puzzle?news.puzzle.rightTop.image:null">-->
-          <!--</div>-->
-          <!--<div class="plz_img rb1">-->
-            <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom1)"-->
-                 <!--:src="news.puzzle?news.puzzle.rightButtom1.image:null">-->
-          <!--</div>-->
-          <!--<div class="plz_img rb2">-->
-            <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom2)"-->
-                 <!--:src="news.puzzle?news.puzzle.rightButtom2.image:null">-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
+    <!--<br/>-->
+    <!--<div class="plz_img  lm">-->
+    <!--<div class="img">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.left)"-->
+    <!--:src="news.puzzle?news.puzzle.left.image:null" style="float:left;">-->
+    <!--</div>-->
+    <!--<div class="plz_img rt">-->
+    <!--<div class="img">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightTop)"-->
+    <!--:src="news.puzzle?news.puzzle.rightTop.image:null">-->
+    <!--</div>-->
+    <!--<div class="plz_img rb1">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom1)"-->
+    <!--:src="news.puzzle?news.puzzle.rightButtom1.image:null">-->
+    <!--</div>-->
+    <!--<div class="plz_img rb2">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom2)"-->
+    <!--:src="news.puzzle?news.puzzle.rightButtom2.image:null">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 
     <div class="notelist">
@@ -92,9 +92,7 @@
         </div>
       </div>
     </div>
-    <div class="logo logowrap" ref="logowrap"><span
-      class="l1"></span><span class="l2"></span></div>
-  </div>
+     </div>
 </template>
 <style lang="scss" scoped="" type="text/css">
   @import "../assets/css/news.scss";
@@ -112,20 +110,29 @@
         reading: null,
         news: {cover: {}, toplines: [], previous: []},
         screen: screen.width,
+        blue2yellow: false, yellow2blue: false,
       };
     },
-    beforeDestory(){
+    beforeDestory()
+    {
       scrollMgr.off('NewsCover');
-    },
+    }
+    ,
     methods: {
-      jump(note){
+      jump(note)
+      {
         this.$router.push({name: 'Detail', params: {link: note.link}});
-      },
-      ellipsis(str, l = 200){
+      }
+      ,
+      ellipsis(str, l = 200)
+      {
         return util.ellipsis(str, l);
-      },
-    },
-    mounted(){
+      }
+      ,
+    }
+    ,
+    mounted()
+    {
 
       ajax.get('/news').then(news => {
         this.news = news;
@@ -154,6 +161,9 @@
 //          if (off1 >0) {
 //            puzzle.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
 //          }
+
+          this.blue2yellow = top < 900||top > 1500;
+          this.yellow2blue = top > 500 && top < 1800;
         });
       });
     }

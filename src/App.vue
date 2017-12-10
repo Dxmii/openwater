@@ -54,6 +54,9 @@
     <div style="position: fixed;  width: 100%;  height: 100%;  top: 0;  left: 0;  margin: 0 0;
   background: #111;  Opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2"
          @click="showNavi=false;showNavi2=false"></div>
+    <div class="logo logowrap" ref="logowrap"><span
+      class="l1"></span><span class="l2"></span></div>
+
   </div>
 </template>
 
