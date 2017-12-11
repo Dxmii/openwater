@@ -27,8 +27,9 @@ export default new Router({
         }
       ],
     },
+    {path: '/', redirect: '/company'},
     {
-      path: '/',
+      path: '/news',
       name: 'News',
       component: News,
     },

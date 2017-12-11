@@ -8,7 +8,7 @@ let data = {
   '/navi': [
     {
       name: '媒体资讯',
-      path: '/',
+      path: '/news',
     },
     {
       name: '品牌大事件',
