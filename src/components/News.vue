@@ -1,5 +1,5 @@
 <template>
-  <div id="news">
+  <div id="news" v-bind:class="{blue2yellow,yellow2blue}">
     <div class="coverPage">
       <div class="cover mask" ref="coverImg">
         <img :src='news.cover.image'/>
@@ -31,16 +31,16 @@
     </div>
     <div class="topline">
       <div class="tl_panel" v-for="(tl,index) in news.toplines" key="title">
-        <div class="tl_image" @click="jump(tl)" v-bind:class="{left:index%2==0,right:index%2!=0}">
+        <div class="tl_image" @click="jump(tl)" v-bind:class="{left:index%2!=0,right:index%2==0}">
           <div class="scalable" style="cursor:pointer;width:100%;height:100%;">
             <img :src="tl.image">
           </div>
         </div>
-        <div class="top_content" v-bind:class="{left:index%2!=0,right:index%2==0}">
+        <div class="top_content" v-bind:class="{left:index%2==0,right:index%2!=0}">
           <div @click="jump(tl)" class="title  songti bold"><span class="clickable">{{tl.title}}</span></div>
           <div class="info light_brown songti"><span>{{ellipsis(tl.about, 180)}}</span></div>
           <div class="light_gray time">发表日期：{{tl.time}}</div>
-          <div class="readBtn">查看详情</div>
+          <div @click="jump(tl)" class="readBtn">查看详情</div>
         </div>
 
       </div>
@@ -48,29 +48,29 @@
     </div>
 
 
-    <div class="puzzle" ref="puzzle">
-      <br/>
-      <div class="plz_img  lm">
-        <div class="img">
-          <img class="" @click="news.puzzle&&jump(news.puzzle.left)"
-               :src="news.puzzle?news.puzzle.left.image:null" style="float:left;">
-          </div>
-        <div class="plz_img rt">
-          <div class="img">
-            <img class="" @click="news.puzzle&&jump(news.puzzle.rightTop)"
-                 :src="news.puzzle?news.puzzle.rightTop.image:null">
-          </div>
-          <div class="plz_img rb1">
-            <img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom1)"
-                 :src="news.puzzle?news.puzzle.rightButtom1.image:null">
-          </div>
-          <div class="plz_img rb2">
-            <img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom2)"
-                 :src="news.puzzle?news.puzzle.rightButtom2.image:null">
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--<div class="puzzle" ref="puzzle">-->
+    <!--<br/>-->
+    <!--<div class="plz_img  lm">-->
+    <!--<div class="img">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.left)"-->
+    <!--:src="news.puzzle?news.puzzle.left.image:null" style="float:left;">-->
+    <!--</div>-->
+    <!--<div class="plz_img rt">-->
+    <!--<div class="img">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightTop)"-->
+    <!--:src="news.puzzle?news.puzzle.rightTop.image:null">-->
+    <!--</div>-->
+    <!--<div class="plz_img rb1">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom1)"-->
+    <!--:src="news.puzzle?news.puzzle.rightButtom1.image:null">-->
+    <!--</div>-->
+    <!--<div class="plz_img rb2">-->
+    <!--<img class="" @click="news.puzzle&&jump(news.puzzle.rightButtom2)"-->
+    <!--:src="news.puzzle?news.puzzle.rightButtom2.image:null">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
 
     <div class="notelist">
       <div class="titleText" style=" margin: 0 auto;">
@@ -92,9 +92,7 @@
         </div>
       </div>
     </div>
-    <div class="logo logowrap" ref="logowrap"><span
-      class="l1"></span><span class="l2"></span></div>
-  </div>
+     </div>
 </template>
 <style lang="scss" scoped="" type="text/css">
   @import "../assets/css/news.scss";
@@ -112,20 +110,29 @@
         reading: null,
         news: {cover: {}, toplines: [], previous: []},
         screen: screen.width,
+        blue2yellow: false, yellow2blue: false,
       };
     },
-    beforeDestory(){
+    beforeDestory()
+    {
       scrollMgr.off('NewsCover');
-    },
+    }
+    ,
     methods: {
-      jump(note){
+      jump(note)
+      {
         this.$router.push({name: 'Detail', params: {link: note.link}});
-      },
-      ellipsis(str, l = 200){
+      }
+      ,
+      ellipsis(str, l = 200)
+      {
         return util.ellipsis(str, l);
-      },
-    },
-    mounted(){
+      }
+      ,
+    }
+    ,
+    mounted()
+    {
 
       ajax.get('/news').then(news => {
         this.news = news;
@@ -137,9 +144,8 @@
         const coverPanel = $(this.$refs.coverPanel);
         const logowrap = $(this.$refs.logowrap);
         const coverImg = $(this.$refs.coverImg);
-        const puzzle = $(this.$refs.puzzle);
-
-        const puzzleOffset = puzzle.offset().top;
+//        const puzzle = $(this.$refs.puzzle);
+//        const puzzleOffset = puzzle.offset().top;
 
         scrollMgr.on('NewsCover', top => {
           if (top < 200) {
@@ -151,10 +157,13 @@
             coverImg.css("transform", "translate(0px,-" + top / 1.5 + "px)");
             coverPanel.css('opacity', (400 - top) / 400);
           }
-          let off1 = top - puzzleOffset;
-          if (off1 >0) {
-            puzzle.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
-          }
+//          let off1 = top - puzzleOffset;
+//          if (off1 >0) {
+//            puzzle.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
+//          }
+
+          this.blue2yellow = top < 900||top > 1500;
+          this.yellow2blue = top > 500 && top < 1800;
         });
       });
     }

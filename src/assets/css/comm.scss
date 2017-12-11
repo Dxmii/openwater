@@ -27,6 +27,7 @@ $btn_h: 3;
   text-align: center;
   color: #FFF;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .hoverButtonB {
@@ -87,7 +88,7 @@ $hum_w: 17;
   display: block;
   position: relative;
   width: #{$left};
-  height: #{$left};
+  height: #{$left+5};
   cursor: pointer;
   border-bottom: 1px solid #f5f5f5;
 }
@@ -105,7 +106,7 @@ $hum_w: 17;
     content: "";
     position: absolute;
     width: #{$hum_w}px;
-    height: 1px;
+    height: 2px;
     background-color: #000;
   }
 
@@ -283,6 +284,45 @@ $hum_w: 17;
   color: #a3a6a8;
 }
 
+.blue2yellow {
+  animation: blue_yellow 2s forwards;
+}
+
+@keyframes blue_yellow {
+  from {
+    background-color: #E9F1F6;
+  }
+  to {
+    background-color: #fff;
+  }
+}
+
+.yellow2blue {
+  animation: yellow_blue 2s forwards;
+}
+
+@keyframes yellow_blue {
+  from {
+    background-color: #FFF;
+  }
+  to {
+    background-color: #E9F1F6;
+  }
+}
+
+.bf_3 {
+  animation: change_red 2s forwards;
+}
+
+@keyframes change_red {
+  from {
+    background-color: #cff8f3;
+  }
+  to {
+    background-color: #E9F1F6;
+  }
+}
+
 .font12 {
   font-size: 12px;
 }
@@ -305,6 +345,18 @@ $hum_w: 17;
 
 .font24 {
   font-size: 24px;
+}
+
+.font22 {
+  font-size: 22px;
+}
+
+.font28 {
+  font-size: 28px;
+}
+
+.font26 {
+  font-size: 26px;
 }
 
 .font30 {
@@ -355,11 +407,11 @@ $hum_w: 17;
   opacity: 0.5;
 }
 
-.scalable{
+.scalable {
   transition: all 1s;
 }
 
-.scalable:hover{
+.scalable:hover {
   transform: scale(1.1);
 }
 
@@ -401,11 +453,11 @@ $hum_w: 17;
     left: 6vw;
   }
 
-   div>span{
-       @media screen and (max-width: 780px) {
-         display: block;
-       }
-   }
+  div > span {
+    @media screen and (max-width: 780px) {
+      display: block;
+    }
+  }
 
   .icp {
     margin-left: 5vw;
@@ -487,6 +539,7 @@ $lines-to-show: 2;
   animation: logo_anim 2s ease-in-out forwards;
 }
 
+/*
 .logowrap {
   z-index: 20;
   position: fixed;
@@ -530,6 +583,43 @@ $lines-to-show: 2;
   .l1, .l2 {
     animation: logo_gone 2s infinite both;
     animation-delay: 5s;
+  }
+}
+*/
+
+.logowrap {
+  z-index: 20;
+  position: fixed;
+  left: 60px;
+  top: -14px;
+  width: 47px;
+  height: 30px;
+  background: url('/static/image/logo.png') no-repeat;
+  background-size: 100% 100%;
+  //transform: rotate(10deg);
+  //animation: vanish 6s forwards;
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.4;
+    transform:rotate(135deg);
+  }
+  50%{
+    transform:rotate(45deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+
   }
 }
 
@@ -576,14 +666,23 @@ $lines-to-show: 2;
 .menuPanel {
   margin-left: 48px;
   margin-top: 9em;
+
+  @media screen and (max-width: 780px) {
+    margin-left: 20vw;
+  }
 }
 
 .naviItem div, .naviItem2 div {
   margin-top: 1.8em;
-  font-family:'Microsoft YaHei' ,微软雅黑, serif;
+  font-family: 'Microsoft YaHei', 微软雅黑, serif;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
+
+  @media screen and (max-width: 780px) {
+    font-size: 25px;
+  }
+
 }
 
 .naviItem2 {
@@ -592,7 +691,7 @@ $lines-to-show: 2;
 }
 
 .naviItem2:hover {
-  color: #333;
+  color: #c0a490;
 }
 
 .naviItem:hover {
@@ -641,6 +740,24 @@ $lines-to-show: 2;
   height: auto;
 }
 
+@keyframes nshow {
+  from {
+    width: 0
+  }
+  to {
+    width: #{$naviWidth}
+  }
+}
+
+@keyframes nshow2 {
+  from {
+    width: 0
+  }
+  to {
+    width: #{$naviWidth2}
+  }
+}
+
 @media screen and (max-width: 780px) {
   .logowrap {
     left: 0;
@@ -655,6 +772,25 @@ $lines-to-show: 2;
   }
   .naviMenu, .naviMenu2 {
     left: 0;
+    width: 100vw;
+  }
+
+  @keyframes nshow {
+    from {
+      width: 0
+    }
+    to {
+      width: 100vw
+    }
+  }
+
+  @keyframes nshow2 {
+    from {
+      width: 0
+    }
+    to {
+      width: 100vw
+    }
   }
 }
 
@@ -668,7 +804,7 @@ $lines-to-show: 2;
 }
 
 .naviShow2 {
-  animation: nshow2 0.5s;
+  animation: nshow2 0.5s forwards;
 }
 
 .naviHide {
@@ -703,20 +839,3 @@ $lines-to-show: 2;
   }
 }
 
-@keyframes nshow {
-  from {
-    width: 0
-  }
-  to {
-    width: #{$naviWidth}
-  }
-}
-
-@keyframes nshow2 {
-  from {
-    width: 0
-  }
-  to {
-    width: #{$naviWidth2}
-  }
-}

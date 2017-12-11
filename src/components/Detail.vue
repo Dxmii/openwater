@@ -1,17 +1,19 @@
 <template>
   <div class="article">
-    <iframe target="_parent" class="detailPage" scrolling=auto security="restricted" sandbox=""   :src="link">
+    <iframe class="detailPage" scrolling=auto    :src="link">
 
     </iframe>
+
+    <div class="blank">
+    </div>
     <div @click='back' class="detailClose">
-      <i class="el-icon-arrow-left"></i>
     </div>
   </div>
 </template>
 <style scoped="">
   @import '../assets/css/detail.scss';
 
-  .tail{
+  .tail {
     visibility: hidden;
   }
 </style>
@@ -23,10 +25,10 @@
         link,
       };
     },
-    methods:{
-        back(){
-            window.history.back();
-        }
+    methods: {
+      back(){
+        window.history.back();
+      }
     }
   }
 
