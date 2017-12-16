@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-bind="http://www.w3.org/1999/xhtml">
   <div id="news" v-bind:class="{blue2yellow,yellow2blue}">
     <div class="coverPage">
       <div class="cover mask" ref="coverImg">
@@ -77,9 +77,10 @@
         <div class="arrow1" style=" margin: 0 auto;"></div>
         <span>更早资讯</span>
       </div>
-      <div v-for="note in news.previous" key="title" class="note">
+      <div class="notepanel">
+        <div v-for="note in news.previous" key="title" class="note">
 
-        <div @click="jump(note)" class="noteImage">
+          <div @click="jump(note)" class="noteImage">
           <div class="scalable" style="cursor:pointer;width:100%;height:100%;">
             <img :src="note.image"/>
           </div>
@@ -90,9 +91,10 @@
           <div class="noteAbout songti light_brown">{{ellipsis(note.about)}}</div>
           <div class="noteTime">发表日期：{{note.time}}</div>
         </div>
+        </div>
       </div>
     </div>
-     </div>
+  </div>
 </template>
 <style lang="scss" scoped="" type="text/css">
   @import "../assets/css/news.scss";
@@ -162,7 +164,7 @@
 //            puzzle.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
 //          }
 
-          this.blue2yellow = top < 900||top > 1500;
+          this.blue2yellow = top < 900 || top > 1500;
           this.yellow2blue = top > 500 && top < 1800;
         });
       });

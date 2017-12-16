@@ -46,25 +46,22 @@ $pageHeight: 110vh;
 
       .title2 {
         position: relative;
-        font-size: 12px;
-        @media screen and (max-width: 780px) {
-          font-size:20px;
-        }
+        font-size: .2rem;
 
         }
       .product_name {
         position: relative;
-        top:4vh;
+        margin-top:3vh;
         @media screen and (max-width: 780px) {
           top: 40px;
         }
       }
       .product_desc {
         position: relative;
-        line-height: 2em;
+        line-height: .4rem;
         margin: 0 auto;
         text-align: left;
-        top: 6vh;
+        margin-top: 5vh;
         width: 100%;
         @media screen and (max-width: 780px) {
           top: 45px;
@@ -81,6 +78,7 @@ $pageHeight: 110vh;
     height: 100%;
     padding-bottom: 15vh;
     padding-top: 15vh;
+    box-sizing: border-box;
 
     @media screen and (max-width: 780px) {
       float: none;
@@ -91,6 +89,7 @@ $pageHeight: 110vh;
     }
   }
   .right {
+    box-sizing: border-box;
     padding-bottom: 15vh;
     padding-top: 15vh;
     position: relative;
@@ -136,7 +135,7 @@ $pageHeight: 110vh;
     text-align: center;
     margin: 0 auto;
     position: relative;
-    font-size: 14px;
+    font-size: .2rem;
     width: 76vw;
   }
 }

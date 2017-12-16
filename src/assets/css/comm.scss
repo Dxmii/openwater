@@ -5,6 +5,35 @@ $naviWidth2: 40%;
 div, pre {
   font-family: "STSong", "宋体", Arial, sans-serif;
 }
+html {
+  font-size : 25px;
+
+  @media only screen and (min-width: 401px){
+    font-size: 30px !important;
+  }
+
+  @media only screen and (min-width: 428px){
+    font-size: 36.75px !important;
+  }
+
+  @media only screen and (min-width: 481px){
+    font-size: 40px !important;
+  }
+  @media only screen and (min-width: 569px){
+    font-size: 45px !important;
+  }
+  @media only screen and (min-width: 641px){
+    font-size: 50px !important;
+  }
+  @media only screen and (min-width: 1200px){
+    font-size: 60px !important;
+  }
+  @media only screen and (min-width: 1800px){
+    font-size: 120px !important;
+  }
+}
+
+
 
 body {
   //overflow-x: hidden;
@@ -15,19 +44,18 @@ body {
 
 /*=======特殊按钮效果=======*/
 
-$btn_w: 11;
-$btn_h: 3;
-
+$btn_w: 2;
+$btn_h: .6;
 .hoverButton, .hoverButtonB {
-  width: #{$btn_w}em;
-  height: #{$btn_h}em;
+  width: #{$btn_w}rem;
+  height: #{$btn_h}rem;
   transition: color 2s;
-  line-height: #{$btn_h};
-  margin-top: 2em;
+  line-height: #{$btn_h}rem;
+  margin-top: 2rem;
   text-align: center;
   color: #FFF;
   cursor: pointer;
-  font-size: 12px;
+  font-size:0.2rem;
 }
 
 .hoverButtonB {
@@ -38,9 +66,9 @@ $btn_h: 3;
   content: "";
   position: absolute;
   top: 0;
-  left: 1px;
-  width: #{$btn_w}em;
-  height: #{$btn_h+0.1}em;
+  left: 0;
+  width: calc(#{$btn_w}rem + 2px);
+  height: calc(#{$btn_h}rem + 2px);
   background: #FFF;
   text-align: center;
   z-index: -2;
@@ -69,8 +97,8 @@ $btn_h: 3;
   position: absolute;
   top: 0;
   left: 0;
-  width: #{$btn_w}em;
-  height: #{$btn_h}em;
+  width: #{$btn_w}rem;
+  height: #{$btn_h}rem;
   border: solid #FFF 1px;
 }
 
@@ -323,44 +351,51 @@ $hum_w: 17;
   }
 }
 
+.font10 {
+  font-size: .2rem;
+}
 .font12 {
-  font-size: 12px;
+  font-size: .3rem;
 }
 
 .font14 {
-  font-size: 14px;
+  font-size: .4rem;
 }
 
 .font16 {
-  font-size: 16px;
+  font-size: .5rem;
 }
 
 .font18 {
-  font-size: 18px;
+  font-size: .6rem;
 }
 
 .font20 {
-  font-size: 20px;
-}
-
-.font24 {
-  font-size: 24px;
+  font-size: .7rem;
 }
 
 .font22 {
-  font-size: 22px;
+  font-size: .8rem;
 }
-
-.font28 {
-  font-size: 28px;
+.font24 {
+  font-size: .9rem;
 }
 
 .font26 {
-  font-size: 26px;
+  font-size: 1rem;
 }
 
+.font28 {
+  font-size: 1.1rem;
+}
+
+
 .font30 {
-  font-size: 30px;
+  font-size: 1.2rem;
+}
+
+.font36 {
+  font-size: 1.5rem;
 }
 
 .v_line {
@@ -371,8 +406,8 @@ $hum_w: 17;
 }
 
 .line {
-  width: 45px;
-  top: 1.5em;
+  width: .5rem;
+  top: 1.5rem;
   left: 0;
   border-top: 1px solid;
 }
@@ -383,18 +418,18 @@ $hum_w: 17;
 .title1 {
   color: #484D51;
   font-family: "STSong", "宋体", Arial, sans-serif;
-  font-size: 36px;
+  font-size: .7rem;
 }
 
 .title2 {
   color: #CAB2A1;
   font-family: "STSong", "宋体", Arial, sans-serif;
-  font-size: 12px;
+  font-size: .3rem;
 }
 
 .title3 {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  font-size: 24px;
+  font-size: .8rem;
   font-weight: bold;
 }
 
@@ -425,12 +460,12 @@ $hum_w: 17;
 
 .content1 {
   color: #4A4F53;
-  font-size: 14px;
+  font-size: .18rem;
 }
 
 .content2 {
   color: #A3A6A8;
-  font-size: 12px;
+  font-size: .3rem;
 }
 
 .text {
@@ -467,7 +502,7 @@ $hum_w: 17;
   }
 }
 
-$font-size: 12px;
+$font-size: .3rem;
 $line-height: 1.4;
 $lines-to-show: 2;
 
@@ -492,7 +527,7 @@ $lines-to-show: 2;
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate(0, 1em);
+    transform: translate(0, 1rem);
   }
   to {
     opacity: 1;
@@ -524,7 +559,7 @@ $lines-to-show: 2;
   position: absolute;
   left: 0;
   top: 0;
-  height: 3em;
+  height: 0.6rem;
   width: 2px;
   background: #C0A490;
 }
@@ -533,7 +568,7 @@ $lines-to-show: 2;
 .logo {
   margin-left: 48px;
   margin-top: 38px;
-  font-size: 24px;
+  font-size: .5rem;
   font-weight: bold;
   font-family: 'STSong', 宋体, sans-serif;
   animation: logo_anim 2s ease-in-out forwards;
@@ -549,7 +584,7 @@ $lines-to-show: 2;
   .l1:before {
     content: 'Open';
     position: absolute;
-    left: 0.2em;
+    left: 0.2rem;
     opacity: 1;
     animation: logo_hide 2s both;
     animation-delay: 1s;
@@ -557,7 +592,7 @@ $lines-to-show: 2;
   .l2:before {
     content: 'Water';
     position: absolute;
-    left: 2.5em;
+    left: 2.5rem;
     opacity: 1;
     animation: logo_hide 2s both;
     animation-delay: 2s;
@@ -565,17 +600,17 @@ $lines-to-show: 2;
   .l1:after {
     content: '开水';
     position: absolute;
-    left: 0.2em;
+    left: 0.2rem;
     opacity: 1;
-    width: 4em;
+    width: 4rem;
     animation: logo_show 2s both;
     animation-delay: 2s;
   }
   .l2:after {
     content: '科技';
     position: absolute;
-    left: 2.5em;
-    width: 4em;
+    left: 2.5rem;
+    width: 4rem;
     opacity: 1;
     animation: logo_show 2s both;
     animation-delay: 3s;
@@ -665,7 +700,7 @@ $lines-to-show: 2;
 /*-------Logo End------*/
 .menuPanel {
   margin-left: 48px;
-  margin-top: 9em;
+  margin-top: 3rem;
 
   @media screen and (max-width: 780px) {
     margin-left: 20vw;
@@ -673,10 +708,10 @@ $lines-to-show: 2;
 }
 
 .naviItem div, .naviItem2 div {
-  margin-top: 1.8em;
+  margin-top: .4rem;
   font-family: 'Microsoft YaHei', 微软雅黑, serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: .5rem;
   cursor: pointer;
 
   @media screen and (max-width: 780px) {
@@ -686,7 +721,7 @@ $lines-to-show: 2;
 }
 
 .naviItem2 {
-  font-size: 1.2em;
+  font-size: .6rem;
   color: #FFF;
 }
 
@@ -819,7 +854,7 @@ $lines-to-show: 2;
 @keyframes mshow {
   0% {
     opacity: 0;
-    transform: translate(-9em);
+    transform: translate(-9rem);
   }
   60% {
     opacity: 0.4;

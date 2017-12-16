@@ -78,7 +78,8 @@ $pz_mh: 250;
 /*-----puzzle end----*/
 #news {
   width: 100%;
-  margin-bottom: 13vh;
+  zoom:1;
+  overflow: hidden;
   @media screen and (max-width: 780px) {
     margin-bottom: 130px;
   }
@@ -89,23 +90,25 @@ $pz_mh: 250;
   height: auto;
   min-height: 800px;
   display: block;
+  overflow: hidden;
   zoom: 1;
 }
 
 $tl_sp: 4;
-$tl_p_h: 78;
+$tl_p_h: 7.5;
 $tl_padding: 6;
 .tl_panel {
   position: relative;
-  width: 100%;
-  height: #{$tl_p_h}vh;
+  width: 97%;
+  left:1%;
+  height: #{$tl_p_h}rem;
   border-bottom: 1px #f2f2f2 solid;
   zoom: 1;
   overflow: hidden;
-  padding-top: 6vh;
-  padding-bottom: 8vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   @media screen and (max-width: 780px) {
-    height: 800px;
+    height: 16rem;
   }
 
   .left {
@@ -128,58 +131,53 @@ $tl_padding: 6;
   }
 
   .top_content {
-    margin-top: 2.5vh;
-    padding: 12vh 0;
+    margin-top: .6rem;
+    padding: .7rem .4rem;
+    box-sizing: border-box;
     @media screen and (max-width: 780px) {
       margin-top: 0;
       top: 80px;
     }
     .title {
-      margin-left: #{$tl_sp}vw;
+      //margin-left: #{$tl_sp}vw;
       width: 80%;
       height: auto;
-      font-size: 2vw;
-      @media screen and (max-width: 780px) {
-        font-size: 26px;
-      }
+      font-size: .5rem;
     }
 
     .info {
-      margin-left: #{$tl_sp}vw;
-      margin-top: 5vh;
-      width: 80%;
-      line-height: 2em;
+      //margin-left: #{$tl_sp}vw;
+      margin-top: 1rem;
+      width: 100%;
+      line-height: .55rem;
       height: auto;
-      font-size: 1.2vw;
+      font-size: .3rem;
 
       @media screen and (max-width: 780px) {
-        font-size: 18px;
-        margin-top: 30px;
+        margin-top: .3rem;
       }
     }
     .time {
-      margin-left: #{$tl_sp}vw;
-      margin-top: 1.2vh;
+      //margin-left: #{$tl_sp}vw;
+      margin-top: .2rem;
       width: 80%;
       line-height: 2em;
       height: auto;
-      font-size: 1vw;
+      font-size: .25rem;
 
-      @media screen and (max-width: 780px) {
-        font-size: 14px;
-      }
 
     }
     .readBtn {
-      margin-left: #{$tl_sp}vw;
-      width: 100px;
-      top: 1.5vh;
+      //margin-left: #{$tl_sp}vw;
+      width: 1.4rem;
+      margin-top: .2rem;
       cursor: pointer;
       text-align: center;
       border: 1px solid;
       border-radius: 2px;
-      height: 28px;
-      line-height: 28px;
+      height: .5rem;
+      font-size:.2rem;
+      line-height: .5rem;
       color: #cbcbcb;
     }
     .readBtn:hover {
@@ -297,15 +295,13 @@ $tl_padding: 6;
 
 .notelist {
   position: relative;
-  top: 80px;
   height: auto;
   zoom: 1;
-  margin: 0 auto;
   .titleText {
     position: relative;
     text-align: center;
     width: 100%;
-    height: 2em;
+    height: 2rem;
     margin-bottom: 40px;
     @media screen and (max-width: 780px) {
       border-bottom: solid 1px #f2f2f2;
@@ -317,76 +313,39 @@ $tl_padding: 6;
 }
 
 $note_i_w: 180px;
-$note_art_w: 58vw;
 $note_sp_w: 7vw;
-$note_font: 1.1;
-$line-height: 1.85;
+$note_font: 0.3;
+$line-height: 0.4;
+.notepanel{
+  width:100%;
+  margin:0 auto;
+  overflow: hidden;
+  zoom:1;
+}
+
 .note {
   position: relative;
   border-bottom: dashed 1px #F2F2F2;
-  width: calc(#{$note_i_w} + #{$note_art_w+$note_sp_w});
-  height: 150px;
-  left: 6vw;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  width: 80%;
+  height: 4rem;
+  margin: 0 auto;
+  overflow: hidden;
 
   @media screen and (max-width: 780px) {
-    left: 2vw;
-    height: 400px;
+    height: 11rem;
     width: 98vw;
     border-bottom: dashed 1px #CCC;
-  }
-  .noteInfo {
-    position: relative;
-    float: left;
-    top: 3vh;
-    @media screen and (max-width: 780px) {
-      top: 10px;
-    }
-    .title3 {
-      position: relative;
-      top: 10px;
-      display: block;
-      height: 10vh;
-      font-size: 1.5em;
-      @media screen and (max-width: 780px) {
-        width: 98vw;
-      }
-    }
-    .noteAbout {
-      position: relative;
-      width: $note_art_w;
-      top: 3vh;
-      line-height: #{$line-height}em;
-      font-size: #{$note_font}em;
-      height: #{$note_font*$line-height*2 + $line-height}em;
-      @media screen and (max-width: 780px) {
-        width: 90vw;
-        display: block; /* Fallback for non-webkit */
-        display: -webkit-box;
-        max-width: 90vw;
-        overflow: hidden;
-        height: #{$note_font*$line-height*5 +1}em;
-        text-overflow: ellipsis;
-      }
-    }
-    .noteTime {
-      position: relative;
-      color: #cbcbcb;
-      @media screen and (max-width: 780px) {
-      }
-    }
   }
 
   .noteImage {
     position: relative;
     float: right;
-    width: 200px;
-    height: 130px;
+    width: 25%;
+    height: 2.8rem;
     overflow: hidden;
     img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;;
     }
 
     @media screen and (min-width: 600px) {
@@ -402,6 +361,51 @@ $line-height: 1.85;
       }
     }
   }
+  .noteInfo {
+    position: relative;
+    float: left;
+    width: 75%;
+    padding-right: .4rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    @media screen and (max-width: 780px) {
+      top: 10px;
+    }
+    .title {
+      position: relative;
+      display: block;
+      //height: 10vh;
+      overflow: hidden;
+      @media screen and (max-width: 780px) {
+        width: 98vw;
+      }
+    }
+    .noteAbout {
+      position: relative;
+      width: 100%;
+      margin-top:.4rem;
+      line-height: #{$line-height}rem;
+      font-size: #{$note_font}rem;
+      height: #{$note_font*(1+$line-height)*3}rem;
+      overflow: hidden;
+      @media screen and (max-width: 780px) {
+        width: 90vw;
+        display: block; /* Fallback for non-webkit */
+        display: -webkit-box;
+        max-width: 90vw;
+        overflow: hidden;
+        height: #{$note_font*(1+$line-height)*5}rem;
+        text-overflow: ellipsis;
+      }
+    }
+    .noteTime {
+      position: relative;
+      color: #cbcbcb;
+      margin-top:.1rem;
+      font-size: .25rem;
+    }
+  }
+
 }
 
 .cover {
@@ -427,7 +431,7 @@ $line-height: 1.85;
 }
 
 .titleText {
-  font-size: 22px;
+  font-size: 0.4rem;
   font-weight: bold;
   font-family: 'STSong', 宋体, sans-serif;
 }
