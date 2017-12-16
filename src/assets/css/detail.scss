@@ -6,36 +6,37 @@
   height: 100vh;
 }
 
-.blank{
+.blank {
   position: fixed;
-  width:100%;
-  height:14vh;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 14vh;
+  top: 0;
+  left: 0;
   background: #FFF;
-  z-index:32;
+  z-index: 32;
 }
+
 .detailClose {
   position: fixed;
-  right: 3%;
-  top: 5%;
-  width:14px;
-  height:14px;
+  width: 14px;
+  height: 14px;
   background: url('/static/image/close.png') no-repeat;
   background-size: 100% 100%;
   opacity: 0.5;
   color: white;
   text-align: center;
-  z-index:33;
+  z-index: 33;
   cursor: pointer;
+  left: 3%;
+  top: 5%;
 
-  @media screen and (max-width: 780px) {
-    left:15px;
-    top:15px;
+  @media screen and (min-width: 600px) {
+    right: 3%;
   }
 
 }
+
 .detailClose:hover {
-  transform:  scale(1.2);
+  transform: scale(1.2);
 
 }

@@ -138,7 +138,7 @@ let data = {
   },
   '/cooperation': {
     image: '/static/company/cooperation.jpg',
-    title: '我们为休闲产业集群制造平台，准备抓住时机准备抓住时机准备抓住时机准备抓住时机',
+    title: '我们为休闲产业集群制造平台，准备抓住时机',
     contents: [
       {
         title: '企业团建、媒体推广、商务拓展、异业合作',

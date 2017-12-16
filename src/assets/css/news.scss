@@ -80,9 +80,6 @@ $pz_mh: 250;
   width: 100%;
   zoom:1;
   overflow: hidden;
-  @media screen and (max-width: 780px) {
-    margin-bottom: 130px;
-  }
 }
 
 .topline {
@@ -108,7 +105,7 @@ $tl_padding: 6;
   padding-top: 1rem;
   padding-bottom: 1rem;
   @media screen and (max-width: 780px) {
-    height: 16rem;
+    height: 13rem;
   }
 
   .left {
@@ -137,6 +134,7 @@ $tl_padding: 6;
     @media screen and (max-width: 780px) {
       margin-top: 0;
       top: 80px;
+      padding: .3rem .4rem;
     }
     .title {
       //margin-left: #{$tl_sp}vw;
@@ -332,8 +330,8 @@ $line-height: 0.4;
   overflow: hidden;
 
   @media screen and (max-width: 780px) {
-    height: 11rem;
-    width: 98vw;
+    height: 9rem;
+    width: 100%;
     border-bottom: dashed 1px #CCC;
   }
 
@@ -341,7 +339,7 @@ $line-height: 0.4;
     position: relative;
     float: right;
     width: 25%;
-    height: 2.8rem;
+    height: 2.4rem;
     overflow: hidden;
     img {
       width: auto;
@@ -352,7 +350,7 @@ $line-height: 0.4;
       border-radius: 2px;
     }
     @media screen and (max-width: 780px) {
-      width: 95vw;
+      width: 100vw;
       height: 40vw;
       float: left;
       img {
@@ -370,6 +368,8 @@ $line-height: 0.4;
     overflow: hidden;
     @media screen and (max-width: 780px) {
       top: 10px;
+      width: 100%;
+      padding: .4rem .4rem;
     }
     .title {
       position: relative;
@@ -377,7 +377,7 @@ $line-height: 0.4;
       //height: 10vh;
       overflow: hidden;
       @media screen and (max-width: 780px) {
-        width: 98vw;
+        width: 100vw;
       }
     }
     .noteAbout {
