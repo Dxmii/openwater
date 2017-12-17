@@ -24,7 +24,7 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped="" type="text/css">
+<style lang="scss"  type="text/css">
 
   @import "../assets/css/product.scss";
 

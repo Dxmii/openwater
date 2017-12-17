@@ -1,4 +1,6 @@
-$left: 70px;
+@import "color";
+
+$left: 1.2rem;
 $naviWidth: 50%;
 $naviWidth2: 40%;
 
@@ -14,28 +16,32 @@ html {
   }
 
 
-  @media only screen and (min-width: 401px){
-    font-size: 50px !important;
-  }
-
-  @media only screen and (min-width: 428px){
-    font-size: 50px !important;
-  }
-
-  @media only screen and (min-width: 481px){
-    font-size: 50px !important;
-  }
-  @media only screen and (min-width: 569px){
-    font-size: 50px !important;
-  }
-  @media only screen and (min-width: 641px){
-    font-size: 50px !important;
-  }
+  //@media only screen and (min-width: 401px){
+  //  font-size: 50px !important;
+  //}
+  //
+  //@media only screen and (min-width: 428px){
+  //  font-size: 50px !important;
+  //}
+  //
+  //@media only screen and (min-width: 481px){
+  //  font-size: 50px !important;
+  //}
+  //@media only screen and (min-width: 569px){
+  //  font-size: 50px !important;
+  //}
+  //@media only screen and (min-width: 641px){
+  //  font-size: 50px !important;
+  //}
   @media only screen and (min-width: 1200px){
     font-size: 60px !important;
   }
-  @media only screen and (min-width: 1800px){
-    font-size: 120px !important;
+
+  @media only screen and (min-width: 1600px){
+    font-size: 83.5px !important;
+  }
+  @media only screen and (min-width: 2000px){
+    font-size: 100px !important;
   }
 }
 
@@ -115,31 +121,31 @@ $btn_h: .6;
 /*------特殊按钮End------*/
 
 /*========menu动态效果========*/
-$hum_h: 4;
-$hum_w: 17;
+$hum_h: .07;
+$hum_w: .25;
 
 .Menu_link {
   display: block;
   position: relative;
   width: #{$left};
-  height: #{$left+5};
+  height: calc(#{$left} + 5px);
   cursor: pointer;
   border-bottom: 1px solid #f5f5f5;
 }
 
 @media screen and (min-width: 600px) {
   .Menu_hamburger:before {
-    top: #{$hum_h}px;
+    top: #{$hum_h}rem;
   }
 
   .Menu_hamburger:after {
-    top: #{$hum_h}px;
+    top: #{$hum_h}rem;
   }
 
   .Menu_hamburger, .Menu_hamburger:after, .Menu_hamburger:before {
     content: "";
     position: absolute;
-    width: #{$hum_w}px;
+    width: #{$hum_w}rem;
     height: 2px;
     background-color: #000;
   }
@@ -210,7 +216,7 @@ $hum_w: 17;
     transform: rotate(0deg);
   }
   100% {
-    top: #{$hum_h}px;
+    top: #{$hum_h}rem;
     transform: rotate(0deg);
   }
 }
@@ -225,7 +231,7 @@ $hum_w: 17;
     transform: rotate(0deg);
   }
   100% {
-    top: -#{$hum_h}px;
+    top: -#{$hum_h}rem;
     transform: rotate(0deg);
   }
 }
@@ -307,15 +313,15 @@ $hum_w: 17;
 }
 
 .dark_ink {
-  color: #484d51;
+  color: $darkInk;
 }
 
 .light_gray {
-  color: #cbcbcb;
+  color: $lightGray;
 }
 
 .light_brown {
-  color: #a3a6a8;
+  color: $darkBrown;
 }
 
 .blue2yellow {
@@ -470,7 +476,7 @@ $hum_w: 17;
 }
 
 .content2 {
-  color: #A3A6A8;
+  color: $ContentColor;
   font-size: .3rem;
 }
 
@@ -487,7 +493,7 @@ $hum_w: 17;
   width: 100%;
   height: 16vh;
   background: #f6f7f8;
-  color: #cbcbcb;
+  color: $lightGray;
   font-size:.25rem;
   div {
     position: absolute;
@@ -562,14 +568,6 @@ $lines-to-show: 2;
   background: #000;
 }
 
-.pointer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 0.6rem;
-  width: 2px;
-  background: #C0A490;
-}
 
 /*==========Logo===========*/
 .logo {
@@ -632,12 +630,12 @@ $lines-to-show: 2;
 .logowrap {
   z-index: 20;
   position: fixed;
-  left: 60px;
-  top: -14px;
-  width: 47px;
-  height: 30px;
+  left: 1.5rem;
+  top: .2rem;
+  width: .9rem;
+  height: .9rem;
   background: url('/static/image/logo.png') no-repeat;
-  background-size: 100% 100%;
+  background-size: 98% 98%;
   //transform: rotate(10deg);
   //animation: vanish 6s forwards;
 }
@@ -709,6 +707,18 @@ $lines-to-show: 2;
   margin-left: 48px;
   margin-top: 3rem;
 
+
+  .pointer {
+    margin-left: -48px;
+    position: relative;
+    float:left;
+    left: 0;
+    top: 0;
+    height: 0.6rem;
+    width: 2px;
+    background: #C0A490;
+  }
+
   @media screen and (max-width: 780px) {
     margin-left: 20vw;
   }
@@ -718,7 +728,7 @@ $lines-to-show: 2;
   margin-top: .4rem;
   font-family: 'Microsoft YaHei', 微软雅黑, serif;
   font-weight: 500;
-  font-size: .5rem;
+  font-size: .45rem;
   cursor: pointer;
 
   @media screen and (max-width: 780px) {

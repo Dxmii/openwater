@@ -11,7 +11,7 @@ let data = {
       path: '/news',
     },
     {
-      name: '品牌大事件',
+      name: '业务范围',
       path: '/Product',
       children: [
         {

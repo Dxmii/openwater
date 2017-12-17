@@ -12,18 +12,18 @@
     <div class='naviMenu' v-bind:class="{naviHide:!showNavi,naviShow:showNavi}" v-show="showNavi">
       <div class="logo">OpenWater</div>
       <div v-bind:class="{menuPanel:true,menuShow:showNavi}">
+        <div class="pointer" ref="pointer"></div>
 
-        <div @mouseenter="movePointer(item.path)" @mouseleave="movePointer(selection.path||selection)"
+        <div @mouseenter="movePointer(item.path)" @mouseleave="movePointerDelay(selection.path||selection)"
              class='naviItem' v-bind:class="{selected:(item.path==(selection.path||selection))}" v-for="item in navi"
              :ref="item.path"
              @click="selection = item">
-          <div v-if="item.children"  @click="showNavi=false;showNavi2=true">{{item.name}}</div>
+          <div v-if="item.children" @click="showNavi=false;showNavi2=true">{{item.name}}</div>
           <router-link v-if="item.children==null||item.children.length==0" :to="item.path" tag="div"
                        @click.native="showNavi=false;showNavi2=false">{{item.name}}
           </router-link>
         </div>
       </div>
-      <div class="pointer" ref="pointer"></div>
     </div>
     <!--二级导航-->
     <div class="naviMenu2" v-bind:class="{naviShow2:showNavi2}" v-show="showNavi2">
@@ -54,7 +54,7 @@
     <div style="position: fixed;  width: 100%;  height: 100%;  top: 0;  left: 0;  margin: 0 0;
   background: #111;  Opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2"
          @click="showNavi=false;showNavi2=false"></div>
-    <div class="logo logowrap" ref="logowrap"><span
+    <div class="logowrap" ref="logowrap"><span
       class="l1"></span><span class="l2"></span></div>
 
   </div>
@@ -62,6 +62,7 @@
 
 <script>
   import ajax from './assets/js/ajaxService'
+  import scrollMgr from './assets/js/scrollMgr'
 
   let intv = 0;
   export default {
@@ -70,7 +71,7 @@
       return {
         showNavi: false,
         showNavi2: false,
-        selection: '/',
+        selection: '/news',
         selection2: {},
         navi: [],
       }
@@ -79,23 +80,40 @@
       ajax.get('/navi').then(r => {
         this.navi = r;
       });
+      let logo = $(this.$refs.logowrap);
+      let limit = logo.width() * 30;
+      scrollMgr.on('app', top => {
+          if (top < limit) {
+            logo.css('opacity', (limit - top) / limit);
+
+          }
+        }
+      );
+    },
+    beforeDestory(){
+      scrollMgr.off('app');
     },
     methods: {
+      movePointerDelay(item){
+        if (intv)
+          clearTimeout(intv);
+        intv = setTimeout(() => {
+          this.movePointer(item);
+        }, 1000);
+      },
       movePointer(item){
-        let p = this.$refs[item][0];
-        const pp = this.$refs['pointer'];
-        let r = p.parentElement.offsetTop + p.offsetTop;
-        let o = pp.offsetTop;
-        let d = r > o;
-        let f = () => {
-          pp.style.top = (d ? o += 8 : o -= 8) + 'px';
-          if ((d && o > r) || (!d && o < r)) {
-            window.clearInterval(intv);
-          }
-        };
-
-        window.clearInterval(intv);
-        intv = setInterval(f, 20);
+        if (intv)
+          clearTimeout(intv);
+        if (this.$refs[item] == null) {
+          return;
+        }
+        let i = this.$refs[item][0];
+        const pointer = this.$refs['pointer'];
+        const pp = $(pointer);
+        let r = $(i).offset().top - $(i.parentElement).offset().top;
+        pp.animate({
+          top: r + 'px'
+        }, 100);
       },
     },
   }

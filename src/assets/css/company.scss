@@ -1,3 +1,4 @@
+@import "color";
 $pageHeight: 600px;
 #container {
   width: 100%;
@@ -68,7 +69,7 @@ $pageHeight: 600px;
   top: 85vh;
   width: 80vw;
   left: 6vw;
-  height: 5rem;
+  height: 50vh;
   text-align: center;
   margin: 0 auto;
   background: #FBFBFD;
@@ -93,10 +94,10 @@ $pageHeight: 600px;
 .letter:after {
   content: "";
   position: absolute;
-  bottom: 30px;
+  bottom: 5vh;
   left: 50%;
-  width: 1px;
-  height: 50px;
+  width: 2px;
+  height: 10vh;
   background: #C0A490 100%;
   opacity: 0.5;
 }
@@ -150,21 +151,21 @@ $pageHeight: 600px;
   position: relative;
   background-color: #EEF1F6;
   text-align: center;
-  height: 12rem;
+  height: 11rem;
   margin: 0 auto;
   @media screen and (max-width: 780px) {
     height: 16rem;
   }
   .title {
     position: relative;
-    top: 1rem;
+    top: 2rem;
   }
   .cont {
     position: relative;
     margin: 0 auto;
-    margin-top: 1.2rem;
+    margin-top: 2.2rem;
     width: 50vw;
-    color: #A3A6A8;
+    color: $ContentColor;
   }
   div {
     position: relative;
@@ -181,7 +182,7 @@ $pageHeight: 600px;
       }
     }
     .contact_way, .contact_address {
-      top: 30vh;
+      top: 2.3rem;
       float: left;
       @media screen and(max-width: 780px) {
         margin-top: 90px;
@@ -198,7 +199,7 @@ $pageHeight: 600px;
         position: relative;
         top: 0.3rem;
         margin-top: 2vh;
-        color: #484d51;
+        color: $darkInk;
         font-size: .3rem;
       }
     }
@@ -267,7 +268,7 @@ $pageHeight: 600px;
   .cooperation_title {
     position: relative;
     color: #fff;
-    font-size: .6rem;
+    font-size: .8rem;
     text-align: center;
     margin: 0 auto;
     z-index: 1;
@@ -297,8 +298,9 @@ $pageHeight: 600px;
   overflow: hidden;
   .coopers {
     position: relative;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-left: 30%;
+    margin-bottom: 1.2rem;
     div {
       line-height: 1.1em;
       text-align: left;
@@ -306,9 +308,10 @@ $pageHeight: 600px;
 
     .cooper_content {
       position: relative;
-      margin-top: .2rem;
+      margin-bottom: .2rem;
     }
     .cooper_title {
+      margin-bottom: .5rem;
       font-size: .3rem;
       width: 46vw;
       line-height: 1.3em;
@@ -337,8 +340,8 @@ $pageHeight: 600px;
   left: 83px;
   width: 6em;
   text-align: left;
-  font-size: .8rem;
-  color: #484d51;
+  font-size: .6rem;
+  color: $darkInk;
   @media screen and(max-width: 780px) {
     top: 80px;
     left: 23px;
@@ -431,6 +434,7 @@ $pageHeight: 600px;
     .job_intro {
       position: relative;
       margin-top: 1rem;
+      margin-bottom: 1rem;
       width: 50vw;
       @media screen and(max-width: 780px) {
         width: 80vw;
