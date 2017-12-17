@@ -10,8 +10,18 @@
     </div>
     <div class="plank"></div>
     <div class="letter">
-      <div class="text title2">我们的故事</div>
-      <div class="text content font12 songti">{{company.story}}</div>
+      <div class="text title2">{{company.story[story].title}}</div>
+      <div class="text content font12 songti">{{company.story[story].content}}</div>
+      <div class="btn_panel">
+        <!--需求不考虑超过10页-->
+        <div class="pages"><span class="mole">0{{story+1}} </span><span class="deno">/0{{company.story.length}}</span></div>
+        <div class="buttons">
+          <div class="left" v-bind:class="{enable:story>0}" @click="()=>{if(story>0)story--}"></div>
+          <div class="right" v-bind:class="{enable:story<(company.story.length-1)}"
+               @click="()=>{if(story<(company.story.length-1))story++}">
+          </div>
+        </div>
+      </div>
     </div>
     <div ref="cooperation" class="cooperation">
       <div ref="cooperation_img" class="cooperation_top mask">
@@ -40,7 +50,7 @@
       </div>
     </div>
     <div ref="job" class="recruitment">
-      <div>
+      <div class="recruitment_top">
         <img :src="recruitment.image">
         <div class="recruitment_info_panel">
           <div class="recruitment_title1">加入我们</div>
@@ -110,6 +120,7 @@
         recruitment: {},
         cooperation: {},
         mobile: false,
+        story: 0,
       }
     },
     watch: {
@@ -123,7 +134,7 @@
     },
     methods: {
       scrollInto(id){
-        this.$refs[id?id:'company'].scrollIntoView();
+        this.$refs[id ? id : 'company'].scrollIntoView();
       },
     },
     beforeRouteEnter(to, from, next){

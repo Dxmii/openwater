@@ -1,4 +1,5 @@
 @import "color";
+
 $pageHeight: 110vh;
 
 #product {
@@ -13,6 +14,10 @@ $pageHeight: 110vh;
   width: 100%;
   border-top: 1px #f2f2f2 solid;
   margin-top: 17vh;
+
+  @media screen and (max-width: 780px) {
+    margin-top: 50px;
+  }
 }
 
 .product_panel {
@@ -24,13 +29,13 @@ $pageHeight: 110vh;
   text-align: center;
   border-bottom: 1px #f2f2f2 solid;
   @media screen and (max-width: 780px) {
-    margin: 0 auto;
-    height: 600px;
+    height: auto;
+    padding-bottom:60px;
   }
   .product_info {
     position: relative;
     @media screen and (max-width: 780px) {
-      width:100%;
+      width: 100%;
     }
 
     .panel {
@@ -38,23 +43,25 @@ $pageHeight: 110vh;
       text-align: left;
       width: 30vw;
       padding-top: 2vw;
+      box-sizing: border-box;
       margin: 0 auto;
+      overflow: hidden;
 
       @media screen and (max-width: 780px) {
-        margin-top:100px;
-        width:60%;
+        margin-top: 50px;
+        width: 70%;
       }
 
       .title2 {
         position: relative;
         font-size: .2rem;
 
-        }
+      }
       .product_name {
         position: relative;
-        margin-top:3vh;
+        margin-top: 3vh;
         @media screen and (max-width: 780px) {
-          top: 40px;
+          top: 20px;
         }
       }
       .product_desc {
@@ -65,7 +72,7 @@ $pageHeight: 110vh;
         margin-top: 5vh;
         width: 100%;
         @media screen and (max-width: 780px) {
-          top: 45px;
+          margin-top: 25px;
         }
       }
     }
@@ -113,7 +120,7 @@ $pageHeight: 110vh;
     height: auto;
     @media screen and (max-width: 780px) {
       width: 50vw;
-      margin-top:40px;
+      margin-top: 40px;
     }
   }
 }
@@ -121,16 +128,25 @@ $pageHeight: 110vh;
 .brand_intro {
   position: relative;
   width: 100%;
-  top: 10vh;
   height: auto;
   text-align: center;
-  margin: 0 auto;
+  margin: 10vh auto 0 auto;
   @media screen and (max-width: 780px) {
-    top: 100px;
+    margin-top: 50px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
+
   img {
     width: 20vw;
     height: auto;
+    @media screen and (max-width: 780px) {
+      margin-top: 20px;
+      width: 150px;
+      height: 60px;
+    }
   }
   .text {
     text-align: center;
@@ -141,19 +157,5 @@ $pageHeight: 110vh;
   }
 }
 
-@media screen and (max-width: 780px) {
 
-  .brand_intro {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    img {
-      margin-top: 20px;
-      width: 150px;
-      height: 60px;
-    }
-  }
-}
 

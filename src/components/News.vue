@@ -87,7 +87,7 @@
         </div>
 
         <div class="noteInfo">
-          <span @click="jump(note)" class="songti bold font14 clickable">{{note.title}}</span>
+          <span @click="jump(note)" class="songti bold  clickable">{{note.title}}</span>
           <div class="noteAbout songti light_brown">{{ellipsis(note.about)}}</div>
           <div class="noteTime">发表日期：{{note.time}}</div>
         </div>

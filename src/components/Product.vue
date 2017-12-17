@@ -14,7 +14,7 @@
         <div class="product_info" v-bind:class="{left:index%2!=0,right:index%2==0}">
           <div class="panel">
             <div class="title2">产品介绍</div>
-            <div class="product_name font18 songti bold dark_ink"><strong>{{p.title}}</strong></div>
+            <div class="product_name font16 songti bold dark_ink"><strong>{{p.title}}</strong></div>
             <div class="product_desc">
               <span class="font12 light_brown songti">{{p.intro}}</span>
             </div>

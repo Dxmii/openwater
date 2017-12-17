@@ -113,7 +113,7 @@
         let r = $(i).offset().top - $(i.parentElement).offset().top;
         pp.animate({
           top: r + 'px'
-        }, 100);
+        }, 200);
       },
     },
   }
