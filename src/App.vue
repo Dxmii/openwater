@@ -76,6 +76,15 @@
         navi: [],
       }
     },
+    watch: {
+      showNavi(v){
+        if (v) {
+          setTimeout(() => {
+            this.movePointer(this.selection.path ? this.selection.path : this.selection);
+          },1000);
+        }
+      }
+    },
     mounted(){
       ajax.get('/navi').then(r => {
         this.navi = r;

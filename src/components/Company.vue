@@ -115,7 +115,7 @@
     name: 'MainPage',
     data(){
       return {
-        company: {},
+        company: {story:[{}]},
         contact: {},
         recruitment: {},
         cooperation: {},
