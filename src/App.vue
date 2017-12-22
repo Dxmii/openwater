@@ -29,7 +29,7 @@
     <div class="naviMenu2" v-bind:class="{naviShow2:showNavi2}" v-show="showNavi2">
       <div class="logo" style="color:#FFF">OpenWater</div>
       <div class="menuPanel" v-bind:class="{menuShow:showNavi}">
-        <i style="position:relative;width:20px;height:20px;color:white;" class="el-icon-arrow-left"
+        <i class="back el-icon-arrow-left"
            @click="showNavi2=false;showNavi=true"></i>
         <div class='naviItem2' v-bind:class="{selected:(item==selection2)}" v-for="item in selection.children"
              :ref="item.path"
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div style="position: fixed;  width: 100%;  height: 100%;  top: 0;  left: 0;  margin: 0 0;
-  background: #111;  Opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2"
+  background: #111;  opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2"
          @click="showNavi=false;showNavi2=false"></div>
     <div class="logowrap" ref="logowrap"><span
       class="l1"></span><span class="l2"></span></div>
@@ -71,7 +71,7 @@
       return {
         showNavi: false,
         showNavi2: false,
-        selection: '/news',
+        selection: '/company',
         selection2: {},
         navi: [],
       }
