@@ -1,8 +1,8 @@
 @import "color";
 
 $left: 1.2rem;
-$naviWidth: 45vw;
-$naviWidth2: 40vw;
+$naviWidth: 50%;
+$naviWidth2: 40%;
 
 div, pre {
   font-family: "STSong", "宋体", Arial, sans-serif;
@@ -708,11 +708,6 @@ $lines-to-show: 2;
   margin-left: 48px;
   margin-top: 3rem;
 
-  .back:before {
-    position: relative;
-    font-size:.42rem;
-    color: white;
-  }
   .pointer {
     margin-left: -48px;
     position: relative;

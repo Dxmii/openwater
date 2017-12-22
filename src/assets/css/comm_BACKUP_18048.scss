@@ -636,8 +636,11 @@ $lines-to-show: 2;
   //animation: vanish 6s forwards;
   @media screen and (max-width: 780px) {
     left: 6vw;
+<<<<<<< HEAD
     width: 1rem;
     height: 1rem;
+=======
+>>>>>>> 9a7448b... '图标修改，导航蒙板修改，品牌介绍文字siz，导航默认选中'
   }
 }
 
@@ -708,11 +711,15 @@ $lines-to-show: 2;
   margin-left: 48px;
   margin-top: 3rem;
 
+<<<<<<< HEAD
+=======
   .back:before {
     position: relative;
     font-size:.42rem;
     color: white;
   }
+
+>>>>>>> 9a7448b... '图标修改，导航蒙板修改，品牌介绍文字siz，导航默认选中'
   .pointer {
     margin-left: -48px;
     position: relative;

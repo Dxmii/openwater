@@ -1,19 +1,20 @@
 @import "color";
 
 $left: 1.2rem;
-$naviWidth: 45vw;
-$naviWidth2: 40vw;
+$naviWidth: 50%;
+$naviWidth2: 40%;
 
 div, pre {
   font-family: "STSong", "宋体", Arial, sans-serif;
 }
-
 html {
-  font-size: 25px;
+  font-size : 25px;
 
-  @media only screen and (min-width: 301px) {
+
+  @media only screen and (min-width: 301px){
     font-size: 50px !important;
   }
+
 
   //@media only screen and (min-width: 401px){
   //  font-size: 50px !important;
@@ -32,17 +33,19 @@ html {
   //@media only screen and (min-width: 641px){
   //  font-size: 50px !important;
   //}
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1200px){
     font-size: 60px !important;
   }
 
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1600px){
     font-size: 83.5px !important;
   }
-  @media only screen and (min-width: 2000px) {
+  @media only screen and (min-width: 2000px){
     font-size: 100px !important;
   }
 }
+
+
 
 body {
   //overflow-x: hidden;
@@ -63,7 +66,7 @@ $btn_h: .6;
   text-align: center;
   color: #FFF;
   cursor: pointer;
-  font-size: 0.2rem;
+  font-size:0.2rem;
 }
 
 .hoverButtonB {
@@ -165,8 +168,8 @@ $hum_w: .25;
     position: fixed;
     right: 10px;
     top: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: #000;
     opacity: 0.6;
     border-bottom: 0px solid #f5f5f5;
@@ -362,7 +365,6 @@ $hum_w: .25;
 .font10 {
   font-size: .2rem;
 }
-
 .font12 {
   font-size: .3rem;
 }
@@ -386,7 +388,6 @@ $hum_w: .25;
 .font22 {
   font-size: .8rem;
 }
-
 .font24 {
   font-size: .9rem;
 }
@@ -398,6 +399,7 @@ $hum_w: .25;
 .font28 {
   font-size: 1.1rem;
 }
+
 
 .font30 {
   font-size: 1.2rem;
@@ -491,7 +493,7 @@ $hum_w: .25;
   height: 16vh;
   background: #f6f7f8;
   color: $lightGray;
-  font-size: .25rem;
+  font-size:.25rem;
   div {
     position: absolute;
     top: 7vh;
@@ -565,6 +567,7 @@ $lines-to-show: 2;
   background: #000;
 }
 
+
 /*==========Logo===========*/
 .logo {
   margin-left: 48px;
@@ -634,10 +637,8 @@ $lines-to-show: 2;
   background-size: 98% 98%;
   //transform: rotate(10deg);
   //animation: vanish 6s forwards;
-  @media screen and (max-width: 780px) {
-    left: 6vw;
-    width: 1rem;
-    height: 1rem;
+  @media screen and (max-width:780px){
+      left: 6vw;
   }
 }
 
@@ -647,10 +648,10 @@ $lines-to-show: 2;
   }
   20% {
     opacity: 0.4;
-    transform: rotate(135deg);
+    transform:rotate(135deg);
   }
-  50% {
-    transform: rotate(45deg);
+  50%{
+    transform:rotate(45deg);
   }
   80% {
     opacity: 1;
@@ -708,15 +709,11 @@ $lines-to-show: 2;
   margin-left: 48px;
   margin-top: 3rem;
 
-  .back:before {
-    position: relative;
-    font-size:.42rem;
-    color: white;
-  }
+
   .pointer {
     margin-left: -48px;
     position: relative;
-    float: left;
+    float:left;
     left: 0;
     top: 0;
     height: 0.6rem;

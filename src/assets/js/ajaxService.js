@@ -26,15 +26,15 @@ let data = {
     },
     {
       name: '关于公司',
-      path: '/Company',
+      path: '/company',
     },
     {
       name: '商务合作',
-      path: '/Company/cooperation',
+      path: '/company/cooperation',
     },
     {
       name: '招聘',
-      path: '/Company/job',
+      path: '/company/job',
     },
   ],
   '/news': {
