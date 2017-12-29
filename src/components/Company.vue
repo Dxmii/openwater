@@ -39,11 +39,11 @@
             <br/><br/>
             <div><strong class="cooper_title yahei">{{c.title}}</strong></div>
             <br/>
-            <div class="cooper_content font12 light_brown yahei">联系人:{{c.contacts}}</div>
+            <div class="cooper_content font12 light_brown yahei">联系人：{{c.contacts}}</div>
             <br/>
-            <div class="cooper_content font12 light_brown yahei">电子邮箱:{{c.email}}</div>
+            <div class="cooper_content font12 light_brown yahei">电子邮箱：{{c.email}}</div>
             <br/>
-            <div class="cooper_content font12 light_brown yahei">联系电话:{{c.phone}}</div>
+            <div class="cooper_content font12 light_brown yahei">联系电话：{{c.phone}}</div>
             <br/><br/><br/><br/>
           </div>
         </div>

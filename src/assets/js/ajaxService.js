@@ -162,24 +162,24 @@ let data = {
     title: '我们为休闲产业集群制造平台，准备抓住时机',
     contents: [
       {
-        title: '企业团建、媒体推广、商务拓展、异业合作',
-        contacts: '缪总监',
-        email: 'noah.miao@openwter.com.cn',
-        phone: '18102803622'
+        title: ' 企业团建、媒体推广、商务拓展、异业合作',
+        contacts: ' 缪总监',
+        email: ' noah.miao@openwter.com.cn',
+        phone: ' 18102803622'
       }, {
-        title: '经销商代理：潜水装备（OCEANIC、HOLLIS）; 菲律宾太平洋宿务国际度假村',
-        contacts: '梁总监',
-        email: 'toby.leung@openwater.com.cn',
-        phone: '18420153381'
+        title: ' 经销商代理： 潜水装备（OCEANIC、HOLLIS）; 菲律宾太平洋宿务国际度假村',
+        contacts: ' 梁总监',
+        email: ' toby.leung@openwater.com.cn',
+        phone: ' 18420153381'
       }
     ],
   },
   '/recruitment': {
     image: '/static/company/job.jpg',
     title: '只要，你是独一无二的你',
-    introduce: '开水科技的迅速增长使得我们需要继续储备我们的人才库。我们目前有一个小团队，但我们的业务正在迅速扩大，我们正在招聘以满足我们对产品的需求。如果你看到一个让你感兴趣的职位，请以“姓名+岗位”为主题投递简历至邮箱 hr@openwater.com.cn，。也欢迎电话咨询：020-37209341\n',
+    introduce: '开水科技的迅速增长使得我们需要继续储备我们的人才库。我们目前有一个小团队，但我们的业务正在迅速扩大，我们正在招聘以满足我们对产品的需求。如果你看到一个让你感兴趣的职位，请以“姓名+岗位”为主题投递简历至邮箱 hr@openwater.com.cn 。也欢迎电话咨询：020-37209341\n',
     jobs: [
-      '高级前端工程师', '后端开发工程师', '人资经理', '新媒体运营专员''活动策划执行','文案','UI设计师','秘书','会计','前台'
+      '高级前端工程师', '后端开发工程师', '人资经理'
     ],
   },
   '/hollis': {
