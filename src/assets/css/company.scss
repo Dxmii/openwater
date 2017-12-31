@@ -102,7 +102,7 @@ $pageHeight: 600px;
     position: absolute;
     bottom: 1rem;
     text-align: left;
-    width: 100%;
+    width: 99%;
     height: 1rem;
     .pages {
       position: absolute;
@@ -272,13 +272,13 @@ $pageHeight: 600px;
   div {
     position: relative;
     .contact_address {
-      left: 22vw;
+      left: 20%;
       @media screen and(max-width: 780px) {
         left: 0;
       }
     }
     .contact_way {
-      left: 45vw;
+      left: 60%;
       @media screen and(max-width: 780px) {
         left: 0;
       }
@@ -286,14 +286,14 @@ $pageHeight: 600px;
     .contact_way, .contact_address {
       top: 2.3rem;
       float: left;
-      width: 20em;
+      width: 30%;
+      text-align: left;
+      position: absolute;
       @media screen and(max-width: 780px) {
         margin-top: 90px;
         top: 10px;
         margin-left: 30%;
       }
-      text-align: left;
-      position: relative;
       .line {
         position: relative;
         top: .2rem;
@@ -528,7 +528,8 @@ $pageHeight: 600px;
 .recruitment_content {
   position: relative;
   width: 100%;
-  height: 14rem;
+  //height: 14rem;
+  padding-bottom: 2rem;
   background-color: #FBFBFD;
 
   .jobs {

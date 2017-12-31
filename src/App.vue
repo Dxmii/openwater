@@ -71,7 +71,7 @@
       return {
         showNavi: false,
         showNavi2: false,
-        selection: '/company',
+        selection: '/index',
         selection2: {},
         navi: [],
       }

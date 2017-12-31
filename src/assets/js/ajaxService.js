@@ -7,12 +7,16 @@
 let data = {
   '/navi': [
     {
+      name: '首页',
+      path: '/index',
+    },
+    {
       name: '媒体资讯',
       path: '/news',
     },
     {
       name: '业务范围',
-      path: '/Product',
+      path: '/product',
       children: [
         {
           name: 'Hollis',

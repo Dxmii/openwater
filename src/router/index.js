@@ -4,15 +4,21 @@ import Company from '@/components/Company'
 import News from '@/components/News'
 import Product from '@/components/Product'
 import Detail from '@/components/Detail'
+import Index from '@/components/Index'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path: '/', redirect: '/index'},
     {
       path:'/detail',
       name:'Detail',
       component:Detail,
+    },{
+      path:'/index',
+      name:'Index',
+      component:Index,
     },
     {
       path:'/company',
@@ -21,13 +27,12 @@ export default new Router({
       children:[
         {
           path:'/company/:id',
-          name: 'Company',
+          name: 'CompanyDetail',
           component: Company,
 
         }
       ],
     },
-    {path: '/', redirect: '/company'},
     {
       path: '/news',
       name: 'News',
