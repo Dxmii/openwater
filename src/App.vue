@@ -53,8 +53,8 @@
     <div style="position: fixed;  width: 100%;  height: 100%;  top: 0;  left: 0;  margin: 0 0;
   background: #111;  opacity: 0.5;  z-index: 30;" v-show="showNavi||showNavi2"
          @click="showNavi=false;showNavi2=false"></div>
-    <div class="logowrap" ref="logowrap"><span
-      class="l1"></span><span class="l2"></span></div>
+    <div class="logowrap" ref="logowrap" @click="jump('/index')"><span
+      class="l1" ></span><span class="l2"></span></div>
 
   </div>
 </template>
@@ -95,12 +95,12 @@
         this.navi = r;
       });
       let logo = $(this.$refs.logowrap);
-      let limit = logo.width() * 30;
+      let limit = logo.width() * 5;
       scrollMgr.on('app', top => {
-          if (top < limit) {
-            logo.css('opacity', (limit - top) / limit);
-
-          }
+//          if (top < limit) {
+            let a=(limit - top) / limit;
+            logo.css('opacity', a<.1?0:a);
+//          }
         }
       );
     },
@@ -108,6 +108,9 @@
       scrollMgr.off('app');
     },
     methods: {
+      jump(path){
+          this.$router.push(path);
+      },
       movePointerDelay(item){
         if (intv)
           clearTimeout(intv);
