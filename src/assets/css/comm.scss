@@ -576,6 +576,7 @@ $lines-to-show: 2;
   font-weight: bold;
   font-family: 'STSong', 宋体, sans-serif;
   animation: logo_anim 2s ease-in-out forwards;
+  visibility: hidden;
 }
 
 /*
@@ -627,7 +628,7 @@ $lines-to-show: 2;
 */
 
 .logowrap {
-  z-index: 20;
+  z-index: 30;
   position: fixed;
   left: 1.5rem;
   top: 0;

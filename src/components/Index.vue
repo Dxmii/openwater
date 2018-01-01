@@ -63,7 +63,7 @@
             self.$refs.fullpage.$fullpage.movePrev(); //Move to the next page
           }
 
-          setTimeout(v, 500);
+          setTimeout(v, 300);
         };
         v();
       }
@@ -145,7 +145,7 @@
     z-index: 3;
     .item {
       margin: 0 auto;
-      border-radius: .18rem;
+      border-radius: .8rem;
       width: .15rem;
       height: .15rem;
       border: .03rem #fff solid;
