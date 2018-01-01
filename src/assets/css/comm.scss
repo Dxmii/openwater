@@ -630,16 +630,17 @@ $lines-to-show: 2;
   z-index: 20;
   position: fixed;
   left: 1.5rem;
-  top: .2rem;
-  width: .9rem;
-  height: .9rem;
+  top: -3px;
+  width: 1rem;
+  //height: .9rem;
+  height:1.2rem;
   background: url('/static/image/logo.png') no-repeat;
   background-size: 98% 98%;
   //transform: rotate(10deg);
   //animation: vanish 6s forwards;
   @media screen and (max-width: 780px) {
     left: 6vw;
-    width: 1rem;
+    width: .9rem;
     height: 1rem;
   }
 }
