@@ -118,6 +118,7 @@ $pageHeight: 110vh;
   img {
     width: 50vh;
     height: auto;
+    display: inline;
     @media screen and (max-width: 780px) {
       width: 50vw;
       margin-top: 40px;

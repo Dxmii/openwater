@@ -10,7 +10,7 @@
     </div>
     <!--一级导航-->
     <div class='naviMenu' v-bind:class="{naviHide:!showNavi,naviShow:showNavi}" v-show="showNavi">
-      <div class="logowrap"></div>
+      <div class="logowrap" @click="jump('/index')"></div>
       <div v-bind:class="{menuPanel:true,menuShow:showNavi}">
         <div class="pointer" ref="pointer"></div>
 
