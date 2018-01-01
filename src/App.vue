@@ -14,10 +14,9 @@
       <div v-bind:class="{menuPanel:true,menuShow:showNavi}">
         <div class="pointer" ref="pointer"></div>
 
-        <div @mouseenter="movePointer(item.path)" @mouseleave="movePointerDelay(selection.path||selection)"
-             class='naviItem' v-bind:class="{selected:(item.path==(selection.path||selection))}" v-for="item in navi"
-             :ref="item.path"
-             @click="selection = item">
+        <div @mouseenter="movePointer(item.path)" @mouseleave="movePointerDelay(selection)"
+             class='naviItem' v-bind:class="{selected:(item.path==(selection))}" v-for="item in navi"
+             :ref="item.path" @click="selected(item)">
           <div v-if="item.children" @click="showNavi=false;showNavi2=true">{{item.name}}</div>
           <router-link v-if="item.children==null||item.children.length==0" :to="item.path" tag="div"
                        @click.native="showNavi=false;showNavi2=false">{{item.name}}
@@ -31,10 +30,10 @@
       <div class="menuPanel" v-bind:class="{menuShow:showNavi}">
         <i class="back el-icon-arrow-left"
            @click="showNavi2=false;showNavi=true"></i>
-        <div class='naviItem2' v-bind:class="{selected:(item==selection2)}" v-for="item in selection.children"
+        <div class='naviItem2' v-bind:class="{selected:(item==selection2)}" v-for="item in selectedMenu.children"
              :ref="item.path"
              @click="selection2 = item">
-          <router-link :to="{path:selection.path,query:{index:item.path}}" tag="div"
+          <router-link :to="{path:selectedMenu.path+item.path}" tag="div"
                        @click.native="showNavi2=false">{{item.name}}
           </router-link>
         </div>
@@ -44,7 +43,7 @@
     </div>
     <div class="mainPanel">
       <router-view></router-view>
-      <div class="tail">
+      <div class="tail" v-if="selection!='/index'">
         <div class="yahei">
           <span class="auth">Copyright © 2017 <span class="dark_ink">广州开水信息科技有限公司</span> 版权所有</span>
           <span class="icp">粤ICP备16048076号-1</span>
@@ -71,7 +70,8 @@
       return {
         showNavi: false,
         showNavi2: false,
-        selection: '/index',
+//        selection: '/index',
+        selectedMenu:{},
         selection2: {},
         navi: [],
       }
@@ -80,10 +80,15 @@
       showNavi(v){
         if (v) {
           setTimeout(() => {
-            this.movePointer(this.selection.path ? this.selection.path : this.selection);
-          },1000);
+            this.movePointer(this.selection);
+          }, 1000);
         }
-      }
+      },
+    },
+    computed:{
+        selection(){
+            return this.$route.matched[0].path;
+        }
     },
     mounted(){
       ajax.get('/navi').then(r => {
@@ -109,6 +114,9 @@
         intv = setTimeout(() => {
           this.movePointer(item);
         }, 1000);
+      },
+      selected(item){
+          this.selectedMenu = item;
       },
       movePointer(item){
         if (intv)

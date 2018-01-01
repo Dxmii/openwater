@@ -24,7 +24,7 @@
     </div>
   </div>
 </template>
-<style lang="scss"  type="text/css">
+<style lang="scss" type="text/css">
 
   @import "../assets/css/product.scss";
 
@@ -37,22 +37,21 @@
     name: 'product',
     data(){
       return {
-        key: '',
         brand: {},
         mobile: false,
       }
     },
     watch: {
-      '$route.query.index'(val){
-        this.key = this.$route.query.index;
-        ajax.get(this.key).then(d => {
+      '$route.fullPath'(val){
+
+        ajax.get('/' + this.$route.params.brand).then(d => {
           this.brand = d;
         });
       }
     },
+    computed: {},
     mounted(){
-      this.key = this.$route.query.index;
-      ajax.get(this.key).then(d => {
+      ajax.get('/' + this.$route.params.brand).then(d => {
         this.brand = d;
       });
       this.mobile = screen.width < 780;

@@ -5,6 +5,33 @@
  * Created by anr on 2017/12/4.
  */
 let data = {
+  '/index': [
+    {
+      url: '/news',
+      title: '最新资讯',
+      enter:'Enter',
+      image: '/static/index/first.jpg'
+    },
+    {
+      url: '/product/hollis',
+      title: 'Hollis',
+      enter:'进入品牌',
+      image: '/static/index/second.jpg'
+    },
+
+    {
+      url: '/product/oceanic',
+      title: 'Oceanic',
+      enter:'进入品牌',
+      image: '/static/index/second.jpg'
+    },
+    {
+      // url: '/product/hollis',
+      title: '度假村',
+      enter:'敬请期待',
+      image: '/static/index/third.jpg'
+    }
+  ],
   '/navi': [
     {
       name: '首页',
@@ -63,7 +90,7 @@ let data = {
       link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/19.html',
     },
       {
-        title: '潜水特色展',
+        title: '潜水特色展1',
         time: '2017/03/25',
         about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
         image: '/static/news/diver1.png',
@@ -79,21 +106,21 @@ let data = {
         link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
       },
       rightTop: {
-        title: '潜水特色展',
+        title: '潜水特色展2',
         time: '2017/03/25',
         about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
         image: '/static/news/puz_right_top.jpg',
         link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
       },
       rightButtom1: {
-        title: '潜水特色展',
+        title: '潜水特色展3',
         time: '2017/03/25',
         about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
         image: '/static/news/puz_right_btm1.jpg',
         link: 'http://openwater.com.cn/index/content/detail/model_id/6/id/18.html',
       },
       rightButtom2: {
-        title: '潜水特色展',
+        title: '潜水特色展4',
         time: '2017/03/25',
         about: '以“爱户外 享自然”为主题的第三届广州户外运动节在广州天河体育中心南广场开幕。本届户外运动节新引进了水上运动项目，有潜水、皮划艇、帆船等。',
         image: '/static/news/puz_right_btm2.jpg',

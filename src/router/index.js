@@ -41,7 +41,14 @@ export default new Router({
     {
       path: '/product',
       name: 'Product',
-      component: Product
+      component: Product,
+      children:[
+        {
+          path:'/product/:brand',
+          name: 'ProductBranch',
+          component: Product,
+        }
+      ],
     }
   ]
 })

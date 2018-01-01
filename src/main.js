@@ -6,11 +6,15 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'lib-flexible/flexible.js'
+import 'animate.css'
+import 'fullpage-vue/src/fullpage.css'
+import VueFullpage from 'fullpage-vue'
 
 /* eslint-disable */
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 
+Vue.use(VueFullpage)
 
 new Vue({
   el: '#app',
