@@ -8,8 +8,8 @@ let data = {
   '/index': [
     {
       url: '/news',
-      title: '最新资讯',
-      enter:'Enter',
+      title: '潜水盛事',
+      enter:'进入资讯',
       image: '/static/index/first.jpg'
     },
     {
