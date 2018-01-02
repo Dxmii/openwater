@@ -23,13 +23,19 @@ let data = {
       url: '/product/oceanic',
       title: 'Oceanic',
       enter:'进入品牌',
-      image: '/static/index/second.jpg'
+      image: '/static/index/third.jpg'
     },
     {
       // url: '/product/hollis',
       title: '度假村',
       enter:'敬请期待',
-      image: '/static/index/third.jpg'
+      image: '/static/index/four.jpg'
+    },
+    {
+      url: '/company',
+      title: '关于我们',
+      enter:'点击进入',
+      image: '/static/index/five.jpg'
     }
   ],
   '/navi': [

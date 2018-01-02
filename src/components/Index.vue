@@ -124,7 +124,7 @@
       }
     }
     .mask:after{
-      opacity: .3;
+      opacity: .1;
     }
     .hoverButton {
       position: relative;
