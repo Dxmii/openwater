@@ -1,18 +1,20 @@
 <template>
-  <div class="fullpage-container" @keyup="keyup($event)">
-    <div class="fullpage-wp" v-fullpage="opts" ref="fullpage">
-      <div class="page" v-for="i in infos">
-        <div class="part  mask">
-          <img :src="i.image"/>
-        </div>
-        <div class="title songti" v-animate="{value:'slideInDown'}">{{i.title}}</div>
-        <div class="hoverButton" v-animate="{value:'pulse'}" style="z-index:1;" @click="jump(i.url)">
-          <span>{{i.enter}}</span>
+  <div style="width:100%;height:100vh">
+    <div class="fullpage-container" @keyup="keyup($event)">
+      <div class="fullpage-wp" v-fullpage="opts" ref="fullpage">
+        <div class="page" v-for="i in infos">
+          <div class="part  mask">
+            <img :src="i.image"/>
+          </div>
+          <div class="title songti" v-animate="{value:'slideInDown'}">{{i.title}}</div>
+          <div class="hoverButton" v-animate="{value:'pulse'}" style="z-index:1;" @click="jump(i.url)">
+            <span>{{i.enter}}</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="bar">
-      <div class="item" :class="{selected:idx==activeIndex}" v-for="(i,idx) in infos" @click="change(idx)"></div>
+      <div class="bar">
+        <div class="item" :class="{selected:idx==activeIndex}" v-for="(i,idx) in infos" @click="change(idx)"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -21,11 +23,11 @@
 
   export default{
     data() {
-      let self=this;
+      let self = this;
       return {
         infos: [{}
         ],
-        activeIndex:0,
+        activeIndex: 0,
         opts: {
           start: 0,
           dir: 'v',
@@ -34,7 +36,7 @@
 
           },
           afterChange: function (prev, next) {
-            self.activeIndex=next;
+            self.activeIndex = next;
           }
         }
       }
