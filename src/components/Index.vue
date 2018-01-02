@@ -6,7 +6,7 @@
           <div class="part  mask">
             <img :src="i.image"/>
           </div>
-          <div class="title songti" v-animate="{value:'slideInDown'}">{{i.title}}</div>
+          <div class="title songti" v-animate="{value:i.animation||'slideInDown'}">{{i.title}}</div>
           <div class="hoverButton" v-animate="{value:'pulse'}" style="z-index:1;" @click="jump(i.url)">
             <span>{{i.enter}}</span>
           </div>

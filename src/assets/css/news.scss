@@ -436,8 +436,10 @@ $line-height: 0.4;
     height: 600px;
     overflow: hidden;
     img {
+      position:relative;
       width: auto;
       height: 100%;
+      left:-80vw;
     }
   }
 

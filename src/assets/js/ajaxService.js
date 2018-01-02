@@ -10,13 +10,13 @@ let data = {
       url: '/news',
       title: '潜水盛事',
       enter:'进入资讯',
-      image: '/static/index/first.jpg'
+      image: '/static/index/first.jpg',
     },
     {
       url: '/product/hollis',
       title: 'Hollis',
       enter:'进入品牌',
-      image: '/static/index/second.jpg'
+      image: '/static/index/second.jpg',
     },
 
     {
@@ -29,7 +29,8 @@ let data = {
       // url: '/product/hollis',
       title: '度假村',
       enter:'敬请期待',
-      image: '/static/index/four.jpg'
+      image: '/static/index/four.jpg',
+      animation:'fadeIn',
     },
     {
       url: '/company',
