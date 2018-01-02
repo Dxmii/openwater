@@ -102,18 +102,19 @@ $pageHeight: 600px;
     position: absolute;
     bottom: 1rem;
     text-align: left;
-    width: 99%;
+    width: 100%;
+    left:0;
     height: 1rem;
     .pages {
       position: absolute;
       float: left;
       bottom: 0;
       height: 1rem;
-      left: 8%;
+      left: 10%;
       line-height: 1.2rem;
 
       @media screen and (max-width: 780px) {
-        left: 4%;
+        //left: 10%;
         line-height: 1.4rem;
       }
       .mole {
@@ -136,14 +137,14 @@ $pageHeight: 600px;
     .buttons {
       position: relative;
       width: 20%;
-      left: -1.6rem;
+      //left: -1.6rem;
       margin: 0 auto;
       height: 1rem;
       bottom: 0;
 
       @media screen and (max-width: 780px) {
         width: 30%;
-        left: -.4rem;
+        //left: -.4rem;
       }
       .left, .right {
         cursor: pointer;
@@ -248,7 +249,7 @@ $pageHeight: 600px;
   height: 11rem;
   margin: 0 auto;
   @media screen and (max-width: 780px) {
-    height: 15rem;
+    height: 17rem;
   }
   .title {
     position: relative;
@@ -281,6 +282,7 @@ $pageHeight: 600px;
       left: 60%;
       @media screen and(max-width: 780px) {
         left: 0;
+        margin-top:5rem;
       }
     }
     .contact_way, .contact_address {
@@ -290,9 +292,8 @@ $pageHeight: 600px;
       text-align: left;
       position: absolute;
       @media screen and(max-width: 780px) {
-        margin-top: 90px;
-        top: 10px;
         margin-left: 30%;
+        width:50%;
       }
       .line {
         position: relative;
@@ -496,7 +497,7 @@ $pageHeight: 600px;
 
     .recruitment_title1, .recruitment_title2 {
       position: relative;
-      font-family: 'STSong', 宋体, sans-serif;
+      font-family: $songti;
       top: 20%;
       margin-top: 1em;
       font-size: .35rem;
