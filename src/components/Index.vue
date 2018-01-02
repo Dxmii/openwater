@@ -32,6 +32,7 @@
           start: 0,
           dir: 'v',
           duration: 500,
+          overflow:'scroll',
           beforeChange: function (prev, next) {
 
           },
