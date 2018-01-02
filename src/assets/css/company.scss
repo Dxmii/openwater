@@ -102,18 +102,19 @@ $pageHeight: 600px;
     position: absolute;
     bottom: 1rem;
     text-align: left;
-    width: 99%;
+    width: 100%;
+    left:0;
     height: 1rem;
     .pages {
       position: absolute;
       float: left;
       bottom: 0;
       height: 1rem;
-      left: 8%;
+      left: 10%;
       line-height: 1.2rem;
 
       @media screen and (max-width: 780px) {
-        left: 4%;
+        //left: 10%;
         line-height: 1.4rem;
       }
       .mole {
@@ -136,14 +137,14 @@ $pageHeight: 600px;
     .buttons {
       position: relative;
       width: 20%;
-      left: -1.6rem;
+      //left: -1.6rem;
       margin: 0 auto;
       height: 1rem;
       bottom: 0;
 
       @media screen and (max-width: 780px) {
         width: 30%;
-        left: -.4rem;
+        //left: -.4rem;
       }
       .left, .right {
         cursor: pointer;
