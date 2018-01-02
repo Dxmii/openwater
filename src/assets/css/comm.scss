@@ -5,7 +5,7 @@ $naviWidth: 45vw;
 $naviWidth2: 40vw;
 
 div, pre {
-  font-family: "STSong", "宋体", Arial, sans-serif;
+  font-family: $songti;
 }
 img{
   display: block;
@@ -429,13 +429,13 @@ $hum_w: .25;
 
 .title1 {
   color: #484D51;
-  font-family: "STSong", "宋体", Arial, sans-serif;
+  font-family: $songti;
   font-size: .7rem;
 }
 
 .title2 {
   color: #CAB2A1;
-  font-family: "STSong", "宋体", Arial, sans-serif;
+  font-family: $songti;
   font-size: .3rem;
 }
 
@@ -464,11 +464,11 @@ $hum_w: .25;
 
 .songti {
   //font-family: 'STSong', 宋体, sans-serif;
-  font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+  font-family: $songti;
 }
 
 .yahei {
-  font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+  font-family: $yahei;
 }
 
 .content1 {
@@ -575,7 +575,7 @@ $lines-to-show: 2;
   margin-top: 38px;
   font-size: .5rem;
   font-weight: bold;
-  font-family: 'STSong', 宋体, sans-serif;
+  font-family: $songti;
   animation: logo_anim 2s ease-in-out forwards;
   visibility: hidden;
 }
