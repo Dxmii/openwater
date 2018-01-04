@@ -184,7 +184,7 @@ let data = {
     image: '/static/company/company.jpg',
   },
   '/contact': {
-    title1: '来联系我们吧 !',
+    title1: '来联系我们吧',
     title2: '我们致力于整合潜水资源，搭建互联网+休闲产业集群服务平台',
     city: '广州市',
     street: '天河区黄埔大道西33号',
