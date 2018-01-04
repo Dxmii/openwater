@@ -81,7 +81,7 @@ let data = {
       head: '回顾盛事',
       title: '香港国际潜水暨度假观光展',
       title_en: 'DRT SHOW 2017',
-      time: '2017/12/15',
+      time: '2017 / 12 / 15',
       about: '一说起潜水胜地，大多数潜水爱好者一定会联想到东南亚、澳洲欧洲那些极富盛名的殿堂级潜水胜地。然而，大多数人都不知道的是，广州也有极富盛名的殿堂级潜水胜地，和潜伴在此间潜水，可以体会到广州浓厚的历史积淀和水上文化底蕴，享受独特、富有浪漫情怀的潜水体验。广州开水信息科技有限公司为您盘点一二：',
       image: '/static/news/hongkong2.jpg',
       link: 'http://www.openwater.com.cn/index/content/detail/model_id/6/id/21.html',

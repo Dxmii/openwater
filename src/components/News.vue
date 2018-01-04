@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="top_content" v-bind:class="{left:index%2==0,right:index%2!=0}">
-          <div @click="jump(tl)" class="title  songti bold"><span class="clickable">{{tl.title}}</span></div>
+          <div @click="jump(tl)" class="title songti "><span class="clickable font14">{{tl.title}}</span></div>
           <div class="info light_brown songti"><span>{{ellipsis(tl.about, 180)}}</span></div>
           <div class="light_gray time">发表日期：{{tl.time}}</div>
           <div @click="jump(tl)" class="readBtn">查看详情</div>
@@ -87,7 +87,7 @@
         </div>
 
         <div class="noteInfo">
-          <span @click="jump(note)" class="songti bold  clickable">{{note.title}}</span>
+          <span @click="jump(note)" class="songti  clickable font14">{{note.title}}</span>
           <div class="noteAbout songti light_brown">{{ellipsis(note.about)}}</div>
           <div class="noteTime">发表日期：{{note.time}}</div>
         </div>

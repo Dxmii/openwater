@@ -4,7 +4,7 @@
       <div ref="companyImage" class="company_image" v-bind:class="{mask:mobile}">
         <img :src="company.image"></div>
       <div ref="companyInfo" class="company_info fadeIn ">
-        <div class="text title1 bold">{{company.name}}</div>
+        <div class="text title1 ">{{company.name}}</div>
         <div class="text content2">{{company.intro}}</div>
       </div>
     </div>
@@ -81,7 +81,7 @@
         <img :src="contact.topImg">
       </div>
       <div class="contact_content">
-        <div class="title songti font22 bold">{{contact.title1}}</div>
+        <div class="title songti font20 ">{{contact.title1}}</div>
         <div class="cont font12 yahei">{{contact.title2}}</div>
         <div>
           <div class="contact_address">
