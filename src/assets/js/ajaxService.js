@@ -276,14 +276,28 @@ let data = {
 };
 
 
+const HTTP_URL='http://www.openwater.com.cn/';
+let serverurl={
+  '/news': 'api/index/newslist'
+};
+let ajaxHttp=function(key) {
+  switch(key)
+  {
+    case '/news':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    //break;
+    default:
+      return data[key]
+  }
+}
+
 export default {
   get(key){
 
     return new Promise((rev, rej) => {
       //TODO 这里改为接口访问
-
-      data.hasOwnProperty(key) ? rev(data[key]) : rej({code: 404, msg: 'can not attach API: ' + key});
-
+      data.hasOwnProperty(key) ? rev(ajaxHttp(key)) : rej({code: 404, msg: 'can not attach API: ' + key});
     });
   },
 };
+
