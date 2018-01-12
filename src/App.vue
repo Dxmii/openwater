@@ -43,7 +43,7 @@
     </div>
     <div class="mainPanel">
       <router-view></router-view>
-      <div class="tail" v-if="selection!='/index'">
+      <div class="tail" v-if="selection!='/index' && selection!='/detail'">
         <div class="yahei">
           <span class="auth">Copyright © 2017 <span class="dark_ink">广州开水信息科技有限公司</span> 版权所有</span>
           <span class="icp">粤ICP备16048076号-1</span>

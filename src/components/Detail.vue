@@ -1,11 +1,7 @@
 <template>
   <div class="article">
     <iframe class="detailPage" scrolling=auto    :src="link">
-
     </iframe>
-
-    <div class="blank">
-    </div>
     <div @click='back' class="detailClose">
     </div>
   </div>

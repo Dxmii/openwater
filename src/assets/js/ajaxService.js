@@ -278,16 +278,41 @@ let data = {
 
 const HTTP_URL='http://www.openwater.com.cn/';
 let serverurl={
-  '/news': 'api/index/newslist'
+  '/hollis':'api/index/hollis',
+  '/oceanic':'api/index/oceanic',
+  '/index':'api/index/index',
+  '/company':'api/index/company',
+  '/news':'api/index/news',
+  '/contact':'api/index/contact',
+  '/recruitment':'api/index/recruitment',
+  '/cooperation':'api/index/cooperation',
+  '/navi':'api/index/navi'
 };
 let ajaxHttp=function(key) {
+  console.log(key);
   switch(key)
   {
-  case '/news':
-    return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
-    //break;
-  default:
-    return data[key]
+    case '/index':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/news':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+      //break;
+    case '/hollis':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/oceanic':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/company':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/contact':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/recruitment':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/cooperation':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    case '/navi':
+      return $.ajax({url:HTTP_URL+serverurl[key],dataType:'json'});
+    default:
+      return data[key]
   }
 }
 
