@@ -15,6 +15,13 @@ export default new Router({
       path:'/detail',
       name:'Detail',
       component:Detail,
+      children:[
+        {
+          path:'/detail/:link',
+          name:'DetailLink',
+          component:Detail,
+        }
+      ],
     },{
       path:'/index',
       name:'Index',

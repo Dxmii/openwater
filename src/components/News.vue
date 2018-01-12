@@ -1,5 +1,6 @@
 <template xmlns:v-bind="http://www.w3.org/1999/xhtml">
-  <div id="news" v-bind:class="{blue2yellow,yellow2blue}">
+  <div id="news">
+    <!--<div id="news" v-bind:class="{blue2yellow,yellow2blue}">-->
     <div class="coverPage">
       <div class="cover mask" ref="coverImg">
         <img :src='news.cover.image'/>
@@ -123,7 +124,9 @@
     methods: {
       jump(note)
       {
-        this.$router.push({name: 'Detail', params: {link: note.link}});
+//        this.$router.push({name: 'Detail', params: {link: note.link}});
+
+        this.$router.push('Detail/'+note.link.split('/').join('|'));
       }
       ,
       ellipsis(str, l = 200)
@@ -164,8 +167,8 @@
 //            puzzle.css("transform", "translate(0px,-" + off1 / 1.5 + "px)");
 //          }
 
-          this.blue2yellow = top < 900 || top > 1500;
-          this.yellow2blue = top > 500 && top < 1800;
+//          this.blue2yellow = top < 900 || top > 1500;
+//          this.yellow2blue = top > 500 && top < 1800;
         });
       });
     }
