@@ -1,6 +1,6 @@
 <template>
   <div class="article">
-    <iframe class="detailPage" scrolling=auto    :src="link">
+    <iframe class="detailPage" scrolling=auto     :src="link">
     </iframe>
     <div @click='back' class="detailClose">
     </div>
@@ -17,6 +17,8 @@
   export default{
     data(){
       let link = this.$route.params.link;
+      if (link)
+        link = link.split('|').join('/');
       return {
         link,
       };

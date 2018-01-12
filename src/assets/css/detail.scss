@@ -1,4 +1,6 @@
-
+iframe{
+  border:none;
+}
 .detailPage {
   position: fixed;
   top: 0;
@@ -22,8 +24,8 @@
 
 .detailClose {
   position: fixed;
-  width: 14px;
-  height: 14px;
+  width: .3rem;
+  height: .3rem;
   background: url('/static/image/close.png') no-repeat;
   background-size: 100% 100%;
   opacity: 0.5;
@@ -31,7 +33,7 @@
   text-align: center;
   z-index: 33;
   cursor: pointer;
-  left: 3%;
+  right:5%;
   top: 5%;
 
   @media screen and (min-width: 600px) {

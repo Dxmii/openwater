@@ -34,6 +34,9 @@ $pageHeight: 110vh;
   }
   .product_info {
     position: relative;
+    padding-bottom: 15vh;
+    padding-top: 15vh;
+
     @media screen and (max-width: 780px) {
       width: 100%;
     }
@@ -84,8 +87,6 @@ $pageHeight: 110vh;
     width: calc(50% - 1px);
     border-right: 1px #f2f2f2 solid;
     height: 100%;
-    padding-bottom: 15vh;
-    padding-top: 15vh;
     box-sizing: border-box;
 
     @media screen and (max-width: 780px) {
@@ -98,8 +99,6 @@ $pageHeight: 110vh;
   }
   .right {
     box-sizing: border-box;
-    padding-bottom: 15vh;
-    padding-top: 15vh;
     position: relative;
     float: right;
     width: 50%;
@@ -116,9 +115,12 @@ $pageHeight: 110vh;
 
 .product_img {
   img {
-    width: 50vh;
-    height: auto;
+    position:relative;
+    width: auto;
+    height: 45vh;
     display: inline;
+    top: 50%;
+    transform: translateY(-50%);
     @media screen and (max-width: 780px) {
       width: 50vw;
       margin-top: 40px;
